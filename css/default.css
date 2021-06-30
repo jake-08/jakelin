@@ -13,7 +13,6 @@
   --previewShadow: #f0ead6;
 
   --buttonColor: black;
-
 }
 
 html,
@@ -405,4 +404,11 @@ ul {
   .right-column {
     justify-content: center;
   }
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
 }
