@@ -425,9 +425,9 @@ ul {
       "left-column"
       "right-column";
   }
-  .post-wrapper {
+  /* .post-wrapper {
     gap: 10px;
-  }
+  } */
   .article-container .img-container {
     width: 50%;
   }
