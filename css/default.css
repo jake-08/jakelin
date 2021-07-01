@@ -405,6 +405,9 @@ ul {
   .right-column {
     justify-content: center;
   }
+  .thumbnail {
+    width: 50%;
+  }
 }
 
 .article-container {
