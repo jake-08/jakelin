@@ -17,6 +17,7 @@
 
 html,
 body {
+  background-color: var(--mainColor);
   padding: 0;
   margin: 0;
 }
@@ -409,6 +410,26 @@ ul {
 .article-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 50%;
+  background-color: var(--secondaryColor);
+}
+
+.article-container .img-container {
+  align-self: center;
+  width: 30%;
+}
+
+.img-container img {
+  border-radius: 50%;
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.article-container h2 {
+  align-self: center;
+}
+
+.article-container p {
+  align-self: center;
+  width: 100ch;
 }
