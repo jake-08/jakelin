@@ -425,9 +425,8 @@ ul {
       "left-column"
       "right-column";
   }
-
-  .thumbnail {
-    object-fit: contain;
+  .post {
+    width: 100%;
   }
   .article-container .img-container {
     width: 50%;
