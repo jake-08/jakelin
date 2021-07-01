@@ -425,8 +425,8 @@ ul {
       "left-column"
       "right-column";
   }
-  .post {
-    width: 100%;
+  .post-wrapper {
+    gap: 10px;
   }
   .article-container .img-container {
     width: 50%;
