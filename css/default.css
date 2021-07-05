@@ -15,6 +15,12 @@
   --buttonColor: black;
 }
 
+/*
+################################################################################################
+               Start of Font and Font Size 
+################################################################################################
+*/
+
 html,
 body {
   background-color: var(--mainColor);
@@ -67,14 +73,17 @@ h6 {
   font-size: 16px;
 }
 
-a {
-  text-decoration: none;
-  color: #17a2b8;
-}
+/*
+################################################################################################
+               End of Font and Font Size 
+################################################################################################
+*/
 
-ul {
-  list-style: none;
-}
+/*
+################################################################################################
+               Start of Container and Wrapper (All Page) 
+################################################################################################
+*/
 
 .s1 {
   background-color: var(--mainColor);
@@ -93,6 +102,17 @@ ul {
   margin: 0 auto;
 }
 
+/*
+################################################################################################
+               End of Container and Wrapper (All Page) 
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Start of Introduction Block (Index Page) 
+################################################################################################
+*/
 .greeting-wrapper {
   display: grid;
   text-align: center;
@@ -116,60 +136,6 @@ ul {
     "left-column right-column";
 }
 
-.nav-wrapper {
-  grid-area: nav-wrapper;
-  border-bottom: 1px solid var(--borderColor);
-  border-radius: 5px 5px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--mainColor);
-}
-
-#navigation a {
-  color: var(--mainText);
-}
-
-#navigation {
-  margin: 0;
-  padding: 10px;
-}
-
-#navigation li {
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.dots-wrapper {
-  display: flex;
-  padding: 10px;
-}
-
-#dot-1 {
-  background-color: #fc6058;
-}
-
-#dot-2 {
-  background-color: #fec02f;
-}
-
-#dot-3 {
-  background-color: #2aca3e;
-}
-
-.browser-dot {
-  background-color: black;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  margin: 5px;
-
-  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-}
-
 .left-column {
   grid-area: left-column;
   padding-top: 50px;
@@ -183,53 +149,6 @@ ul {
   width: 250px;
   object-fit: cover;
   border: 2px solid var(--borderColor);
-}
-
-#theme-options-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.theme-dot {
-  height: 30px;
-  width: 30px;
-  background-color: black;
-  border-radius: 50%;
-
-  margin: 5px;
-  border: 2px solid var(--themeDotBroder);
-
-  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-
-  cursor: pointer;
-}
-
-.theme-dot:hover {
-  border-width: 5px;
-}
-
-#light-mode {
-  background-color: #fff;
-}
-
-#blue-mode {
-  background-color: #2c445c;
-}
-
-#green-mode {
-  background-color: #78866b;
-}
-
-#purple-mode {
-  background-color: #4f2e5e;
-}
-
-#settings-note {
-  font-size: 12px;
-  font-style: italic;
-  text-align: center;
 }
 
 .right-column {
@@ -285,30 +204,151 @@ ul {
   bottom: -5px;
   right: -5px;
 }
+/*
+################################################################################################
+              End of Introduction Block (Index Page) 
+################################################################################################
+*/
 
-.about-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  padding-bottom: 50px;
-  padding-top: 50px;
-  gap: 100px;
-}
+/*
+################################################################################################
+               Naviagation  Bar (All Page) 
+################################################################################################
+*/
 
-#skills {
+.dots-wrapper {
   display: flex;
-  justify-content: space-evenly;
-  background-color: var(--previewShadow);
+  padding: 10px;
 }
 
-.social-links {
-  display: grid;
-  align-content: center;
+#dot-1 {
+  background-color: #fc6058;
+}
+
+#dot-2 {
+  background-color: #fec02f;
+}
+
+#dot-3 {
+  background-color: #2aca3e;
+}
+
+.browser-dot {
+  background-color: black;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 5px;
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.nav-wrapper {
+  grid-area: nav-wrapper;
+  border-bottom: 1px solid var(--borderColor);
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mainColor);
+}
+
+a {
+  text-decoration: none;
+  color: #17a2b8;
+}
+
+.nav-wrapper ul {
+  list-style: none;
+}
+
+#navigation a {
+  color: var(--mainText);
+}
+
+#navigation {
+  margin: 0;
+  padding: 10px;
+}
+
+#navigation li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/*
+################################################################################################
+               End of Naviagation  Bar (All Page) 
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Start of Theme (Index Page) 
+################################################################################################
+*/
+
+#theme-options-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-dot {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  border-radius: 50%;
+
+  margin: 5px;
+  border: 2px solid var(--themeDotBroder);
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+
+  cursor: pointer;
+}
+
+.theme-dot:hover {
+  border-width: 5px;
+}
+
+#light-mode {
+  background-color: #fff;
+}
+
+#blue-mode {
+  background-color: #2c445c;
+}
+
+#green-mode {
+  background-color: #78866b;
+}
+
+#purple-mode {
+  background-color: #4f2e5e;
+}
+
+#settings-note {
+  font-size: 12px;
+  font-style: italic;
   text-align: center;
 }
 
-#social_img {
-  width: 100%;
-}
+/*
+################################################################################################
+               End of Theme (Index Page) 
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Start of Posts   
+################################################################################################
+*/
 
 .post-wrapper {
   display: grid;
@@ -329,7 +369,7 @@ ul {
 .thumbnail {
   display: block;
   width: 100%;
-  height: 300px;
+  height: 180px;
   object-fit: cover;
 }
 
@@ -347,6 +387,18 @@ ul {
   color: #4b5156;
   font-size: 16px;
 }
+
+/*
+################################################################################################
+               End of Posts   
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Start of Contact (Index Page) 
+################################################################################################
+*/
 
 #contact-form {
   display: block;
@@ -387,12 +439,24 @@ ul {
   background-color: var(--buttonColor);
   border: none;
 }
+/*
+################################################################################################
+               End of Contact (Index Page) 
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Start of Post Page
+################################################################################################
+*/
 
 .article-container {
   display: flex;
   flex-direction: column;
   background-color: var(--secondaryColor);
   padding: 0px 5vw;
+  position: relative;
 }
 
 .article-container .img-container {
@@ -402,7 +466,7 @@ ul {
 
 .img-container img {
   width: 100%;
-  border-radius: 50%;
+  border-radius: 10%;
   -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
@@ -411,6 +475,61 @@ ul {
 .article-container h2 {
   text-align: center;
 }
+
+.reading-date {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 13px;
+  color: var(--secondaryText);
+  font-weight: bold;
+  position: absolute;
+}
+
+#date {
+  top: 5px;
+  right: 10px;
+}
+
+#reading-time {
+  top: 25px;
+  right: 10px;
+}
+
+.quote {
+  border-left: 8px solid var(--borderColor);
+  margin: 0 0 25px;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #fc6058;
+}
+
+/*
+################################################################################################
+               End of Post Page
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Start of Blog Page
+################################################################################################
+*/
+
+.blog-container {
+  background-color: var(--secondaryColor);
+  height: 100vh;
+}
+
+/*
+################################################################################################
+               End ofBlog Page
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Start of Media Query 
+################################################################################################
+*/
 
 @media screen and (max-width: 1200px) {
   .main-container {
@@ -426,18 +545,64 @@ ul {
       "left-column"
       "right-column";
   }
+
+  .article-container {
+    padding: 0px 5vw;
+  }
+
+  .article-container h2 {
+    text-align: center;
+  }
+
   .article-container .img-container {
     width: 50%;
   }
+
   .right-column {
     justify-content: center;
     padding-top: 0;
     padding-bottom: 100px;
   }
-  .article-container {
-    padding: 0px 5vw;
+
+  #date {
+    right: 90px;
   }
-  .article-container h2 {
-    text-align: center;
+
+  #reading-time {
+    top: 5px;
   }
 }
+
+/*
+################################################################################################
+               Start of About Block  (Index Page) 
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding-bottom: 50px;
+  padding-top: 50px;
+  gap: 100px;
+}
+
+#skills {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--previewShadow);
+}
+
+.social-links {
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+#social_img {
+  width: 100%;
+}
+
+
+
+         End of About Block  (Index Page) 
+################################################################################################
+*/
