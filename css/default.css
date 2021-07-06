@@ -61,6 +61,7 @@ h2 {
   font-size: 36px;
 }
 h3 {
+  margin: 15px 0;
   font-size: 28px;
 }
 h4 {
@@ -465,7 +466,7 @@ a {
 
 .article-container .img-container {
   align-self: center;
-  width: 30%;
+  width: 50%;
 }
 
 .img-container img {
@@ -500,10 +501,43 @@ a {
 
 .quote {
   border-left: 8px solid var(--borderColor);
-  margin: 0 0 25px;
+  margin: 0 0 15px;
   overflow: hidden;
   padding: 20px;
   background-color: #fc6058;
+}
+
+.song {
+  border-left: 8px solid var(--borderColor);
+  margin: 0 0 25px;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #fec02f;
+}
+
+.song p {
+  color: #24292e;
+  margin: 0;
+}
+
+.song a {
+  color: rebeccapurple;
+}
+
+.song a:hover {
+  font-weight: bold;
+}
+
+.song span {
+  font-size: 12px;
+  font-style: italic;
+  color: black;
+  margin-left: 15px;
+  margin-top: 25px;
+}
+
+.extra-section p {
+  font-family: cursive;
 }
 
 /*
@@ -559,7 +593,7 @@ a {
   }
 
   .article-container .img-container {
-    width: 50%;
+    width: 70%;
   }
 
   .right-column {
