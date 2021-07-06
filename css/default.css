@@ -505,6 +505,8 @@ a {
   overflow: hidden;
   padding: 20px;
   background-color: #fc6058;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .song {
