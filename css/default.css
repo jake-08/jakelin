@@ -78,6 +78,11 @@ hr {
   margin: 0;
 }
 
+ul,
+ol {
+  margin: 0;
+}
+
 /*
 ################################################################################################
                End of Font and Font Size 
@@ -507,6 +512,7 @@ a {
   background-color: #fc6058;
   font-weight: 500;
   font-style: italic;
+  font-size: 20px;
 }
 
 .song {
@@ -538,9 +544,17 @@ a {
   margin-top: 25px;
 }
 
-.extra-section p,
-li {
-  font-family: cursive;
+.extra-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.extra-section span {
+  font-style: italic;
+  color: black;
+  background-color: #2aca3e;
+  display: block;
+  padding: 5px;
 }
 
 /*
@@ -557,7 +571,7 @@ li {
 
 .blog-container {
   background-color: var(--secondaryColor);
-  height: 100vh;
+  height: auto;
 }
 
 /*
