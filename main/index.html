@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head id="header">
     <title>Jake Lin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Welcome to my website" />
     <meta property="og:description" content=" Welcome to my website, where I will share about my life in general here in Sydney, Australia." />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/jakepic.jpeg"/>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
-      rel="stylesheet"
-    />
 
-    <link href="../images/jakepic.jpeg" rel="icon" /> 
-    <link rel="stylesheet" type="text/css" href="../css/default.css" />
-    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <section class="s1">
@@ -34,9 +24,10 @@
               <div id="dot-2" class="browser-dot"></div>
               <div id="dot-3" class="browser-dot"></div>
             </div>
-            <ul id="navigation">
+            <ul class="navigation">
               <li><a href="#contact-form">Contact</a></li>
               <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="learn.html" target="_blank">Learn</a></li>
             </ul>
           </div>
           <div class="left-column">
@@ -128,6 +119,10 @@
     </section>
 
     <script type="text/javascript" src="../js/script.js"></script>
-
+    <script>
+      $(function () {
+        $("#header").load("../templates/header.html");
+      });
+    </script>
   </body>
 </html>

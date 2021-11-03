@@ -274,16 +274,16 @@ a {
   list-style: none;
 }
 
-#navigation a {
+.navigation a {
   color: var(--mainText);
 }
 
-#navigation {
+.navigation {
   margin: 0;
   padding: 10px;
 }
 
-#navigation li {
+.navigation li {
   display: inline-block;
   margin-right: 10px;
   margin-left: 10px;

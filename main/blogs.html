@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head id="header">
     <title>Blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
@@ -10,29 +10,10 @@
     <meta property="og:description" content=" Welcome to my Blog Page" />
     <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/welcome.jpg" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
-
-    <link href="../images/jakepic.jpeg" rel="icon" />
-    <link rel="stylesheet" type="text/css" href="../css/default.css" />
-    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
+  <nav id="nav-bar"></nav>
   <body>
-    <div class="nav-wrapper">
-      <a href="../main/index.html">
-        <div class="dots-wrapper">
-          <div id="dot-1" class="browser-dot"></div>
-          <div id="dot-2" class="browser-dot"></div>
-          <div id="dot-3" class="browser-dot"></div>
-        </div>
-      </a>
-
-      <ul id="navigation">
-        <li><a href="../main/index.html#contact-form">Contact</a></li>
-        <li><a href="../main/blogs.html">Blogs</a></li>
-      </ul>
-    </div>
-
     <div class="main-container">
       <div class="blog-container">
         <div class="greeting-wrapper">
@@ -88,4 +69,10 @@
     </div>
   </body>
   <script type="text/javascript" src="../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#header").load("../templates/header.html");
+      $("#nav-bar").load("../templates/navigation.html");
+    });
+  </script>
 </html>
