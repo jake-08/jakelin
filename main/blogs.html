@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head id="header">
+  <head>
+    <title>Blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
     <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/firstblog.html" />
@@ -9,10 +10,16 @@
     <meta property="og:description" content=" Welcome to my Blog Page" />
     <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/welcome.jpg" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <nav id="nav-bar"></nav>
-  <title>Blogs</title>
   <body>
     <div class="main-container">
       <div class="secondary-container">
@@ -72,7 +79,6 @@
   <script type="text/javascript" src="../js/script.js"></script>
   <script>
     $(function () {
-      $("#header").load("../templates/header.html");
       $("#nav-bar").load("../templates/navigation.html");
       $("#footer").load("../templates/footer.html");
     });

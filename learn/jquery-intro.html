@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head id="header"></head>
+  <head>
+    <title>jQuery Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
   <nav id="nav-bar"></nav>
-  <title>jQuery Intro</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <body>
     <div id="jquery-intro" class="main-container">
       <div class="secondary-container">
@@ -149,7 +159,6 @@
   <script type="text/javascript" src="../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
-      $("#header").load("../templates/header.html");
       $("#nav-bar").load("../templates/navigation.html");
       $("#footer").load("../templates/footer.html");
     });

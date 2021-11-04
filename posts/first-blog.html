@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head id="header">
+  <head>
     <title>Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
@@ -12,6 +12,13 @@
       content=" Welcome to my very first blog. I've been waiting for this moment for the longest time and I'm glad that I'm finally doing it."
     />
     <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/welcome.jpg" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
@@ -56,7 +63,6 @@
   <script type="text/javascript" src="../js/script.js"></script>
   <script>
     $(function () {
-      $("#header").load("../templates/header.html");
       $("#nav-bar").load("../templates/navigation.html");
       $("#footer").load("../templates/footer.html");
     });
