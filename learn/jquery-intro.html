@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head id="header">
+    <title>Learn</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <nav id="nav-bar"></nav>
+  <body>
+    <div class="main-container">
+      <div class="secondary-container">
+        <h1>Introduction to jQuery</h1>
+        <h2>What is jQuery?</h2>
+        <p>The purpose of JQuery is to make it easier to use JavaScript on your Website.</p>
+        <p>jQuery is a lightweight, "write less, do more", JavaScript library.</p>
+        <p>
+          jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them
+          into methods that you can call with a single line of code.
+        </p>
+        <p>
+          jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+        </p>
+        <p>The jQuery library contains the following features:</p>
+        <ul>
+          <li>HTML/DOM manipulation</li>
+          <li>CSS manipulation</li>
+          <li>HTML event methods</li>
+          <li>Effects and animations</li>
+          <li>AJAX</li>
+          <li>Utilities</li>
+        </ul>
+        <p>In addition, jQuery has plugins for almost any task out there.</p>
+        <h2>jQuery CDN</h2>
+        <p>
+          If you don't want to download and host jQuery yourself, you can include it from a CDN (Content Delivery
+          Network).
+        </p>
+        <pre>
+        &lt;head&gt;
+          &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt;/script&gt;
+        &lt;/head&gt;
+      </pre
+        >
+        <h2>jQuery Syntax</h2>
+        <p>
+          The jQuery syntax is tailor-made for <strong>selecting</strong> HTML elements and performing some
+          <strong>action</strong> on the element(s).
+        </p>
+        <p>Basic syntax is: <code>$(selector).action()</code></p>
+        <ul>
+          <li>A <code>$</code> sign to define/access jQuery</li>
+          <li>A <code>(selector)</code> to "query (or find)" HTML elements</li>
+          <li>A jQuery <code>action()</code> to be performed on the element(s)</li>
+        </ul>
+        <p>Examples:</p>
+        <p><code>$(this).hide()</code> - hides the current element.</p>
+        <p><code>$("p").hide()</code> - hides all elements</p>
+        <p><code>$(".test").hide()</code> - hides all elements with class="test".</p>
+        <p><code>$("#test").hide()</code> - hides the element with id="test".</p>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#header").load("../templates/header.html");
+      $("#nav-bar").load("../templates/navigation.html");
+      $("#footer").load("../templates/footer.html");
+    });
+  </script>
+</html>

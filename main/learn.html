@@ -4,15 +4,35 @@
     <title>Learn</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <nav id="nav"></nav>
+  <nav id="nav-bar"></nav>
   <body>
-    <div class="main-container"></div>
+    <div class="main-container">
+      <div class="secondary-container">
+        <h3>Learn JQuery</h3>
+        <table>
+          <tr>
+            <th>Topic</th>
+            <th>Source</th>
+          </tr>
+          <tr>
+            <td><a href="../learn/jquery-intro.html" target="_blank">jQuery Introduction</a></td>
+            <td>
+              <a href="https://www.w3schools.com/jquERy/default.asp" target="_blank"
+                >https://www.w3schools.com/jquERy/default.asp</a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </body>
+  <footer id="footer"></footer>
   <script type="text/javascript" src="../js/script.js"></script>
   <script>
     $(function () {
       $("#header").load("../templates/header.html");
-      $("#nav").load("../templates/navigation.html");
+      $("#nav-bar").load("../templates/navigation.html");
+      $("#footer").load("../templates/footer.html");
     });
   </script>
 </html>
