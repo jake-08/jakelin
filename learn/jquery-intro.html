@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head id="header">
-    <title>Learn</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </head>
+  <head id="header"></head>
   <nav id="nav-bar"></nav>
+  <title>jQuery Intro</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <body>
-    <div class="main-container">
+    <div id="jquery-intro" class="main-container">
       <div class="secondary-container">
         <h1>Introduction to jQuery</h1>
         <h2>What is jQuery?</h2>
@@ -56,11 +55,98 @@
         <p><code>$("p").hide()</code> - hides all elements</p>
         <p><code>$(".test").hide()</code> - hides all elements with class="test".</p>
         <p><code>$("#test").hide()</code> - hides the element with id="test".</p>
+        <h3>The Document Ready Event</h3>
+        <p>
+          All jQuery methods are inside a document ready event to prevent any jQUery code from running before the
+          document is finished loading (is ready).
+        </p>
+        <p>It is good practice to wait for the document to be fully loaded and ready before working with it.</p>
+        <p>Here are some examples of actions that can fail if methods are run before the document is fully loaded:</p>
+        <ul>
+          <li>Trying to hide an element that is not created yet</li>
+          <li>Trying to get the size of an image that is not loaded yet</li>
+        </ul>
+        <pre>
+          $(document).ready(function(){
+
+          &nbsp;&nbsp;&nbsp;// jQuery methods go here...
+
+          });
+        </pre>
+        <p>The jQuery team has also created an even shorter method for the document ready event:</p>
+        <pre>
+          $(function(){
+
+          &nbsp;&nbsp; &nbsp;// jQuery methods go here...
+
+          });
+        </pre>
+        <h2>jQuery Selectors</h2>
+        <p>jQuery selectors allow you to select and manipulate HTML element(s).</p>
+        <p>
+          jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types,
+          attributes, values of attributes and much more.
+        </p>
+        <p>
+          It's based on the existing
+          <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">CSS Selectors</a>, and in
+          addition, it has some own custom selectors.
+        </p>
+        <p>All selectors in jQuery start with the dollar sign and parentheses: $().</p>
+        <p><code>$("*")</code> - Selects all element</p>
+        <p><code>$(this)</code> - Selects the current HTML element</p>
+        <p><code>$("p.intro")</code> - Selects all &lt;p&gt; elements with class="intro"</p>
+        <p><code>$("p:first")</code> - Selects the first &lt;p&gt; element</p>
+        <p><code>$("ul li:first")</code> - Selects the first &lt;li&gt; element of the first &lt;ul&gt;</p>
+        <p><code>$("ul li:first-child")</code> - Selects the first &lt;li&gt; element of every &lt;ul&gt;</p>
+        <p><code>$("[href]")</code> - Selects all elements with an href attribute</p>
+        <p>
+          <code>$("a[target='_blank']")</code> - Selects all &lt;a&gt; elements with a target attribute value equal to
+          "_blank"
+        </p>
+        <p>
+          <code>$("a[target!='_blank']")</code> - Selects all &lt;a&gt; elements with a target attribute value NOT equal
+          to "_blank"
+        </p>
+        <p>
+          <code>$(":button")</code> - Selects all &lt;button&gt; elements and &lt;input&gt; elements of type="button"
+        </p>
+        <p><code>$("tr:even")</code> - Selects all even &lt;tr&gt; elements</p>
+        <p><code>$("tr:odd")</code> - Selects all odd &lt;tr&gt; elements</p>
+        <h2>jQuery Events</h2>
+        <p>jQuery is tailor-made to respond to events in an HTML page.</p>
+        <p>An event represents the precise moment when something happens.</p>
+        <p>Examples:</p>
+        <ul>
+          <li>moving a mouse over an element</li>
+          <li>selecting a radio button</li>
+          <li>clicking on an element</li>
+        </ul>
+        <p>The <code>click()</code> function is executed when the user clicks on the HTML element.</p>
+        <p>The <code>dblclick()</code> function is executed when the user double-clicks on the HTML element.</p>
+        <p>The <code>mouseenter()</code> function is executed when the mouse pointer enters the HTML element.</p>
+        <p>The <code>mouseleave()</code> function is executed when the mouse pointer leaves the HTML element.</p>
+        <p>
+          The <code>mousedown()</code> function is executed, when the left, middle or right mouse button is pressed
+          down, while the mouse is over the HTML element.
+        </p>
+        <p>
+          The <code>mouseup()</code> function is executed, when the left, middle or right mouse button is released,
+          while the mouse is over the HTML element
+        </p>
+        <p>
+          The <code>hover()</code> method takes two functions and is a combination of the <code>mouseenter()</code> and
+          <code>mouseleave()</code> methods.
+        </p>
+        <p>The <code>focus()</code> function is executed when the form field gets focus.</p>
+        <p>The <code>blue()</code> function is executed when the form field loses focus</p>
+        <p>The <code>on()</code> method attaches one or more event handlers for the selected elements.</p>
       </div>
     </div>
   </body>
   <footer id="footer"></footer>
   <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
       $("#header").load("../templates/header.html");

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head id="header"></head>
+  <nav id="nav-bar"></nav>
+  <title>jQuery Effects</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <body>
+    <div class="main-container">
+      <div class="secondary-container">
+        <h1>jQuery Effects</h1>
+        <h2>jQuery hide(), show(), toggle()</h2>
+        <p>
+          With jQuery, you can hide and show HTML elements with the <code>hide()</code> and <code>show()</code> methods
+        </p>
+        <p>You can also toggle between hiding and showing an element with the <code>toggle()</code> method.</p>
+        <button id="all-selector">Click this to hide everything</button>
+        <button id="header-selector-hide">Click this to hide the headers</button>
+        <button id="header-selector-show">Click this to show the headers</button>
+        <button id="code-selector">Click this to hide/show code blocks</button>
+        <h2>jQuery Fading</h2>
+        <p>The jQuery <code>fadeIn()</code> method is used to fade in a hidden element.</p>
+        <p>The jQuery <code>fadeOut()</code> method is used to fade out a visible element.</p>
+        <p>
+          The jQuery <code>fadeToggle()</code> method toggles between the <code>fadeIn()</code> and
+          <code>fadeOut()</code> methods.
+        </p>
+        <p>The jQuery <code>fadeTo()</code> method allows fading to a given opacity (value between 0 and 1).</p>
+        <button id="fade-in">Click to fade in boxes</button>
+        <button id="fade-out">Click to fade out boxes</button>
+        <button id="fade-toggle">Click to fade toggle boxes</button>
+        <button id="fade-to">Click to fade to boxes</button>
+        <div id="div1-fade" style="width: 80px; height: 80px; display: none; background-color: red"></div>
+        <br />
+        <div id="div2-fade" style="width: 80px; height: 80px; display: none; background-color: green"></div>
+        <br />
+        <div id="div3-fade" style="width: 80px; height: 80px; display: none; background-color: blue"></div>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/jquery-learn-script.js"></script>
+  <script>
+    $(function () {
+      $("#header").load("../templates/header.html");
+      $("#nav-bar").load("../templates/navigation.html");
+      $("#footer").load("../templates/footer.html");
+    });
+  </script>
+</html>
