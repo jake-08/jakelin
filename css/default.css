@@ -30,6 +30,7 @@ body {
 
 body * {
   transition: 0.3s;
+  line-height: 1.5;
 }
 
 h1,
@@ -96,22 +97,25 @@ th {
   padding: 8px;
 }
 
-pre {
-  white-space: pre-line;
-}
-
 pre,
 code {
   color: crimson;
-  background: var(--mainColor);
-  padding: 4px 4px;
+  background-color: var(--mainColor);
+  padding: 0 4px;
   font-size: 105%;
+}
+
+pre {
+  white-space: pre-line;
+  font-size: 120%;
+  padding: 8px 4px;
 }
 
 button {
   display: block;
   margin: 10px 0;
   padding: 10px;
+  cursor: pointer;
 }
 
 /*
@@ -629,13 +633,27 @@ article h2 {
 
 /*
 ################################################################################################
-               Learn Page
+               jQuery Learn 
 ################################################################################################
 */
+#stop-animate-panel,
+#stop-animate-flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
 
+#stop-animate-panel {
+  padding: 50px;
+  display: none;
+}
 /*
 ################################################################################################
-               Learn Page
+               jQuery Learn 
 ################################################################################################
 */
 

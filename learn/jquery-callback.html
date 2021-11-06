@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Callback</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <nav id="nav-bar"></nav>
+  <body>
+    <div class="main-container">
+      <div class="secondary-container">
+        <h1>jQuery Callback Functions</h1>
+        <p>A callback function is executed after the current effect is 100% finished.</p>
+        <p>
+          JavaScript statements are executed line by line. However, with effects, the next line of code can be run even
+          though the effect is not finished. This can create errors.
+        </p>
+        <p>To prevent this, you can create a callback function.</p>
+        <pre>$(selector).hide(speed,callback);</pre>
+        <button id="callback-hide">Callback Hide the paragraph below</button>
+        <p id="callback-p">This is paragraph with little content.</p>
+        <h1>jQuery Chaining Methods</h1>
+        <p>Until now we have been writing jQuery statements one at a time (one after the other).</p>
+        <p>
+          However, there is a technique called chaining, that allows us to run multiple jQuery commands, one after the
+          other, on the same element(s).
+        </p>
+        <button id="chaining">Click Here for Chaining Effect</button>
+        <p id="chaining-p">jQuery is fun!!</p>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/jquery-learn-script.js"></script>
+  <script>
+    $(function () {
+      $("#nav-bar").load("../templates/navigation.html");
+      $("#footer").load("../templates/footer.html");
+    });
+  </script>
+</html>

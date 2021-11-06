@@ -18,6 +18,7 @@
     <div class="main-container">
       <div class="secondary-container">
         <h1>jQuery Effects</h1>
+        <!-- hide show toggle -->
         <h2>jQuery hide(), show(), toggle()</h2>
         <p>
           With jQuery, you can hide and show HTML elements with the <code>hide()</code> and <code>show()</code> methods
@@ -27,6 +28,7 @@
         <button id="header-selector-hide">Click this to hide the headers</button>
         <button id="header-selector-show">Click this to show the headers</button>
         <button id="code-selector">Click this to hide/show code blocks</button>
+        <!-- fading -->
         <h2>jQuery Fading</h2>
         <p>The jQuery <code>fadeIn()</code> method is used to fade in a hidden element.</p>
         <p>The jQuery <code>fadeOut()</code> method is used to fade out a visible element.</p>
@@ -44,6 +46,76 @@
         <div id="div2-fade" style="width: 80px; height: 80px; display: none; background-color: green"></div>
         <br />
         <div id="div3-fade" style="width: 80px; height: 80px; display: none; background-color: blue"></div>
+        <!-- animations -->
+        <h2>jQuery animations</h2>
+        <p>
+          The <code>animate()</code> method changes an element from one state to another with CSS styles. The CSS
+          property value is changed gradually, to create an animated effect.
+        </p>
+        <p>
+          Only numeric values can be animated (like "margin:30px"). String values cannot be animated (like
+          "background-color:red"), except for strings "slow", "hide" and "toggle".
+        </p>
+        <h3>Syntax</h3>
+        <pre>(selector).animate({styles}, speed, easing, callback)</pre>
+        <p><code>styles</code> - Required. Specifies one or more CSS properties/values to animate.</p>
+        <p>
+          Note: The property names must be camel-cased when used with the animate() method. You will need to write
+          paddingLeft instead of padding-left, and so on.
+        </p>
+        <p><code>speed</code> - Optional. Specifies the speed of the animation. Default value is 400 miliseconds.</p>
+        <p>Possible values:</p>
+        <ul>
+          <li>miliseconds (like 100, 1000, 5000, etc)</li>
+          <li>"slow"</li>
+          <li>"fast"</li>
+        </ul>
+        <p>
+          <code>easing</code>Optional. Specifies the speed of the element in different points of the animation. Default
+          value is "swing". Possible values:
+        </p>
+        <ul>
+          <li>"swing" - moves slower at the beginning/end, but faster in the middle</li>
+          <li>"linear" - moves in a constant speed</li>
+        </ul>
+        <p><code>callback</code> - Optional. A function to be executed after the animation completes.</p>
+        <button id="left-animate">Start Left Animation</button>
+        <button id="multiple-animate">Start Multiple Animation</button>
+        <button id="toggle-animate">Start Toggle Animation</button>
+        <button id="queue-animate">Start Queue Animation</button>
+        <button id="callback-animate">Start Callback Animation</button>
+        <p>
+          By default, all HTML elements have a static position, and cannot be moved. To manipulate the position,
+          remember to first set the CSS position property of the element to relative, fixed, or absolute!
+        </p>
+        <div id="div1-animate" style="background: #98bf21; height: 100px; width: 100px; position: relative"></div>
+        <!-- Alternative Animation -->
+        <h2>Alternative Animation Syntax</h2>
+        <pre>(selector).animate({styles},{options})</pre>
+        <button id="alternative-animate">Start Alternative Animation</button>
+        <div id="div2-animate" style="background: #98bf21; height: 100px; width: 100px; margin: 6px"></div>
+        <h3>Progress Bar</h3>
+        <button id="progress-animate">Start Progress Bar</button>
+        <div style="border: 1px solid green; margin: 10px 0; width: 400px">
+          <div id="div3-animate" style="background: #98bf21; height: 50px; width: 1px; border: 1px solid green"></div>
+        </div>
+        <p id="progress-percent"></p>
+        <h2>jQuery stop() Method</h2>
+        <p>The jQuery <code>stop()</code> method is used to stop an animation or effect before it is finished.</p>
+        <p>
+          The <code>stop()</code> method works for all jQuery effect functions, including sliding, fading and custom
+          animations.
+        </p>
+        <pre>$(selector).stop(stopAll,goToEnd);</pre>
+        <button id="stop-animate">Stop Animation</button>
+        <div id="stop-animate-flip">Click to slide down panel</div>
+        <div id="stop-animate-panel">Hello world!</div>
+        <!-- Reference -->
+        <h2>jQuery Effect Reference</h2>
+        <p>
+          For a complete overview of all jQuery effects, please go to our
+          <a href="https://www.w3schools.com/jquERy/jquery_ref_effects.asp" target="_blank">jQuery Effect Reference</a>
+        </p>
       </div>
     </div>
   </body>
@@ -52,7 +124,6 @@
   <script type="text/javascript" src="../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
-      $("#header").load("../templates/header.html");
       $("#nav-bar").load("../templates/navigation.html");
       $("#footer").load("../templates/footer.html");
     });
