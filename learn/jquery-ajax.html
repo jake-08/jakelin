@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery - AJAX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <nav id="nav-bar"></nav>
+  <body>
+    <div class="main-container">
+      <div class="secondary-container">
+        <h1>jQuery AJAX</h1>
+        <p>
+          AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the
+          whole page.
+        </p>
+        <h2>What is AJAX</h2>
+        <p>AJAX = Asynchronous JavaScript and XML.</p>
+        <p>
+          In short; AJAX is about loading data in the background and display it on the webpage, without reloading the
+          whole page.
+        </p>
+        <p>Examples of applications using AJAX: Gmail, Google Maps, Youtube, and Facebook tabs.</p>
+        <h2>What About jQuery and AJAX?</h2>
+        <p>jQuery provides several methods for AJAX functionality.</p>
+        <p>
+          With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote server using both HTTP
+          Get and HTTP Post - And you can load the external data directly into the selected HTML elements of your web
+          page!
+        </p>
+        <p>Without jQuery, AJAX coding can be a bit tricky!</p>
+        <p>
+          Writing regular AJAX code can be a bit tricky, because different browsers have different syntax for AJAX
+          implementation.
+        </p>
+        <p>
+          his means that you will have to write extra code to test for different browsers. However, the jQuery team has
+          taken care of this for us, so that we can write AJAX functionality with only one single line of code.
+        </p>
+        <h2>jQuery - AJAX load() Method</h2>
+        <p>The jQuery <code>load()</code> method is a simple, but powerful AJAX method.</p>
+        <p>
+          The <code>load()</code> method loads data from a server and puts the returned data into the selected element.
+        </p>
+        <h3>Syntax</h3>
+        <pre>$(selector).load(URL,data,callback);</pre>
+        <p>The required <b>URL</b> parameter specifies the URL you wish to load.</p>
+        <p>
+          The optional <b>data</b> parameter specifies a set of querystring key/value pairs to send along with the
+          request.
+        </p>
+        <p>
+          The optional <b>callback</b> parameter is the name of a function to be executed after the
+          <code>load()</code> method is completed.
+        </p>
+        <p>The <b>callback</b> function can have different parameters:</p>
+        <ul>
+          <li><code>responseTxt</code> - contains the resulting content if the call succeeds</li>
+          <li><code>statusTxt</code> - contains the status of the call</li>
+          <li><code>xhr</code> - contains the XMLHttpRequest object</li>
+        </ul>
+        <p>
+          The following example displays an alert box after the <code>load()</code> method completes. If the
+          <code>load()</code> method has succeeded, it displays "External content loaded successfully!", and if it fails
+          it displays an error message:
+        </p>
+        <pre>
+            $("button").click(function(){
+            &nbsp;$("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
+            &nbsp;&nbsp;if(statusTxt == "success")
+            &nbsp;&nbsp;&nbsp;alert("External content loaded successfully!");
+            &nbsp;&nbsp;if(statusTxt == "error")
+            &nbsp;&nbsp;&nbsp;alert("Error: " + xhr.status + ": " + xhr.statusText);
+            &nbsp;});
+            });
+        </pre>
+        <p>
+          Try the above methods at
+          <a href="https://www.w3schools.com/jquery/jquery_ajax_load.asp" target="_blank">jQuery - AJAX load() Method</a
+          >.
+        </p>
+        <!-- get() and post() Methods -->
+        <h2>jQuery - AJAX get() and post() Methods</h2>
+        <p>
+          The jQuery get() and post() methods are used to request data from the server with an HTTP GET or POST request.
+        </p>
+        <h3>HTTP Request: GET vs. POST</h3>
+        <p>Two commonly used methods for a request-response between a client and server are: GET and POST.</p>
+        <ul>
+          <li><b>GET</b> - Requests data from a specified resource</li>
+          <li><b>POST</b> - Submits data to be processed to a specified resource</li>
+        </ul>
+        <p>
+          <b>GET</b> is basically used for just getting (retrieving) some data from the server. Note: The GET method may
+          return cached data.
+        </p>
+        <p>
+          <b>POST</b> can also be used to get some data from the server. However, the POST method NEVER caches data, and
+          is often used to send data along with the request.
+        </p>
+        <h3>jQuery $.get() Method</h3>
+        <p>The <code>$.get()</code> method requests data from the server with an HTTP GET request.</p>
+        <p><b>Syntax:</b></p>
+        <pre>$.get(URL,callback);</pre>
+        <p>The following example uses the <code>$.get()</code> method to retrieve data from a file on the server:</p>
+        <pre>
+            $("button").click(function(){
+            &nbsp;$.get("demo_test.asp", function(data, status){
+            &nbsp;&nbsp;alert("Data: " + data + "\nStatus: " + status);
+            &nbsp;});
+            });
+        </pre>
+        <h3>jQuery $.post() Method</h3>
+        <p>The <code>$.post()</code> method requests data from the server using an HTTP POST request.</p>
+        <p><b>Syntax:</b></p>
+        <pre>$.post(URL,data,callback);</pre>
+        <p>The following example uses the <code>$.post()</code> method to send some data along with the request:</p>
+        <pre>
+            $("button").click(function(){
+            &nbsp;$.post("demo_test_post.asp",
+            &nbsp;{
+                &nbsp;&nbsp;name: "Donald Duck",
+                &nbsp;&nbsp;city: "Duckburg"
+            &nbsp;},
+            &nbsp;function(data, status){
+                &nbsp;&nbsp;alert("Data: " + data + "\nStatus: " + status);
+            &nbsp;});
+            });
+        </pre>
+        <p>
+          Try the above methods at
+          <a href="https://www.w3schools.com/jquery/jquery_ajax_get_post.asp" target="_blank"
+            >jQuery - AJAX get() and post() Methods</a
+          >.
+        </p>
+        <!-- noConflict() Method -->
+        <h2>jQuery - The noConflict() Method</h2>
+        <p>What if you wish to use other frameworks on your pages, while still using jQuery?</p>
+        <h3>jQuery and Other JavaScript Frameworks</h3>
+        <p>As you already know; jQuery uses the <code>$</code> sign as a shortcut for jQuery.</p>
+        <p>There are many other popular JavaScript frameworks like: Angular, Backbone, Ember, Knockout, and more.</p>
+        <p><b>What if other JavaScript frameworks also use the $ sign as a shortcut?</b></p>
+        <p>If two different frameworks are using the same shortcut, one of them might stop working.</p>
+        <p>The jQuery team have already thought about this, and implemented the <code>noConflict()</code>> method.</p>
+        <h3>The jQuery noConflict() Method</h3>
+        <p>
+          The <code>noConflict()</code> method releases the hold on the $ shortcut identifier, so that other scripts can
+          use it.
+        </p>
+        <p>You can of course still use jQuery, simply by writing the full name instead of the shortcut:</p>
+        <pre>
+            $.noConflict();
+            jQuery(document).ready(function(){
+            &nbsp;jQuery("button").click(function(){
+                &nbsp;&nbsp;jQuery("p").text("jQuery is still working!");
+            &nbsp;});
+            });
+        </pre>
+        <p>
+          You can also create your own shortcut very easily. The <code>noConflict()</code> method returns a reference to
+          jQuery, that you can save in a variable, for later use. Here is an example:
+        </p>
+        <pre>
+            var jq = $.noConflict();
+            jq(document).ready(function(){
+            &nbsp;jq("button").click(function(){
+                &nbsp;&nbsp;jq("p").text("jQuery is still working!");
+            &nbsp;});
+            });
+        </pre>
+        <p>
+          If you have a block of jQuery code which uses the <code>$</code> shortcut and you do not want to change it
+          all, you can pass the <code>$</code> sign in as a parameter to the ready method. This allows you to access
+          jQuery using <code>$</code>, inside this function - outside of it, you will have to use "jQuery":
+        </p>
+        <pre>
+            $.noConflict();
+            jQuery(document).ready(function($){
+            &nbsp;$("button").click(function(){
+                &nbsp;&nbsp;$("p").text("jQuery is still working!");
+            &nbsp;});
+            });
+        </pre>
+        <!-- References -->
+        <h2>jQuery AJAX Reference</h2>
+        <p>
+          For a complete overview of all jQuery AJAX methods, please go to our
+          <a href="https://www.w3schools.com/jquery/jquery_ref_ajax.asp" target="_blank">jQuery AJAX Reference</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/jquery-learn-script.js"></script>
+  <script>
+    $(function () {
+      $("#nav-bar").load("../templates/navigation.html");
+      $("#footer").load("../templates/footer.html");
+    });
+  </script>
+</html>

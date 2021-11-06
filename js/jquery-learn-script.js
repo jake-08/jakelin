@@ -218,3 +218,27 @@ $(document).ready(function () {
     $("p").remove(".remove-test, .remove-demo");
   });
 });
+
+// jQuery Filters
+$(document).ready(function () {
+  $("#filter-input-1").keyup(function () {
+    var value = $("#filter-input").val().toLowerCase();
+    $("#filter-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+
+  $("#filter-input-2").keyup(function () {
+    var value = $(this).val().toLowerCase();
+    $("#filter-list li").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+
+  $("#filter-input-3").keyup(function () {
+    var value = $(this).val().toLowerCase();
+    $("#filter-div *").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
