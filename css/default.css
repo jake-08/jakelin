@@ -97,12 +97,21 @@ th {
   padding: 8px;
 }
 
+table tr td:first-child {
+  width: 30%;
+}
+
+button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
 pre,
 code {
-  color: crimson;
   background-color: var(--mainColor);
-  padding: 0 4px;
-  font-size: 105%;
+  color: crimson;
 }
 
 pre {
@@ -111,11 +120,9 @@ pre {
   padding: 8px 4px;
 }
 
-button {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  cursor: pointer;
+code {
+  padding: 0 4px;
+  font-size: 105%;
 }
 
 /*
@@ -354,24 +361,6 @@ a {
 /*
 ################################################################################################
                Naviagation  Bar (All Page) End
-################################################################################################
-*/
-
-/*
-################################################################################################
-               Footer 
-################################################################################################
-*/
-
-.footer {
-  background-color: var(--mainColor);
-  border-top: 1px solid var(--borderColor);
-  text-align: center;
-}
-
-/*
-################################################################################################
-               Footer End 
 ################################################################################################
 */
 
@@ -633,6 +622,24 @@ article h2 {
 
 /*
 ################################################################################################
+               Footer 
+################################################################################################
+*/
+
+.footer {
+  background-color: var(--mainColor);
+  border-top: 1px solid var(--borderColor);
+  text-align: center;
+}
+
+/*
+################################################################################################
+               Footer End 
+################################################################################################
+*/
+
+/*
+################################################################################################
                jQuery Learn 
 ################################################################################################
 */
@@ -659,40 +666,48 @@ article h2 {
 
 /*
 ################################################################################################
-               Start of Media Query 
+               CSS Learn 
 ################################################################################################
 */
 
-/*
-################################################################################################
-               Start of About Block  (Index Page) 
-
-.about-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  padding-bottom: 50px;
-  padding-top: 50px;
-  gap: 100px;
+.learn-background-img {
+  background-image: url("../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-#skills {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: var(--previewShadow);
+.learn-background-img-full {
+  background-image: url("../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 46px);
 }
 
-.social-links {
-  display: grid;
-  align-content: center;
+.learn-background-img-full-header {
+  position: absolute;
   text-align: center;
-}
-
-#social_img {
   width: 100%;
 }
 
+#background-img-learn h2 {
+  text-align: center;
+}
 
+#background-img-learn .secondary-container {
+  position: relative;
+}
 
-         End of About Block  (Index Page) 
+.background-img-code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+}
+
+/*
+################################################################################################
+               CSS Learn 
 ################################################################################################
 */

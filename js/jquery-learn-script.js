@@ -222,7 +222,7 @@ $(document).ready(function () {
 // jQuery Filters
 $(document).ready(function () {
   $("#filter-input-1").keyup(function () {
-    var value = $("#filter-input").val().toLowerCase();
+    var value = $("#filter-input-1").val().toLowerCase();
     $("#filter-table tr").filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });

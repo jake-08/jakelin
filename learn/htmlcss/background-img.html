@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Background Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <nav id="nav-bar"></nav>
+  <body>
+    <div id="background-img-learn" class="main-container">
+      <div class="secondary-container">
+        <h2>Background Responsive Image</h2>
+        <div class="learn-background-img"></div>
+        <div class="background-img-code">
+          <pre>
+            .learn-background-img {
+              &nbsp;background-image: url("../images/abc.jpg");
+              &nbsp;height: 100vh;
+              &nbsp;background-repeat: no-repeat;
+              &nbsp;background-size: cover;
+            }
+          </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
+  <script>
+    $(function () {
+      $("#nav-bar").load("../../templates/navigation.html");
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>
