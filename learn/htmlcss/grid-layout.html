@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diplay Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <nav id="nav-bar"></nav>
+  <body>
+    <div class="main-container">
+      <div class="secondary-container">
+        <h2>CSS Grid Layout</h2>
+        <h3>A Five Items Grid Layout</h3>
+        <div class="learn-grid-1">
+          <div class="learn-grid-item learn-grid-item-1">1</div>
+          <div class="learn-grid-item learn-grid-item-2">2</div>
+          <div class="learn-grid-item learn-grid-item-3">3</div>
+          <div class="learn-grid-item learn-grid-item-4">4</div>
+          <div class="learn-grid-item learn-grid-item-5">5</div>
+        </div>
+        <h3>Grid Layout - Template Area</h3>
+        <div class="learn-grid-2">
+          <div class="learn-grid-item learn-grid-2-item-1">Header</div>
+          <div class="learn-grid-item learn-grid-2-item-2">Menu</div>
+          0
+          <div class="learn-grid-item learn-grid-2-item-3">Main</div>
+          <div class="learn-grid-item learn-grid-2-item-4">Right</div>
+          <div class="learn-grid-item learn-grid-2-item-5">Footer</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
+  <script>
+    $(function () {
+      $("#nav-bar").load("../../templates/navigation.html");
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>

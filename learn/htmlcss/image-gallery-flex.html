@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Gallery Flex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <nav id="nav-bar"></nav>
+  <body>
+    <div id="image-gallery-flex" class="main-container">
+      <div class="secondary-container">
+        <h2>My Blog Images</h2>
+        <ul class="gallery-flex-container">
+          <li class="gallery-flex-image">
+            <a href="../../posts/asking-for-help.html" target="_blank">
+              <img src="../../images/askforhelp.jpg" alt="Blog Image" />
+            </a>
+          </li>
+
+          <li class="gallery-flex-image">
+            <a href="../../posts/first-blog.html" target="_blank">
+              <img src="../../images/firstblog.jpg" alt="Blog Image" />
+            </a>
+          </li>
+          <li class="gallery-flex-image">
+            <a href="../../posts/goal-setting.html" target="_blank">
+              <img src="../../images/goalsetting.jpg" alt="Blog Image" />
+            </a>
+          </li>
+          <li class="gallery-flex-image">
+            <a href="../../main/index.html" target="_blank">
+              <img src="../../images/jakepic.jpeg" alt="Blog Image" />
+            </a>
+          </li>
+          <li class="gallery-flex-image">
+            <a href="../../posts/first-blog.html" target="_blank">
+              <img src="../../images/welcome.jpg" alt="Blog Image" />
+            </a>
+          </li>
+          <li class="gallery-flex-image">
+            <a href="../../posts/winter-blog.html" target="_blank">
+              <img src="../../images/winter.jpg" alt="Blog Image" />
+            </a>
+          </li>
+          <li class="gallery-flex-image">
+            <a href="../../posts/asking-for-help.html" target="_blank">
+              <img src="../../images/askforhelp.jpg" alt="Blog Image" />
+            </a>
+          </li>
+          <li class="gallery-flex-image">
+            <a href="../../posts/goal-setting.html" target="_blank">
+              <img src="../../images/goalsetting.jpg" alt="Blog Image" />
+            </a>
+          </li>
+          <li class="gallery-flex-image">
+            <a href="../../posts/first-blog.html" target="_blank">
+              <img src="../../images/firstblog.jpg" alt="Blog Image" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
+  <script>
+    $(function () {
+      $("#nav-bar").load("../../templates/navigation.html");
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>

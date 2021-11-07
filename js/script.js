@@ -35,3 +35,15 @@ function setTheme(mode) {
   }
   localStorage.setItem("theme", mode);
 }
+
+/*
+################################################################################################
+                Line Clamp for Blog Blurb
+################################################################################################
+*/
+
+var postIntro = document.querySelectorAll(".js-post-intro");
+
+for (var i = 0; i < postIntro.length; i++) {
+  $clamp(postIntro[i], { clamp: 7 });
+}

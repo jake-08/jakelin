@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diplay Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <nav id="nav-bar"></nav>
+  <body>
+    <div class="main-container">
+      <div class="secondary-container">
+        <h2>CSS <code>display:table</code></h2>
+        <p class="display-table-text">The CSS table model is based on the HTML table model</p>
+        <p class="display-table-text">
+          A table is divided into ROWS, and each row contains one or more cells. Cells are children of ROWS, they are
+          NEVER children of columns.
+        </p>
+        <div class="display-table">
+          <div>
+            <div>0, 0</div>
+            <div>0, 1</div>
+          </div>
+          <div>
+            <div>1, 0</div>
+            <div>1, 1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
+  <script>
+    $(function () {
+      $("#nav-bar").load("../../templates/navigation.html");
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>

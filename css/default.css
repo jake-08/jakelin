@@ -439,10 +439,11 @@ a {
 
 .post {
   border: 1px solid var(--borderColor);
-
+  height: 500px;
   -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  position: relative;
 }
 
 .thumbnail {
@@ -458,6 +459,14 @@ a {
 }
 
 .post-title {
+  height: 48px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-title h6 {
   margin: 0;
   color: black;
 }
@@ -465,6 +474,11 @@ a {
 .post-intro {
   color: #4b5156;
   font-size: 16px;
+}
+
+.post-readmore {
+  position: absolute;
+  bottom: 0;
 }
 
 /*
@@ -670,6 +684,8 @@ article h2 {
 ################################################################################################
 */
 
+/* Background Images Full and Secondary*/
+
 .learn-background-img {
   background-image: url("../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
   background-repeat: no-repeat;
@@ -704,6 +720,172 @@ article h2 {
   left: 50%;
   opacity: 0.8;
   transform: translate(-50%, -50%);
+}
+
+/* Image Gallery Float*/
+
+#image-gallery .secondary-container {
+  height: 100vh;
+}
+
+.image-container {
+  border: 2px solid var(--borderColor);
+  width: 300px;
+  height: 240px;
+  float: left;
+  padding: 5px;
+  margin: 10px 0 0 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img:hover {
+  transform: scale(1.25);
+}
+
+/* Image Gallery Flex */
+
+#image-gallery-flex h2 {
+  text-align: center;
+}
+
+ul.gallery-flex-container {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 10px;
+}
+
+li.gallery-flex-image {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+li.gallery-flex-image img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.gallery-flex-image img:hover {
+  transform: scale(1.25);
+}
+
+@media (max-width: 480px) {
+  li.gallery-flex-image {
+    height: auto;
+    width: 100%;
+  }
+
+  li.gallery-flex-image img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
+
+/* Media query to remove hover effect on small screen */
+@media (hover: hover) {
+  .image-container img:hover {
+    transform: scale(1.25);
+  }
+
+  .gallery-flex-image img:hover {
+    transform: scale(1.25);
+  }
+}
+
+/* Dispaly Table */
+.display-table {
+  display: table;
+  width: 100%;
+}
+
+.display-table > div {
+  display: table-row;
+}
+
+.display-table > div > div {
+  display: table-cell;
+  padding: 5px;
+
+  border: #000000 solid 1px;
+}
+
+.display-table-text {
+  background-color: var(--borderColor);
+  display: table;
+}
+
+/* Grid Layout Learn */
+
+.learn-grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Grid Items */
+.learn-grid-1 {
+  display: grid;
+  background-color: #2196f3;
+  padding: 10px;
+  gap: 20px;
+}
+
+.learn-grid-item-1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-column: 1 / span 2;
+}
+
+.learn-grid-item-2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.learn-grid-item-5 {
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 1;
+}
+
+/* Grid Template Area */
+
+.learn-grid-2 {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+  background-color: #2196f3;
+  padding: 10px;
+  gap: 20px;
+}
+
+.learn-grid-2-item-1 {
+  grid-area: header;
+}
+
+.learn-grid-2-item-2 {
+  grid-area: menu;
+}
+
+.learn-grid-2-item-3 {
+  grid-area: main;
+}
+
+.learn-grid-2-item-4 {
+  grid-area: right;
+}
+
+.learn-grid-2-item-5 {
+  grid-area: footer;
 }
 
 /*
