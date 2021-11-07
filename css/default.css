@@ -149,6 +149,12 @@ code {
   overflow: auto;
 }
 
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .main-container {
   width: 1200px;
   margin: 0 auto;
@@ -697,11 +703,10 @@ article h2 {
   background-image: url("../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100vh - 46px);
+  height: calc(100vh - 103px);
 }
 
 .learn-background-img-full-header {
-  position: absolute;
   text-align: center;
   width: 100%;
 }
