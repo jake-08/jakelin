@@ -88,6 +88,7 @@ ol {
 table {
   border-collapse: collapse;
   width: 100%;
+  max-width: 100%;
 }
 
 td,
@@ -95,11 +96,16 @@ th {
   text-align: left;
   border: 1px solid black;
   padding: 8px;
+  vertical-align: top;
 }
 
-table tr td:first-child {
+/* table tr td:first-child {
   width: 30%;
 }
+
+table tr td:nth-child(2) {
+  width: 70%;
+} */
 
 button {
   display: block;
@@ -148,26 +154,56 @@ code {
   border-bottom: 1px sold var(--borderColor);
   overflow: auto;
 }
-
+/* 
 .site-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
+} */
+
+/* .section {
+  padding: 1vw 5vw;
+} */
 
 .main-container {
-  width: 1200px;
+  width: 100%;
+  background-color: var(--secondaryColor);
+  padding: 1vw 5vw;
+  /* display: flex;
+  justify-content: center; */
   margin: 0 auto;
 }
 
-.secondary-container {
-  background-color: var(--secondaryColor);
-  padding: 1vw 5vw;
+/* .secondary-container {
+} */
+
+@media (min-width: 576px) {
+  .main-container {
+    max-width: 540px;
+  }
 }
 
-@media screen and (max-width: 1200px) {
+@media (min-width: 768px) {
   .main-container {
-    width: 95%;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-container {
+    max-width: 1320px;
   }
 }
 
@@ -727,19 +763,20 @@ article h2 {
   transform: translate(-50%, -50%);
 }
 
-/* Image Gallery Float*/
+/* Image Gallery Flex*/
 
-#image-gallery .secondary-container {
-  height: 100vh;
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .image-container {
   border: 2px solid var(--borderColor);
   width: 300px;
   height: 240px;
-  float: left;
   padding: 5px;
   margin: 10px 0 0 10px;
+  flex-grow: 1;
 }
 
 .image-container img {
@@ -751,6 +788,13 @@ article h2 {
   transform: scale(1.25);
 }
 
+@media (max-width: 800px) {
+  .image-container {
+    width: 200px;
+    height: 180px;
+    flex-grow: 1;
+  }
+}
 /* Image Gallery Flex */
 
 #image-gallery-flex h2 {
