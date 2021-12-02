@@ -88,7 +88,6 @@ ol {
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 100%;
 }
 
 td,
@@ -99,13 +98,13 @@ th {
   vertical-align: top;
 }
 
-/* table tr td:first-child {
-  width: 30%;
+table tr td:first-child {
+  width: 70%;
 }
 
 table tr td:nth-child(2) {
-  width: 70%;
-} */
+  width: 30%;
+}
 
 button {
   display: block;
@@ -151,59 +150,23 @@ code {
 
 .s2 {
   background-color: var(--secondaryColor);
-  border-bottom: 1px sold var(--borderColor);
+  border-bottom: 1px solid var(--borderColor);
   overflow: auto;
 }
-/* 
-.site-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-} */
-
-/* .section {
-  padding: 1vw 5vw;
-} */
 
 .main-container {
-  width: 100%;
-  background-color: var(--secondaryColor);
-  padding: 1vw 5vw;
-  /* display: flex;
-  justify-content: center; */
+  width: 1200px;
   margin: 0 auto;
 }
 
-/* .secondary-container {
-} */
-
-@media (min-width: 576px) {
-  .main-container {
-    max-width: 540px;
-  }
+.secondary-container {
+  background-color: #fff;
+  padding: 1em 4em;
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 1200px) {
   .main-container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .main-container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .main-container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .main-container {
-    max-width: 1320px;
+    width: 95%;
   }
 }
 
@@ -480,6 +443,7 @@ a {
 }
 
 .post {
+  background-color: #fff;
   border: 1px solid var(--borderColor);
   height: 500px;
   -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
