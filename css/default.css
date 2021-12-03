@@ -23,7 +23,6 @@
 
 html,
 body {
-  background-color: var(--mainColor);
   padding: 0;
   margin: 0;
 }
@@ -57,7 +56,7 @@ textarea {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 48px;
 }
 h2 {
   font-size: 36px;
@@ -154,18 +153,22 @@ code {
   overflow: auto;
 }
 
-.main-container {
+.main-wrapper {
   width: 1200px;
   margin: 0 auto;
 }
 
-.secondary-container {
-  background-color: #fff;
+.secondary-wrapper {
+  background-color: var(--secondaryColor);
   padding: 1em 4em;
 }
 
-@media screen and (max-width: 1200px) {
-  .main-container {
+.header-wrapper {
+  text-align: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .main-wrapper {
     width: 95%;
   }
 }
@@ -181,12 +184,6 @@ code {
                (Index Page) Introduction Block 
 ################################################################################################
 */
-.greeting-wrapper {
-  display: grid;
-  text-align: center;
-  align-content: center;
-  min-height: 10em;
-}
 
 .intro-wrapper {
   background-color: var(--secondaryColor);
@@ -336,7 +333,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--mainColor);
+  background-color: var(--secondaryColor);
 }
 
 a {
@@ -569,6 +566,9 @@ article h2 {
 
 .date-time {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: absolute;
+  right: 18%;
+  top: 5%;
   font-size: 13px;
   color: var(--secondaryText);
   font-weight: bold;
@@ -634,6 +634,12 @@ article h2 {
   }
 }
 
+@media screen and (max-width: 1800px) {
+  .date-time {
+    right: 12%;
+  }
+}
+
 /*
 ################################################################################################
                Article end
@@ -647,8 +653,7 @@ article h2 {
 */
 
 .footer {
-  background-color: var(--mainColor);
-  border-top: 1px solid var(--borderColor);
+  background-color: var(--secondaryColor);
   text-align: center;
 }
 
@@ -693,6 +698,7 @@ article h2 {
 /* Background Images Full and Secondary*/
 
 .learn-background-img {
+  position: relative;
   background-image: url("../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -704,19 +710,6 @@ article h2 {
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 103px);
-}
-
-.learn-background-img-full-header {
-  text-align: center;
-  width: 100%;
-}
-
-#background-img-learn h2 {
-  text-align: center;
-}
-
-#background-img-learn .secondary-container {
-  position: relative;
 }
 
 .background-img-code {
@@ -785,7 +778,7 @@ li.gallery-flex-image img {
 }
 
 .gallery-flex-image img:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
 }
 
 @media (max-width: 480px) {
@@ -804,11 +797,11 @@ li.gallery-flex-image img {
 /* Media query to remove hover effect on small screen */
 @media (hover: hover) {
   .image-container img:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
   }
 
   .gallery-flex-image img:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
   }
 }
 
@@ -832,6 +825,10 @@ li.gallery-flex-image img {
 .display-table-text {
   background-color: var(--borderColor);
   display: table;
+}
+
+.without-display-table-text {
+  background-color: var(--mainColor);
 }
 
 /* Grid Layout Learn */

@@ -1,78 +1,106 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta Tag for Google Search Results -->
     <title>Template for Blogs</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
+    <!-- Meta Tag for Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
     <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
 
+    <!-- Favicon -->
+    <link href="../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-    <link href="../images/jakepic.jpeg" rel="icon" />
     <link rel="stylesheet" type="text/css" href="../css/default.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
+    <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
   </head>
-  <nav id="nav-bar"></nav>
   <body>
-    <div class="main-container">
-      <article class="article-container">
-        <div class="date-time">
-          <p>Date Here</p>
-          <p>MIN READ</p>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+
+        <ul class="navigation">
+          <li><a href="../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../main/blogs.html">Blogs</a></li>
+          <li><a href="../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <article class="secondary-wrapper">
+            <div class="date-time">
+              <p>Date Here</p>
+              <p>MIN READ</p>
+            </div>
+            <div class="header-wrapper">
+              <h1>Heading Here</h1>
+            </div>
+            <div class="img-container">
+              <img src="../images/" />
+            </div>
+            <p>Hello Friends,</p>
+            <p>First Para</p>
+            <p>Second Para</p>
+            <p>Third Para</p>
+            <p>Fourth Para</p>
+            <p>Fifth Para</p>
+            <p>Thank you so much for your time! 🙏</p>
+            <p>
+              Have a great day/ night! <br />
+              Jake
+            </p>
+            <h3>✍️ Quote of the Day</h3>
+            <div class="quote">Quote Here</div>
+            <h3>🎵 Song of the Day</h3>
+            <div class="song">
+              <p>
+                Artist - Music Name
+                <a target="_blank" href="#">Listen Here</a>
+              </p>
+              <span>"Lyris Here"</span>
+            </div>
+            <hr />
+            <div class="extra-section">
+              <p>
+                Underneath is the section where I would like to share about my website and my life updates that may/may not interest you. If you don't feel like you need to read it, please feel free
+                to skip this section.
+              </p>
+              <p>Para 1</p>
+              <p>Para 2</p>
+              <p>Should you have any recommendations, feedback, or anything about my website, please send it my way! I would love to hear from you.</p>
+            </div>
+          </article>
         </div>
-        <h2>Heading Here</h2>
-        <div class="img-container">
-          <img src="../images/" />
-        </div>
-        <p>Hello Friends,</p>
-        <p>First Para</p>
-        <p>Second Para</p>
-        <p>Third Para</p>
-        <p>Fourth Para</p>
-        <p>Fifth Para</p>
-        <p>Thank you so much for your time! 🙏</p>
-        <p>
-          Have a great day/ night! <br />
-          Jake
-        </p>
-        <h3>✍️ Quote of the Day</h3>
-        <div class="quote">Quote Here</div>
-        <h3>🎵 Song of the Day</h3>
-        <div class="song">
-          <p>
-            Artist - Music Name
-            <a target="_blank" href="#">Listen Here</a>
-          </p>
-          <span>"Lyris Here"</span>
-        </div>
-        <hr />
-        <div class="extra-section">
-          <p>
-            Underneath is the section where I would like to share about my website and my life updates that may/may not
-            interest you. If you don't feel like you need to read it, please feel free to skip this section.
-          </p>
-          <p>Para 1</p>
-          <p>Para 2</p>
-          <p>
-            Should you have any recommendations, feedback, or anything about my website, please send it my way! I would
-            love to hear from you.
-          </p>
-        </div>
-      </article>
-    </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
   </body>
-  <footer id="footer"></footer>
   <script type="text/javascript" src="../js/script.js"></script>
   <script>
     $(function () {
-      $("#nav-bar").load("../templates/navigation.html");
       $("#footer").load("../templates/footer.html");
     });
   </script>

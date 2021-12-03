@@ -1,104 +1,132 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta Tag for Google Search Results -->
     <title>Blogs</title>
+    <meta name="description" content="Welcome to my Blog Page" />
+
+    <!-- Meta Tag for Mobile Devices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
+    <!-- Meta Tag for Facebook -->
     <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/firstblog.html" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Blog Page" />
     <meta property="og:description" content=" Welcome to my Blog Page" />
     <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/welcome.jpg" />
 
+    <!-- Favicon -->
+    <link href="../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-    <link href="../images/jakepic.jpeg" rel="icon" />
     <link rel="stylesheet" type="text/css" href="../css/default.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
+    <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
   </head>
-  <nav id="nav-bar"></nav>
+
   <body>
-    <div class="main-container">
-      <div class="secondary-container">
-        <div class="greeting-wrapper">
-          <h1>My Blogs</h1>
+    <header>
+      <nav class="nav-wrapper">
+        <a href="../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+
+        <ul class="navigation">
+          <li><a href="../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../main/blogs.html">Blogs</a></li>
+          <li><a href="../main/learn.html">Learn</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <div class="header-wrapper">
+              <h1>My Blogs</h1>
+            </div>
+            <div class="post-wrapper">
+              <div class="post">
+                <img class="thumbnail" src="../images/goalsetting.jpg" />
+                <div class="post-preview">
+                  <div class="post-title"><h6>Setting Goals for Winter</h6></div>
+                  <div class="post-intro js-post-intro">
+                    <p>
+                      I need to get my life in order. I am not gonna lie - I do this all the time but this time, I've got to be serious. I mean a lot more serious than before, you will find out why
+                      below.
+                    </p>
+                  </div>
+                  <div class="post-readmore">
+                    <p><a href="../posts/goal-setting.html" target="_blank">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <img class="thumbnail" src="../images/askforhelp.jpg" />
+                <div class="post-preview">
+                  <div class="post-title"><h6>Why you should always ask for help</h6></div>
+                  <div class="post-intro js-post-intro">
+                    <p>
+                      One of the life-changing lessons I want to share today is - why you should always ask for help. Most people, including myself, like to solve problems on their own and can't be
+                      bothered to ask for help.
+                    </p>
+                  </div>
+                  <div class="post-readmore">
+                    <p><a href="../posts/asking-for-help.html" target="_blank">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <img class="thumbnail" src="../images/winter.jpg" />
+                <div class="post-preview">
+                  <div class="post-title"><h6>Why do we have winter?</h6></div>
+                  <div class="post-intro js-post-intro">
+                    <p>
+                      I learned something about the seasons of the year today - Winter to be specific. It happens that I have to give an introduction speech at my toastmaster (public speaking club)
+                      tomorrow and I have to speak about the meeting theme - which is "Winter".
+                    </p>
+                  </div>
+                  <div class="post-readmore">
+                    <p><a href="../posts/winter-blog.html" target="_blank">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <img class="thumbnail" src="../images/welcome.jpg" />
+                <div class="post-preview">
+                  <div class="post-title"><h6>Welcome to my First Blog</h6></div>
+                  <div class="post-intro js-post-intro">
+                    <p>
+                      Welcome to my very first blog. I've been waiting for this moment for the longest time and I'm glad that I'm finally doing it. Having only one more semester to finish my master's
+                      degree, I would like to document my student/ living-abroad life in Australia. It's like now or never.
+                    </p>
+                  </div>
+                  <div class="post-readmore">
+                    <p><a href="../posts/first-blog.html" target="_blank">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="post-wrapper">
-          <div class="post">
-            <img class="thumbnail" src="../images/goalsetting.jpg" />
-            <div class="post-preview">
-              <div class="post-title"><h6>Setting Goals for Winter</h6></div>
-              <div class="post-intro js-post-intro">
-                <p>
-                  I need to get my life in order. I am not gonna lie - I do this all the time but this time, I've got to
-                  be serious. I mean a lot more serious than before, you will find out why below.
-                </p>
-              </div>
-              <div class="post-readmore">
-                <p><a href="../posts/goal-setting.html" target="_blank">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="post">
-            <img class="thumbnail" src="../images/askforhelp.jpg" />
-            <div class="post-preview">
-              <div class="post-title"><h6>Why you should always ask for help</h6></div>
-              <div class="post-intro js-post-intro">
-                <p>
-                  One of the life-changing lessons I want to share today is - why you should always ask for help. Most
-                  people, including myself, like to solve problems on their own and can't be bothered to ask for help.
-                </p>
-              </div>
-              <div class="post-readmore">
-                <p><a href="../posts/asking-for-help.html" target="_blank">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="post">
-            <img class="thumbnail" src="../images/winter.jpg" />
-            <div class="post-preview">
-              <div class="post-title"><h6>Why do we have winter?</h6></div>
-              <div class="post-intro js-post-intro">
-                <p>
-                  I learned something about the seasons of the year today - Winter to be specific. It happens that I
-                  have to give an introduction speech at my toastmaster (public speaking club) tomorrow and I have to
-                  speak about the meeting theme - which is "Winter".
-                </p>
-              </div>
-              <div class="post-readmore">
-                <p><a href="../posts/winter-blog.html" target="_blank">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="post">
-            <img class="thumbnail" src="../images/welcome.jpg" />
-            <div class="post-preview">
-              <div class="post-title"><h6>Welcome to my First Blog</h6></div>
-              <div class="post-intro js-post-intro">
-                <p>
-                  Welcome to my very first blog. I've been waiting for this moment for the longest time and I'm glad
-                  that I'm finally doing it. Having only one more semester to finish my master's degree, I would like to
-                  document my student/ living-abroad life in Australia. It's like now or never.
-                </p>
-              </div>
-              <div class="post-readmore">
-                <p><a href="../posts/first-blog.html" target="_blank">Read More</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
   </body>
-  <footer id="footer"></footer>
+
   <script type="text/javascript" src="../js/script.js"></script>
   <script>
     $(function () {
-      $("#nav-bar").load("../templates/navigation.html");
       $("#footer").load("../templates/footer.html");
     });
   </script>

@@ -1,45 +1,74 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Diplay Table</title>
+    <!-- Meta Tag for Google Search Results -->
+    <title>CSS Units</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-    <link href="../../images/jakepic.jpeg" rel="icon" />
     <link rel="stylesheet" type="text/css" href="../../css/default.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
+    <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
   </head>
-
   <body>
-    <div class="site-wrapper">
-      <nav id="nav-bar"></nav>
-      <div class="main-container">
-        <div class="secondary-container">
-          <h2>CSS Sizing Units</h2>
-          <h3>Absolute Lengths</h3>
-          <p>
-            All absolute lengths resolve against the same base, making them predictable wherever they're used in your
-            CSS. For example, if you use cm to size your element and then print, it should be accurate if you compared
-            it to a ruler.
-          </p>
-          <p>
-            Absolute length units are not recommended for use on screen, because screen sizes vary so much. However,
-            they can be used if the output medium is known, such as for print layout.
-          </p>
-        </div>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <div class="header-wrapper">
+              <h1>CSS Units</h1>
+            </div>
+            <h2>CSS Sizing Units</h2>
+            <h3>Absolute Lengths</h3>
+            <p>
+              All absolute lengths resolve against the same base, making them predictable wherever they're used in your CSS. For example, if you use cm to size your element and then print, it should
+              be accurate if you compared it to a ruler.
+            </p>
+            <p>Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.</p>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer id="footer"></footer>
   </body>
   <script type="text/javascript" src="../../js/script.js"></script>
-  <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
-      $("#nav-bar").load("../../templates/navigation.html");
       $("#footer").load("../../templates/footer.html");
     });
   </script>

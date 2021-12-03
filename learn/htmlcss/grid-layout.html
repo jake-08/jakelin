@@ -1,49 +1,83 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Diplay Table</title>
+    <!-- Meta Tag for Google Search Results -->
+    <title>Grid Layout</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-    <link href="../../images/jakepic.jpeg" rel="icon" />
     <link rel="stylesheet" type="text/css" href="../../css/default.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
+    <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
   </head>
-  <nav id="nav-bar"></nav>
   <body>
-    <div class="main-container">
-      <div class="secondary-container">
-        <h2>CSS Grid Layout</h2>
-        <h3>A Five Items Grid Layout</h3>
-        <div class="learn-grid-1">
-          <div class="learn-grid-item learn-grid-item-1">1</div>
-          <div class="learn-grid-item learn-grid-item-2">2</div>
-          <div class="learn-grid-item learn-grid-item-3">3</div>
-          <div class="learn-grid-item learn-grid-item-4">4</div>
-          <div class="learn-grid-item learn-grid-item-5">5</div>
-        </div>
-        <h3>Grid Layout - Template Area</h3>
-        <div class="learn-grid-2">
-          <div class="learn-grid-item learn-grid-2-item-1">Header</div>
-          <div class="learn-grid-item learn-grid-2-item-2">Menu</div>
-          0
-          <div class="learn-grid-item learn-grid-2-item-3">Main</div>
-          <div class="learn-grid-item learn-grid-2-item-4">Right</div>
-          <div class="learn-grid-item learn-grid-2-item-5">Footer</div>
-        </div>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <div class="header-wrapper">
+              <h1>CSS Grid Layout</h1>
+            </div>
+            <h2>A Five Items Grid Layout</h2>
+            <div class="learn-grid-1">
+              <div class="learn-grid-item learn-grid-item-1">1</div>
+              <div class="learn-grid-item learn-grid-item-2">2</div>
+              <div class="learn-grid-item learn-grid-item-3">3</div>
+              <div class="learn-grid-item learn-grid-item-4">4</div>
+              <div class="learn-grid-item learn-grid-item-5">5</div>
+            </div>
+            <h3>Grid Layout - Template Area</h3>
+            <div class="learn-grid-2">
+              <div class="learn-grid-item learn-grid-2-item-1">Header</div>
+              <div class="learn-grid-item learn-grid-2-item-2">Menu</div>
+              <div class="learn-grid-item learn-grid-2-item-3">Main</div>
+              <div class="learn-grid-item learn-grid-2-item-4">Right</div>
+              <div class="learn-grid-item learn-grid-2-item-5">Footer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
   </body>
-  <footer id="footer"></footer>
   <script type="text/javascript" src="../../js/script.js"></script>
-  <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
-      $("#nav-bar").load("../../templates/navigation.html");
       $("#footer").load("../../templates/footer.html");
     });
   </script>
