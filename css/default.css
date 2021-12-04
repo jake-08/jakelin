@@ -141,33 +141,38 @@ code {
 ################################################################################################
 */
 
+/* For different sections */
 .s1 {
   background-color: var(--mainColor);
   border-bottom: 1px solid var(--borderColor);
   overflow: auto;
 }
 
+/* For different sections */
 .s2 {
   background-color: var(--secondaryColor);
   border-bottom: 1px solid var(--borderColor);
   overflow: auto;
 }
 
+/* For content to be in the middle */
 .main-wrapper {
   width: 1200px;
   margin: 0 auto;
 }
 
+/* For styling the middle content */
 .secondary-wrapper {
   background-color: var(--secondaryColor);
   padding: 1em 4em;
 }
 
+/* For styling the page header */
 .header-wrapper {
   text-align: center;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .main-wrapper {
     width: 95%;
   }
@@ -564,11 +569,15 @@ article h2 {
   text-align: center;
 }
 
+article.secondary-wrapper {
+  position: relative;
+}
+
 .date-time {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   position: absolute;
-  right: 18%;
-  top: 5%;
+  right: 5%;
+  top: 0;
   font-size: 13px;
   color: var(--secondaryText);
   font-weight: bold;
@@ -631,12 +640,6 @@ article h2 {
 @media screen and (max-width: 800px) {
   article .img-container {
     width: 70%;
-  }
-}
-
-@media screen and (max-width: 1800px) {
-  .date-time {
-    right: 12%;
   }
 }
 

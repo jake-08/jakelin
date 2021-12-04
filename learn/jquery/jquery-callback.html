@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta Tag for Google Search Results -->
     <title>jQuery Callback</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-    <link href="../../images/jakepic.jpeg" rel="icon" />
     <link rel="stylesheet" type="text/css" href="../../css/default.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
+    <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
   </head>
-  <nav id="nav-bar"></nav>
   <body>
-    <div class="main-container">
-      <div class="secondary-container">
-        <h1>jQuery Callback Functions</h1>
-        <p>A callback function is executed after the current effect is 100% finished.</p>
-        <p>
-          JavaScript statements are executed line by line. However, with effects, the next line of code can be run even
-          though the effect is not finished. This can create errors.
-        </p>
-        <p>To prevent this, you can create a callback function.</p>
-        <pre>$(selector).hide(speed,callback);</pre>
-        <button id="callback-hide">Callback Hide the paragraph below</button>
-        <p id="callback-p">This is paragraph with little content.</p>
-        <h1>jQuery Chaining Methods</h1>
-        <p>Until now we have been writing jQuery statements one at a time (one after the other).</p>
-        <p>
-          However, there is a technique called chaining, that allows us to run multiple jQuery commands, one after the
-          other, on the same element(s).
-        </p>
-        <button id="chaining">Click Here for Chaining Effect</button>
-        <p id="chaining-p">jQuery is fun!!</p>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <div class="header-wrapper">
+              <h1>jQuery Callback Functions</h1>
+            </div>
+            <p>A callback function is executed after the current effect is 100% finished.</p>
+            <p>JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.</p>
+            <p>To prevent this, you can create a callback function.</p>
+            <pre>$(selector).hide(speed,callback);</pre>
+            <button id="callback-hide">Callback Hide the paragraph below</button>
+            <p id="callback-p">This is paragraph with little content.</p>
+            <h1>jQuery Chaining Methods</h1>
+            <p>Until now we have been writing jQuery statements one at a time (one after the other).</p>
+            <p>However, there is a technique called chaining, that allows us to run multiple jQuery commands, one after the other, on the same element(s).</p>
+            <button id="chaining">Click Here for Chaining Effect</button>
+            <p id="chaining-p">jQuery is fun!!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
   </body>
-  <footer id="footer"></footer>
   <script type="text/javascript" src="../../js/script.js"></script>
   <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
-      $("#nav-bar").load("../../templates/navigation.html");
       $("#footer").load("../../templates/footer.html");
     });
   </script>

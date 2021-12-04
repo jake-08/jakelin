@@ -1,157 +1,146 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta Tag for Google Search Results -->
     <title>jQuery - Traversing</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-    <link href="../../images/jakepic.jpeg" rel="icon" />
     <link rel="stylesheet" type="text/css" href="../../css/default.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
+    <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
   </head>
-  <nav id="nav-bar"></nav>
   <body>
-    <div class="main-container">
-      <div class="secondary-container">
-        <h1>jQuery Traversing</h1>
-        <!-- What is Traversing -->
-        <h2>What is Traversing?</h2>
-        <p>
-          jQuery traversing, which means "move through", are used to "find" (or select) HTML elements based on their
-          relation to other elements. Start with one selection and move through that selection until you reach the
-          elements you desire.
-        </p>
-        <p>An ancestor is a parent, grandparent, great-grandparent, and so on.</p>
-        <p>A descendant is a child, grandchild, great-grandchild, and so on.</p>
-        <p>Siblings share the same parent.</p>
-        <p>jQuery provides a variety of methods that allow us to traverse the DOM.</p>
-        <p>The largest category of traversal methods are tree-traversal.</p>
-        <!-- Traversing Up -->
-        <h2>Traversing Up the DOM Tree</h2>
-        <p>With jQuery you can traverse <b>up</b> the DOM tree to find ancestors of an element.</p>
-        <p>Three useful jQuery methods for traversing up the DOM tree are:</p>
-        <ul>
-          <li>
-            <code>parent()</code> - method returns the direct parent element of the selected element. This method only
-            traverse a single level up the DOM tree.
-          </li>
-          <li>
-            <code>parents()</code> - method returns all ancestor elements of the selected element, all the way up to the
-            document's root element (<code>&lt;html&gt;</code>).
-          </li>
-          <li>
-            <code>parentsUntil()</code> - method returns all ancestor elements between two given arguments. (<code
-              >$("span").parentsUntil("div");</code
-            >
-          </li>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
         </ul>
-        <p>
-          Try the above methods at
-          <a href="https://www.w3schools.com/jquery/jquery_traversing_ancestors.asp" target="_blank"
-            >Traversing Up the DOM Tree</a
-          >.
-        </p>
-        <!-- Traversing Down -->
-        <h2>Traversing Down the DOM Tree</h2>
-        <p>Two useful jQuery methods for traversing down the DOM tree are:</p>
-        <ul>
-          <li>
-            <code>children()</code> - method returns all direct children of the selected element. This method only
-            traverses a single level down the DOM tree.
-          </li>
-          <li>
-            <code>find()</code> - method returns descendant elements of the selected element, all the way down to the
-            last descendant.
-          </li>
-        </ul>
-        <p>
-          Try the above methods at
-          <a href="https://www.w3schools.com/jquery/jquery_traversing_descendants.asp" target="_blank"
-            >Traversing Down the DOM Tree</a
-          >.
-        </p>
-        <!-- Traversing Sideways -->
-        <h2>Traversing Sideways in The DOM Tree</h2>
-        <p>With jQuery you can traverse sideways in the DOM tree to find siblings of an element.</p>
-        <p>There are many useful jQuery methods for traversing sideways in the DOM tree:</p>
-        <ul>
-          <li>
-            <code>siblings()</code> - method returns all sibling elements of the selected element. You can also use an
-            optional parameter to filter the search for siblings.
-          </li>
-          <li><code>next()</code> - method returns the next sibling element of the selected element.</li>
-          <li><code>nextAll()</code> - method returns all next sibling elements of the selected element.</li>
-          <li><code>nextUntil()</code> - method returns all next sibling elements between two given arguments.</li>
-          <li>
-            <code>prev()</code> - method work just like the methods above but with reverse functionality: they return
-            previous sibling elements
-          </li>
-          <li>
-            <code>prevAll()</code> - method work just like the methods above but with reverse functionality: they return
-            previous sibling elements
-          </li>
-          <li>
-            <code>prevUntil()</code> - method work just like the methods above but with reverse functionality: they
-            return previous sibling elements
-          </li>
-        </ul>
-        <p>
-          Try the above methods at
-          <a href="https://www.w3schools.com/jquery/jquery_traversing_filtering.asp" target="_blank"
-            >Traversing Sideways in The DOM Tree</a
-          >.
-        </p>
-        <!-- Traversing Filtering -->
-        <h2>jQuery Traversing - Filtering</h2>
-        <p>
-          The most basic filtering methods are <code>first()</code>, <code>last()</code> and <code>eq()</code>, which
-          allow you to select a specific element based on its position in a group of elements.
-        </p>
-        <p>
-          Other filtering methods, like <code>filter()</code> and <code>not()</code> allow you to select elements that
-          match, or do not match, a certain criteria.
-        </p>
-        <p>The <code>first()</code> method returns the first element of the specified elements.</p>
-        <p>The <code>last()</code> method returns the last element of the specified elements.</p>
-        <p>
-          The <code>eq()</code> method returns an element with a specific index number of the selected elements. The
-          index numbers start at 0, so the first element will have the index number 0 and not 1.
-        </p>
-        <p>
-          The <code>filter()</code> method lets you specify a criteria. Elements that do not match the criteria are
-          removed from the selection, and those that match will be returned.
-        </p>
-        <p>
-          The <code>not()</code> method returns all elements that do not match the criteria. Tip: The
-          <code>not()</code> method is the opposite of <code>filter()</code>.
-        </p>
-        <p>
-          Try the above methods at
-          <a href="https://www.w3schools.com/jquery/jquery_traversing_filtering.asp" target="_blank"
-            >jQuery Traversing - Filtering</a
-          >.
-        </p>
-        <!-- Reference -->
-        <h2>jQuery Traversing Reference</h2>
-        <p>
-          For a complete overview of all jQuery Traversing methods, please go to our
-          <a href="https://www.w3schools.com/jquery/jquery_ref_traversing.asp" target="_blank"
-            >jQuery Traversing Reference</a
-          >.
-        </p>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <div class="header-wrapper">
+              <h1>jQuery Traversing</h1>
+            </div>
+
+            <!-- What is Traversing -->
+            <h2>What is Traversing?</h2>
+            <p>
+              jQuery traversing, which means "move through", are used to "find" (or select) HTML elements based on their relation to other elements. Start with one selection and move through that
+              selection until you reach the elements you desire.
+            </p>
+            <p>An ancestor is a parent, grandparent, great-grandparent, and so on.</p>
+            <p>A descendant is a child, grandchild, great-grandchild, and so on.</p>
+            <p>Siblings share the same parent.</p>
+            <p>jQuery provides a variety of methods that allow us to traverse the DOM.</p>
+            <p>The largest category of traversal methods are tree-traversal.</p>
+            <!-- Traversing Up -->
+            <h2>Traversing Up the DOM Tree</h2>
+            <p>With jQuery you can traverse <b>up</b> the DOM tree to find ancestors of an element.</p>
+            <p>Three useful jQuery methods for traversing up the DOM tree are:</p>
+            <ul>
+              <li><code>parent()</code> - method returns the direct parent element of the selected element. This method only traverse a single level up the DOM tree.</li>
+              <li><code>parents()</code> - method returns all ancestor elements of the selected element, all the way up to the document's root element (<code>&lt;html&gt;</code>).</li>
+              <li><code>parentsUntil()</code> - method returns all ancestor elements between two given arguments. (<code>$("span").parentsUntil("div");</code></li>
+            </ul>
+            <p>
+              Try the above methods at
+              <a href="https://www.w3schools.com/jquery/jquery_traversing_ancestors.asp" target="_blank">Traversing Up the DOM Tree</a>.
+            </p>
+            <!-- Traversing Down -->
+            <h2>Traversing Down the DOM Tree</h2>
+            <p>Two useful jQuery methods for traversing down the DOM tree are:</p>
+            <ul>
+              <li><code>children()</code> - method returns all direct children of the selected element. This method only traverses a single level down the DOM tree.</li>
+              <li><code>find()</code> - method returns descendant elements of the selected element, all the way down to the last descendant.</li>
+            </ul>
+            <p>
+              Try the above methods at
+              <a href="https://www.w3schools.com/jquery/jquery_traversing_descendants.asp" target="_blank">Traversing Down the DOM Tree</a>.
+            </p>
+            <!-- Traversing Sideways -->
+            <h2>Traversing Sideways in The DOM Tree</h2>
+            <p>With jQuery you can traverse sideways in the DOM tree to find siblings of an element.</p>
+            <p>There are many useful jQuery methods for traversing sideways in the DOM tree:</p>
+            <ul>
+              <li><code>siblings()</code> - method returns all sibling elements of the selected element. You can also use an optional parameter to filter the search for siblings.</li>
+              <li><code>next()</code> - method returns the next sibling element of the selected element.</li>
+              <li><code>nextAll()</code> - method returns all next sibling elements of the selected element.</li>
+              <li><code>nextUntil()</code> - method returns all next sibling elements between two given arguments.</li>
+              <li><code>prev()</code> - method work just like the methods above but with reverse functionality: they return previous sibling elements</li>
+              <li><code>prevAll()</code> - method work just like the methods above but with reverse functionality: they return previous sibling elements</li>
+              <li><code>prevUntil()</code> - method work just like the methods above but with reverse functionality: they return previous sibling elements</li>
+            </ul>
+            <p>
+              Try the above methods at
+              <a href="https://www.w3schools.com/jquery/jquery_traversing_filtering.asp" target="_blank">Traversing Sideways in The DOM Tree</a>.
+            </p>
+            <!-- Traversing Filtering -->
+            <h2>jQuery Traversing - Filtering</h2>
+            <p>
+              The most basic filtering methods are <code>first()</code>, <code>last()</code> and <code>eq()</code>, which allow you to select a specific element based on its position in a group of
+              elements.
+            </p>
+            <p>Other filtering methods, like <code>filter()</code> and <code>not()</code> allow you to select elements that match, or do not match, a certain criteria.</p>
+            <p>The <code>first()</code> method returns the first element of the specified elements.</p>
+            <p>The <code>last()</code> method returns the last element of the specified elements.</p>
+            <p>
+              The <code>eq()</code> method returns an element with a specific index number of the selected elements. The index numbers start at 0, so the first element will have the index number 0 and
+              not 1.
+            </p>
+            <p>The <code>filter()</code> method lets you specify a criteria. Elements that do not match the criteria are removed from the selection, and those that match will be returned.</p>
+            <p>The <code>not()</code> method returns all elements that do not match the criteria. Tip: The <code>not()</code> method is the opposite of <code>filter()</code>.</p>
+            <p>
+              Try the above methods at
+              <a href="https://www.w3schools.com/jquery/jquery_traversing_filtering.asp" target="_blank">jQuery Traversing - Filtering</a>.
+            </p>
+            <!-- Reference -->
+            <h2>jQuery Traversing Reference</h2>
+            <p>
+              For a complete overview of all jQuery Traversing methods, please go to our
+              <a href="https://www.w3schools.com/jquery/jquery_ref_traversing.asp" target="_blank">jQuery Traversing Reference</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
   </body>
-  <footer id="footer"></footer>
   <script type="text/javascript" src="../../js/script.js"></script>
   <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
-      $("#nav-bar").load("../../templates/navigation.html");
       $("#footer").load("../../templates/footer.html");
     });
   </script>

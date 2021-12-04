@@ -1,201 +1,208 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta Tag for Google Search Results -->
     <title>jQuery DOM</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-    <link href="../../images/jakepic.jpeg" rel="icon" />
     <link rel="stylesheet" type="text/css" href="../../css/default.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
+    <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
   </head>
-  <nav id="nav-bar"></nav>
   <body>
-    <div class="main-container">
-      <div class="secondary-container">
-        <h1>jQuery DOM Manipulation</h1>
-        <p>jQuery contains powerful methods for changing and manipulating HTML elements and attributes.</p>
-        <p>
-          jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and
-          attributes.
-        </p>
-        <p><strong>DOM = Document Object Model</strong></p>
-        <!-- Get Content -->
-        <h2>Get Content - text(), html(), and val()</h2>
-        <p>Three simple, but useful, jQuery methods for DOM manipulation are:</p>
-        <ul>
-          <li><code>text()</code> - Sets or returns the text content of selected elements</li>
-          <li><code>html()</code> - Sets or return the content of selected elements (including HTML markup)</li>
-          <li><code>val()</code> - Sets or returns the value of form fields</li>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
         </ul>
-        <p id="dom-text-1">This is some <b>bold</b> text in a paragraph.</p>
-        <button id="dom-btn1">Show Text</button>
-        <button id="dom-btn2">Show HTML</button>
-        <button id="dom-btn3">Show Input Value</button>
-        <p>Name: <input type="text" id="dom-text-2" value="Mickey Mouse" /></p>
-        <!-- Get Attribute  -->
-        <h2>Get Attributes - attr()</h2>
-        <p>The jQuery <code>attr()</code> method is used to get attribute values.</p>
-        <p><a href="https://www.w3schools.com" id="w3s-1">W3Schools.com</a></p>
-        <button id="dom-btn4">Show href Value</button>
-        <h2>Set Content - text(), html(), and val()</h2>
-        <p>
-          We will use the same three methods - <code>text()</code>, <code>html()</code>,and <code>val()</code> from
-          above to set content:
-        </p>
-        <p id="dom-text-3">This is a paragraph.</p>
-        <p id="dom-text-4">This is another paragraph.</p>
-        <p>Input field: <input type="text" id="dom-text-5" value="Mickey Mouse" /></p>
-        <button id="dom-btn5">Set Text</button>
-        <button id="dom-btn6">Set HTML</button>
-        <button id="dom-btn7">Set Input Value</button>
-        <h2>Set Attributes - attr()</h2>
-        <p>The jQuery <code>attr()</code> method is used to set/change attribute values.</p>
-        <p><a href="https://www.w3schools.com" id="w3s-2" target="_blank">W3Schools.com</a></p>
-        <button id="dom-btn8">Change href Value</button>
-        <!-- Add Elements -->
-        <h2>jQuery - Add Elements/Content</h2>
-        <p>With jQuery, it is easy to add new elements/content.</p>
-        <p>We will look at four jQuery methods that are used to add new content:</p>
-        <ul>
-          <li><code>append()</code> - Inserts content at the end of the selected elements</li>
-          <li><code>prepend()</code> - Inserts content at the beginning of the selected elements</li>
-          <li><code>after()</code> - Inserts content after the selected elements</li>
-          <li><code>before()</code> - Inserts content before the selected elements</li>
-        </ul>
-        <p id="dom-text-6">This is a paragraph.</p>
-        <p id="dom-text-7">This is another paragraph.</p>
-        <ol id="dom-text-8">
-          <li>List item 1</li>
-          <li>List item 2</li>
-          <li>List item 3</li>
-        </ol>
-        <button id="dom-btn9">Append text</button>
-        <button id="dom-btn10">Append list items</button>
-        <button id="dom-btn11">Prepend text</button>
-        <button id="dom-btn12">Prepend list items</button>
-        <p>
-          Both <code>append()</code> and <code>prepend()</code> method can take an infinite number of new elements as
-          parameters.
-        </p>
-        <pre>$("body").append(txt1, txt2, txt3);&nbsp;&nbsp;&nbsp;// Append the new elements</pre>
-        <!-- Before and After -->
-        <div id="div-before-after" style="width: 80px; height: 80px; background-color: red"></div>
-        <button id="dom-btn13">Insert Before</button>
-        <button id="dom-btn14">Insert After</button>
-        <p>
-          Both <code>before()</code> and <code>after()</code> method can take an infinite number of new elements as
-          parameters.
-        </p>
-        <pre> $("img").after(txt1, txt2, txt3);&nbsp;&nbsp;&nbsp;// Insert new elements after <img></pre>
-        <!-- Remove Elemets/Content -->
-        <h2>jQuery - Remove Elements/Content</h2>
-        <p>To remove elements and content, there are mainly two jQuery methods:</p>
-        <ul>
-          <li><code>remove()</code> - Removes the selected element (and its child elements)</li>
-          <li><code>empty()</code> - Removes the child elements from the selected element</li>
-        </ul>
-        <div
-          id="div1-remove"
-          style="height: 150px; width: 300px; border: 1px solid black; background-color: yellow; margin-top: 20px"
-        >
-          This is some text in the div.
-          <p class="remove-test">This is a paragraph in the div.</p>
-          <p class="remove-demo">This is another paragraph in the div.</p>
-        </div>
-        <button id="dom-btn15">Remove the div element</button>
-        <button id="dom-btn16">Empty the div element</button>
-        <button id="dom-btn17">Remove all p elements with class="remove-test"</button>
-        <button id="dom-btn18">Remove all p elements with class="remove-test" and class="remove-demo"</button>
-        <!-- Manipulating CSS -->
-        <h2>jQuery Manipulating CSS</h2>
-        <p>jQuery has several methods for CSS manipulation. We will look at the following methods:</p>
-        <ul>
-          <li><code>addClass()</code> - Adds one or more classes to the selected elements</li>
-          <li><code>removeClass()</code> - Removes one or more classes from the selected elements</li>
-          <li><code>toggelClass()</code> - Toggles between adding/removing classes from the selected elements</li>
-          <li><code>css()</code> - Sets or return the style attribute</li>
-        </ul>
-        <p>
-          Try the <code>addClass()</code>, <code>removeClass()</code>, and <code>toggleClass()</code>methods at
-          <a href="https://www.w3schools.com/jquery/jquery_css_classes.asp" target="_blank"
-            >jQuery - Get and Set CSS Classes
-          </a>
-        </p>
-        <h3>css() Method</h3>
-        <p>To return the value of a specified CSS property, use the following syntax:</p>
-        <pre>
-          css("propertyname");
-          $("p").css("background-color");
-        </pre>
-        <p>To set a specified CSS property, use the following syntax:</p>
-        <pre>
-          css("propertyname","value");
-          .$("p").css("background-color", "yellow");
-        </pre>
-        <p>To set multiple CSS properties, use the following syntax:</p>
-        <pre>
-          css({"propertyname":"value","propertyname":"value",...});
-          $("p").css({"background-color": "yellow", "font-size": "200%"});
-        </pre>
-        <p>
-          Try the <code>css()</code> method at
-          <a href="https://www.w3schools.com/jquery/jquery_css.asp" target="_blank">jQuery - css() Method</a>
-        </p>
-        <!-- Dimensions -->
-        <h2>jQuery - Dimensions</h2>
-        <p>With jQuery, it is easy to work with the dimensions of elements and browser window.</p>
-        <ul>
-          <li>
-            The <code>width()</code> method sets or returns the width of an element (excludes padding, border and
-            margin).
-          </li>
-          <li>
-            The <code>height()</code> method sets or returns the height of an element (excludes padding, border and
-            margin).
-          </li>
-          <li>The <code>innerWidth()</code> method returns the width of an element (includes padding).</li>
-          <li>The <code>innerHeight()</code> method returns the height of an element (includes padding).</li>
-          <li>The <code>outerWidth()</code> method returns the width of an element (includes padding and border).</li>
-          <li>The <code>outerHeight()</code> method returns the height of an element (includes padding and border).</li>
-          <li>
-            The <code>outerWidth(true)</code> method returns the width of an element (includes padding, border, and
-            margin).
-          </li>
-          <li>
-            The <code>outerHeight(true)</code> method returns the height of an element (includes padding, border, and
-            margin).
-          </li>
-        </ul>
-        <p>The following example sets the width and height of a specified <code>&lt;div&gt;</code> element:</p>
-        <pre>
-          $("button").click(function(){
-          &nbsp;&nbsp;&nbsp;$("#div1").width(500).height(500);
-          });
-        </pre>
-        <p>
-          Try the above methods at
-          <a href="https://www.w3schools.com/jquery/jquery_dimensions.asp" target="_blank">jQuery - Dimensions</a>
-        </p>
-        <!-- Reference -->
-        <h2>jQuery HTML/CSS Methods Reference</h2>
-        <p>
-          For a complete overview of all jQuery HTML methods, please go to our
-          <a href="https://www.w3schools.com/jquERy/jquery_ref_html.asp" target="_blank">jQuery HTML/CSS Reference</a>.
-        </p>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <div class="header-wrapper">
+              <h1>jQuery DOM Manipulation</h1>
+            </div>
+            <p>jQuery contains powerful methods for changing and manipulating HTML elements and attributes.</p>
+            <p>jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.</p>
+            <p><strong>DOM = Document Object Model</strong></p>
+            <!-- Get Content -->
+            <h2>Get Content - text(), html(), and val()</h2>
+            <p>Three simple, but useful, jQuery methods for DOM manipulation are:</p>
+            <ul>
+              <li><code>text()</code> - Sets or returns the text content of selected elements</li>
+              <li><code>html()</code> - Sets or return the content of selected elements (including HTML markup)</li>
+              <li><code>val()</code> - Sets or returns the value of form fields</li>
+            </ul>
+            <p id="dom-text-1">This is some <b>bold</b> text in a paragraph.</p>
+            <button id="dom-btn1">Show Text</button>
+            <button id="dom-btn2">Show HTML</button>
+            <button id="dom-btn3">Show Input Value</button>
+            <p>Name: <input type="text" id="dom-text-2" value="Mickey Mouse" /></p>
+            <!-- Get Attribute  -->
+            <h2>Get Attributes - attr()</h2>
+            <p>The jQuery <code>attr()</code> method is used to get attribute values.</p>
+            <p><a href="https://www.w3schools.com" id="w3s-1">W3Schools.com</a></p>
+            <button id="dom-btn4">Show href Value</button>
+            <h2>Set Content - text(), html(), and val()</h2>
+            <p>We will use the same three methods - <code>text()</code>, <code>html()</code>,and <code>val()</code> from above to set content:</p>
+            <p id="dom-text-3">This is a paragraph.</p>
+            <p id="dom-text-4">This is another paragraph.</p>
+            <p>Input field: <input type="text" id="dom-text-5" value="Mickey Mouse" /></p>
+            <button id="dom-btn5">Set Text</button>
+            <button id="dom-btn6">Set HTML</button>
+            <button id="dom-btn7">Set Input Value</button>
+            <h2>Set Attributes - attr()</h2>
+            <p>The jQuery <code>attr()</code> method is used to set/change attribute values.</p>
+            <p><a href="https://www.w3schools.com" id="w3s-2" target="_blank">W3Schools.com</a></p>
+            <button id="dom-btn8">Change href Value</button>
+            <!-- Add Elements -->
+            <h2>jQuery - Add Elements/Content</h2>
+            <p>With jQuery, it is easy to add new elements/content.</p>
+            <p>We will look at four jQuery methods that are used to add new content:</p>
+            <ul>
+              <li><code>append()</code> - Inserts content at the end of the selected elements</li>
+              <li><code>prepend()</code> - Inserts content at the beginning of the selected elements</li>
+              <li><code>after()</code> - Inserts content after the selected elements</li>
+              <li><code>before()</code> - Inserts content before the selected elements</li>
+            </ul>
+            <p id="dom-text-6">This is a paragraph.</p>
+            <p id="dom-text-7">This is another paragraph.</p>
+            <ol id="dom-text-8">
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <li>List item 3</li>
+            </ol>
+            <button id="dom-btn9">Append text</button>
+            <button id="dom-btn10">Append list items</button>
+            <button id="dom-btn11">Prepend text</button>
+            <button id="dom-btn12">Prepend list items</button>
+            <p>Both <code>append()</code> and <code>prepend()</code> method can take an infinite number of new elements as parameters.</p>
+            <pre>$("body").append(txt1, txt2, txt3);&nbsp;&nbsp;&nbsp;// Append the new elements</pre>
+            <!-- Before and After -->
+            <div id="div-before-after" style="width: 80px; height: 80px; background-color: red"></div>
+            <button id="dom-btn13">Insert Before</button>
+            <button id="dom-btn14">Insert After</button>
+            <p>Both <code>before()</code> and <code>after()</code> method can take an infinite number of new elements as parameters.</p>
+            <pre> $("img").after(txt1, txt2, txt3);&nbsp;&nbsp;&nbsp;// Insert new elements after <img></pre>
+            <!-- Remove Elemets/Content -->
+            <h2>jQuery - Remove Elements/Content</h2>
+            <p>To remove elements and content, there are mainly two jQuery methods:</p>
+            <ul>
+              <li><code>remove()</code> - Removes the selected element (and its child elements)</li>
+              <li><code>empty()</code> - Removes the child elements from the selected element</li>
+            </ul>
+            <div id="div1-remove" style="height: 150px; width: 300px; border: 1px solid black; background-color: yellow; margin-top: 20px">
+              This is some text in the div.
+              <p class="remove-test">This is a paragraph in the div.</p>
+              <p class="remove-demo">This is another paragraph in the div.</p>
+            </div>
+            <button id="dom-btn15">Remove the div element</button>
+            <button id="dom-btn16">Empty the div element</button>
+            <button id="dom-btn17">Remove all p elements with class="remove-test"</button>
+            <button id="dom-btn18">Remove all p elements with class="remove-test" and class="remove-demo"</button>
+            <!-- Manipulating CSS -->
+            <h2>jQuery Manipulating CSS</h2>
+            <p>jQuery has several methods for CSS manipulation. We will look at the following methods:</p>
+            <ul>
+              <li><code>addClass()</code> - Adds one or more classes to the selected elements</li>
+              <li><code>removeClass()</code> - Removes one or more classes from the selected elements</li>
+              <li><code>toggelClass()</code> - Toggles between adding/removing classes from the selected elements</li>
+              <li><code>css()</code> - Sets or return the style attribute</li>
+            </ul>
+            <p>
+              Try the <code>addClass()</code>, <code>removeClass()</code>, and <code>toggleClass()</code>methods at
+              <a href="https://www.w3schools.com/jquery/jquery_css_classes.asp" target="_blank">jQuery - Get and Set CSS Classes </a>
+            </p>
+            <h3>css() Method</h3>
+            <p>To return the value of a specified CSS property, use the following syntax:</p>
+            <pre>
+              css("propertyname");
+              $("p").css("background-color");
+            </pre>
+            <p>To set a specified CSS property, use the following syntax:</p>
+            <pre>
+              css("propertyname","value");
+              .$("p").css("background-color", "yellow");
+            </pre>
+            <p>To set multiple CSS properties, use the following syntax:</p>
+            <pre>
+              css({"propertyname":"value","propertyname":"value",...});
+              $("p").css({"background-color": "yellow", "font-size": "200%"});
+            </pre>
+            <p>
+              Try the <code>css()</code> method at
+              <a href="https://www.w3schools.com/jquery/jquery_css.asp" target="_blank">jQuery - css() Method</a>
+            </p>
+            <!-- Dimensions -->
+            <h2>jQuery - Dimensions</h2>
+            <p>With jQuery, it is easy to work with the dimensions of elements and browser window.</p>
+            <ul>
+              <li>The <code>width()</code> method sets or returns the width of an element (excludes padding, border and margin).</li>
+              <li>The <code>height()</code> method sets or returns the height of an element (excludes padding, border and margin).</li>
+              <li>The <code>innerWidth()</code> method returns the width of an element (includes padding).</li>
+              <li>The <code>innerHeight()</code> method returns the height of an element (includes padding).</li>
+              <li>The <code>outerWidth()</code> method returns the width of an element (includes padding and border).</li>
+              <li>The <code>outerHeight()</code> method returns the height of an element (includes padding and border).</li>
+              <li>The <code>outerWidth(true)</code> method returns the width of an element (includes padding, border, and margin).</li>
+              <li>The <code>outerHeight(true)</code> method returns the height of an element (includes padding, border, and margin).</li>
+            </ul>
+            <p>The following example sets the width and height of a specified <code>&lt;div&gt;</code> element:</p>
+            <pre>
+              $("button").click(function(){
+              &nbsp;&nbsp;&nbsp;$("#div1").width(500).height(500);
+              });
+            </pre>
+            <p>
+              Try the above methods at
+              <a href="https://www.w3schools.com/jquery/jquery_dimensions.asp" target="_blank">jQuery - Dimensions</a>
+            </p>
+            <!-- Reference -->
+            <h2>jQuery HTML/CSS Methods Reference</h2>
+            <p>
+              For a complete overview of all jQuery HTML methods, please go to our
+              <a href="https://www.w3schools.com/jquERy/jquery_ref_html.asp" target="_blank">jQuery HTML/CSS Reference</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
   </body>
-  <footer id="footer"></footer>
   <script type="text/javascript" src="../../js/script.js"></script>
   <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
-      $("#nav-bar").load("../../templates/navigation.html");
       $("#footer").load("../../templates/footer.html");
     });
   </script>

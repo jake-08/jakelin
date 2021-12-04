@@ -1,87 +1,124 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>jQuery - AJAX</title>
+    <!-- Meta Tag for Google Search Results -->
+    <title>jQuery - Filters</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-    <link href="../../images/jakepic.jpeg" rel="icon" />
     <link rel="stylesheet" type="text/css" href="../../css/default.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
 
+    <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
   </head>
-  <nav id="nav-bar"></nav>
   <body>
-    <div class="main-container">
-      <div class="secondary-container">
-        <h1>jQuery - Filters</h1>
-        <p>Use jQuery to filter/search for specific elements.</p>
-        <h2>Filter Tables</h2>
-        <p>Type something in the input field to search the table for first names, last names or emails:</p>
-        <input id="filter-input-1" type="text" placeholder="Search.." />
-        <table>
-          <thead>
-            <tr>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          <tbody id="filter-table">
-            <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
-            </tr>
-            <tr>
-              <td>Mary</td>
-              <td>Moe</td>
-              <td>mary@mail.com</td>
-            </tr>
-            <tr>
-              <td>July</td>
-              <td>Dooley</td>
-              <td>july@greatstuff.com</td>
-            </tr>
-            <tr>
-              <td>Anja</td>
-              <td>Ravendale</td>
-              <td>a_r@test.com</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
-        <h2>Filter Lists</h2>
-        <p>Type something in the input field to search the table for first names, last names or emails:</p>
-        <input id="filter-input-2" type="text" placeholder="Search.." />
-        <ul id="filter-list">
-          <li>First item</li>
-          <li>Second item</li>
-          <li>Third item</li>
-          <li>Fourth item</li>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
         </ul>
-        <h2>Filter Anything</h2>
-        <p>Type something in the input field to search for a specific text inside the div element with id="myDIV":</p>
-        <input id="filter-input-3" type="text" placeholder="Search.." />
-        <div id="filter-div">
-          <p>I am a paragraph.</p>
-          <div>I am a div element inside div.</div>
-          <button>I am a button</button>
-          <button>Another button</button>
-          <p>Another paragraph.</p>
-        </div>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <div class="header-wrapper">
+              <h1>jQuery Callback Functions</h1>
+            </div>
+            <h1>jQuery - Filters</h1>
+            <p>Use jQuery to filter/search for specific elements.</p>
+            <h2>Filter Tables</h2>
+            <p>Type something in the input field to search the table for first names, last names or emails:</p>
+            <input id="filter-input-1" type="text" placeholder="Search.." />
+            <table>
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody id="filter-table">
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                </tr>
+                <tr>
+                  <td>Mary</td>
+                  <td>Moe</td>
+                  <td>mary@mail.com</td>
+                </tr>
+                <tr>
+                  <td>July</td>
+                  <td>Dooley</td>
+                  <td>july@greatstuff.com</td>
+                </tr>
+                <tr>
+                  <td>Anja</td>
+                  <td>Ravendale</td>
+                  <td>a_r@test.com</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+            <h2>Filter Lists</h2>
+            <p>Type something in the input field to search the table for first names, last names or emails:</p>
+            <input id="filter-input-2" type="text" placeholder="Search.." />
+            <ul id="filter-list">
+              <li>First item</li>
+              <li>Second item</li>
+              <li>Third item</li>
+              <li>Fourth item</li>
+            </ul>
+            <h2>Filter Anything</h2>
+            <p>Type something in the input field to search for a specific text inside the div element with id="myDIV":</p>
+            <input id="filter-input-3" type="text" placeholder="Search.." />
+            <div id="filter-div">
+              <p>I am a paragraph.</p>
+              <div>I am a div element inside div.</div>
+              <button>I am a button</button>
+              <button>Another button</button>
+              <p>Another paragraph.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
   </body>
-  <footer id="footer"></footer>
   <script type="text/javascript" src="../../js/script.js"></script>
   <script type="text/javascript" src="../../js/jquery-learn-script.js"></script>
   <script>
     $(function () {
-      $("#nav-bar").load("../../templates/navigation.html");
       $("#footer").load("../../templates/footer.html");
     });
   </script>
