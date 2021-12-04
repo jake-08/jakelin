@@ -157,18 +157,25 @@ code {
 
 /* For content to be in the middle */
 .main-wrapper {
+  background-color: var(--secondaryColor);
   width: 1200px;
   margin: 0 auto;
-}
-
-/* For styling the middle content */
-.secondary-wrapper {
-  background-color: var(--secondaryColor);
   padding: 1em 4em;
 }
 
+/* Remvoing background color and padding on home page */
+#home-page .s1 .main-wrapper {
+  background-color: var(--mainColor);
+  padding: 0;
+}
+
+#home-page .s2 .main-wrapper {
+  background-color: var(--secondaryColor);
+  padding: 0;
+}
+
 /* For styling the page header */
-.header-wrapper {
+.main-wrapper h1 {
   text-align: center;
 }
 
@@ -569,7 +576,7 @@ article h2 {
   text-align: center;
 }
 
-article.secondary-wrapper {
+#blogs .main-wrapper {
   position: relative;
 }
 
