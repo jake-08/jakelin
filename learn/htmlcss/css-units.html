@@ -48,15 +48,64 @@
     </header>
     <main>
       <section class="s1">
-        <h1>CSS Units</h1>
-        <h2>CSS Sizing Units</h2>
-        <h3>Absolute Lengths</h3>
-        <p>
-          All absolute lengths resolve against the same base, making them predictable wherever they're used in your CSS. For example, if you use cm to size your element and then print, it should
-          be accurate if you compared it to a ruler.
-        </p>
-        <p>Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.</p>
-      </div>
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>CSS Units</h1>
+            <h2>CSS Sizing Units</h2>
+            <p>CSS has several different units for expressing a length.</p>
+            <p>Many CSS properties take "length" values, such as <code>width</code>, <code>margin</code>, <code>padding</code>, <code>font-size</code>, etc.</p>
+            <p><b>Length</b> is a number followed by a length unit, such as <code>10px</code>, <code>2em</code>, etc.</p>
+            <p>For some CSS properties, negative lengths are allowed.</p>
+            <p>There are two types of length units: <b>absolute</b> and <b>relative</b>.</p>
+            <h3>Absolute Lengths</h3>
+            <p>The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.</p>
+            <p>All absolute lengths resolve against the same base, making them predictable wherever they're used in your CSS. For example, if you use cm to size your element and then print, it should beaccurate if you compared it to a ruler.</p>
+            <p>Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.</p>
+            <table>
+              <tr>
+                <th style="width: 30%;">Unit</th>
+                <th style="width: 70%;">Description</th>
+              </tr>
+              <tr>
+                <td>cm</td>
+                <td>centimeters</td>
+              </tr>
+              <tr>
+                <td>mm</td>
+                <td>millimeters</td>
+              </tr>
+              <tr>
+                <td>in</td>
+                <td>inches (1in = 96px = 2.54cm)</td>
+              </tr>
+              <tr>
+                <td>px *</td>
+                <td>pixel (1px = 1/96th of 1in) </br>Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens 1px implies multiple device pixels.</td>
+              </tr>
+              <tr>
+                <td>pt</td>
+                <td>points (1pt = 1/72 of 1in)</td>
+              </tr>
+              <tr>
+                <td>pc</td>
+                <td>picas (1pc = 12 pt)</td>
+              </tr>
+            </table>
+            <h2>Relative Lengths</h2>
+            <p>Relative length units specify a length relative to anohter length property.</p>
+            <p>Relative lenght units scale better between different rendering medium.</p>
+            <p><code>em</code> - Relative to the font-size of the element (2em means 2 times the size of the current font)</p>
+            <p><code>rem</code> - Relative to font-size of the root element</p>
+            <p><code>vw</code> - Relative to 1% of the width of the viewport*</p>
+            <p><code>vh</code> - Relative to 1% of the height of the viewport*</p>
+            <p><code>%</code> - Relative to the parent element</p>
+            <p><b>Tip:</b> The <code>em</code> and <code>rem</code> are pratical in creating perfectly scalable layout!</p>
+            <p>*Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.</p>
+            <h2>Pixel to EM Converter and Table</h2>
+            <p><b>Tip: </b>The defult font size is usually <code>16px</code>.</p>
+            <p><a href="https://www.w3schools.com/cssref/css_pxtoemconversion.asp" target="_blank">Go to Converter and Table Reference</a></p>
+          </div>
+        </div>
       </section>
     </main>
     <footer id="footer"></footer>

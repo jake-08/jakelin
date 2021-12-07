@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Meta Tag for Google Search Results -->
-    <title>Display Table</title>
+    <title>CSS Units</title>
     <meta name="description" content="" />
 
     <!-- Meta Tag for Mobile Devices  -->
@@ -28,6 +28,42 @@
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+    <style>
+      .line-height {
+        line-height: 200px;
+        height: 200px;
+        border: 3px solid green;
+        text-align: center;
+      }
+      .line-height p {
+        line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .position-transform {
+        height: 200px;
+        position: relative;
+        border: 3px solid green;
+      }
+      .position-transform p {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .flex-box {
+        display: flex;
+        height: 200px;
+        border: 3px solid green;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -50,20 +86,21 @@
       <section class="s1">
         <div class="main-wrapper">
           <div class="secondary-wrapper">
-            <h1>CSS <code>display:table</code></h1>
-            <p class="display-table-text">The CSS table model is based on the HTML table model</p>
-            <p class="display-table-text">A table is divided into ROWS, and each row contains one or more cells.</p>
-            <p class="without-display-table-text">Cells are children of ROWS, they are NEVER children of columns.</p>
-            <div class="display-table">
-              <div>
-                <div>0, 0</div>
-                <div>0, 1</div>
-              </div>
-              <div>
-                <div>1, 0</div>
-                <div>1, 1</div>
-              </div>
+            <h1>Different Ways to Center</h1>
+            <h2>Center Using line-height</h2>
+            <div class="line-height">
+              <p>I can vertically and horizontally centered using <code>line-height</code>.</p>
             </div>
+            <h2>Center Using position & transform</h2>
+            <div class="position-transform">
+              <p>I can vertically and horizontally centered using <code>position</code> and <code>transform</code>.</p>
+            </div>
+            <h2>Center Using Flex Box</h2>
+            <div class="flex-box">
+              <p>I can vertically and horizontally centered using <code>flex</code>.</p>
+            </div>
+            <h2>Center an Image</h2>
+            <img src="../../images/askforhelp.jpg" alt="Ask for Help" style="width: 40%" />
           </div>
         </div>
       </section>

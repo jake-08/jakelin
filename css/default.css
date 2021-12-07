@@ -97,14 +97,6 @@ th {
   vertical-align: top;
 }
 
-table tr td:first-child {
-  width: 70%;
-}
-
-table tr td:nth-child(2) {
-  width: 30%;
-}
-
 button {
   display: block;
   margin: 10px 0;
@@ -157,14 +149,17 @@ code {
 
 /* For content to be in the middle */
 .main-wrapper {
-  background-color: var(--secondaryColor);
   width: 1200px;
   margin: 0 auto;
+}
+
+.secondary-wrapper {
+  background-color: var(--secondaryColor);
   padding: 1em 4em;
 }
 
 /* Remvoing background color and padding on home page */
-#home-page .s1 .main-wrapper {
+/* #home-page .s1 .main-wrapper {
   background-color: var(--mainColor);
   padding: 0;
 }
@@ -172,7 +167,7 @@ code {
 #home-page .s2 .main-wrapper {
   background-color: var(--secondaryColor);
   padding: 0;
-}
+} */
 
 /* For styling the page header */
 .main-wrapper h1 {
@@ -181,7 +176,7 @@ code {
 
 @media screen and (max-width: 1200px) {
   .main-wrapper {
-    width: 95%;
+    width: 90%;
   }
 }
 
@@ -576,7 +571,7 @@ article h2 {
   text-align: center;
 }
 
-#blogs .main-wrapper {
+#blogs .secondary-wrapper {
   position: relative;
 }
 
