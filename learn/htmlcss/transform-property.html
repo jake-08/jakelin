@@ -28,6 +28,40 @@
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style>
+      .translate {
+        width: 300px;
+        height: 100px;
+        background-color: red;
+        border: 1px solid black;
+        position: absolute;
+      }
+      .translate-1 {
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        transform: translate(50px, 50px);
+        margin-bottom: 100px;
+      }
+      .rotate-1 {
+        width: 300px;
+        height: 100px;
+        background-color: red;
+        border: 1px solid black;
+        position: absolute;
+        margin: 80px 0;
+      }
+      .rotate-2 {
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        margin: 80px 0;
+        transform: rotate(20deg);
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -51,25 +85,38 @@
         <div class="main-wrapper">
           <div class="secondary-wrapper">
             <h1>CSS transform Property</h1>
+            <h2>CSS 2D Transformations</h2>
             <p>The <code>transform</code> property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.</p>
             <p>And they make an element position relative.</p>
             <pre>
               transform: none|transform-functions|initial|inherit;
-          </pre
-            >
+            </pre>
             <h3>translate</h3>
+            <p>The <code>translate()</code> method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).</p>
             <p><code>translate(x,y)</code> - Defines a 2D translation</p>
             <p><code>translateX(x)</code> - Defines a translation, using only the value for the X-axis</p>
             <p><code>translateY(y)</code> - Defines a translation, using only the value for the Y-axis</p>
+            <p>The following example moves the red div element 50 pixels to the right, and 50 pixels down from its current position, resulting in a yellow div.</p>
+            <div class="translate"></div>
+            <div class="translate-1"></div>
             <h3>scale</h3>
+            <p>The <code>scale()</code> method increases or decreases the size of an element (according to the parameters given for the width and height).</p>
             <p><code>scale(x,y)</code> - Defines a 2D scale translation</p>
             <p><code>scaleX(x)</code> - Defines a scale translation, using only the value for the X-axis</p>
             <p><code>scaleY(y)</code> - Defines a scale translation, using only the value for the Y-axis</p>
             <h3>Rotate</h3>
+            <p>The <code>rotate()</code> method rotates an element clockwise or counter-clockwise according to a given degree.</p>
             <p><code>rotate(angle)</code> - Defines a 2D rotation, the angle is specified in the parameter</p>
             <p><code>rotateX(angle)</code> - Defines a 3D rotation along the X-axis</p>
             <p><code>rotateY(angle)</code> - Defines a 3D rotation along the Y-axis</p>
+            <p>The following example rotates the red div element clockwise with 20 degrees:</p>
+            <div class="rotate-1"></div>
+            <div class="rotate-2"></div>
+            <div class="a">
+              <div class="b"></div>
+            </div>
             <h3>skew</h3>
+            <p>The <code>skew()</code> method skews an element along the X and Y-axis by the given angles.</p>
             <p><code>skew(x-angle, y-angle)</code> - Defines a 2D skew transformation along the X- and the Y-axis</p>
             <p><code>skewX(angle)</code> - Defines a 2D skew transformation along the X-axis</p>
             <p><code>skewY(angle)</code> - Defines a 2D skew transformation along the Y-axis</p>

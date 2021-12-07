@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>CSS Units</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style>
+      .transition-1 {
+        background-color: burlywood;
+        width: 50px;
+        height: 30px;
+        border-radius: 5px;
+        padding: 5px;
+        transition-property: width, height, background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+      }
+      .transition-1:hover {
+        width: 100px;
+        height: 80px;
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>CSS Transitions</h1>
+            <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+            <p><b>Mouse over the element below to see a CSS transition effect.</b></p>
+            <div class="transition-1">CSS</div>
+            <p><code>transition</code> - A shorthand property for setting the four transition properties into a single property</p>
+            <p><code>transition-delay</code> - Specifies a delay (in seconds) for the transition effect</p>
+            <p><code>transition-duration</code> - Specifies how many seconds or milliseconds a transition effect takes to complete</p>
+            <p><code>transition-property</code> - Specifies the name of the CSS property the transition effect is for</p>
+            <p><code>transition-timing-function</code> - Specifies the speed curve of the transition effect</p>
+            <h2>How to Use CSS Transitions?</h2>
+            <p>To create a transition effect, you must specify two things:</p>
+            <ul>
+              <li>the CSS property you want to add an effect to - <code>transition-property</code></li>
+              <li>the duration of the effect - <code>transition-duration</code></li>
+            </ul>
+            <p><b>Note:</b> If the duration part is not specified, the transition will have no effect, because the default value is 0.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>

@@ -153,21 +153,11 @@ code {
   margin: 0 auto;
 }
 
+/* Secondary Wrapper is important for mobile responsive - don't delete */
 .secondary-wrapper {
   background-color: var(--secondaryColor);
   padding: 1em 4em;
 }
-
-/* Remvoing background color and padding on home page */
-/* #home-page .s1 .main-wrapper {
-  background-color: var(--mainColor);
-  padding: 0;
-}
-
-#home-page .s2 .main-wrapper {
-  background-color: var(--secondaryColor);
-  padding: 0;
-} */
 
 /* For styling the page header */
 .main-wrapper h1 {
