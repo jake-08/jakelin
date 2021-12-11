@@ -28,6 +28,33 @@
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style>
+      .display-table {
+        display: table;
+        width: 100%;
+      }
+
+      .display-table > div {
+        display: table-row;
+      }
+
+      .display-table > div > div {
+        display: table-cell;
+        padding: 5px;
+
+        border: #000000 solid 1px;
+      }
+
+      .display-table-text {
+        background-color: var(--borderColor);
+        display: table;
+      }
+
+      .without-display-table-text {
+        background-color: var(--mainColor);
+      }
+    </style>
   </head>
   <body>
     <header>

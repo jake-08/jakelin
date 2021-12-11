@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Meta Tag for Google Search Results -->
-    <title>Background Image</title>
+    <title>CSS Pagination</title>
     <meta name="description" content="" />
 
     <!-- Meta Tag for Mobile Devices  -->
@@ -29,22 +29,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
 
-    <style>
-      .learn-background-img {
-        position: relative;
-        background-image: url("../../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-      }
-      .background-img-code {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        opacity: 0.8;
-        transform: translate(-50%, -50%);
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header>
@@ -67,17 +52,33 @@
       <section class="s1">
         <div class="main-wrapper">
           <div class="secondary-wrapper">
-            <h1>Background Image</h1>
-            <div class="learn-background-img"></div>
-            <div class="background-img-code">
-              <pre>
-                .learn-background-img {
-                  &nbsp;background-image: url("../images/abc.jpg");
-                  &nbsp;height: 100vh;
-                  &nbsp;background-repeat: no-repeat;
-                  &nbsp;background-size: cover;
-                }
-              </pre>
+            <h1>Javascript Output Functions</h1>
+            <p>JavaScript can "display" data in different ways:</p>
+            <ul>
+                <li>Writing into an HTML element, using <code>innerHTML</code>.</li>
+                <li>Writing into the HTML output using <code>document.write()</code>.</li>
+                <li>Writing into an alert box, using <code>window.alert()</code>.</li>
+                <li>Writing into the browser console, using <code>console.log()</code>.</li>
+            </ul>
+            <h3>Using <code>innerHTML</code></h3>
+            <p>To access an HTML element, JavaScript can use the <code>document.getElementById(id)</code> method.</p>
+            <p>The <code>id</code> attribute defines the HTML element. The <code>innerHTML</code> property defines the HTML content</p>
+            <p id="demo-1"></p>
+            <h3>Using <code>document.write()</code></h3>
+            <button type="button" onclick="document.write(5 + 6)">Try it</button>
+            <p>Note: Using <code>document.write()</code> after an HTML document is loaded, will delete all existing HTML:</p>
+            <h3>Using <code>window.alert()</code></h3>
+            <p>You can use an alert box to display data:</p>
+            <button type="button" onclick="window.alert(5 + 6);">Try it</button>
+            <p>You can skip the <code>window</code> keyword.</p>
+            <h3>Using <code>console.log</code></h3>
+            <p>For debugging purposes, you can call the <code>console.log()</code> method in the browser to display data.</p>
+            <button type="button" onclick="console.log(5+6)">Try it</button>
+            <h3>JavaScript Print</h3>
+            <p>JavaScript does not have any print object or print methods.</p>
+            <p>You cannot access output devices from JavaScript.</p>
+            <p>The only exception is that you can call the <code>window.print()</code> method in the browser to print the content of the current window.</p>
+            <button onclick="window.print()">Print this page</button>
             </div>
           </div>
         </div>
@@ -87,6 +88,7 @@
   </body>
   <script type="text/javascript" src="../../js/script.js"></script>
   <script>
+    document.getElementById("demo-1").innerHTML = "Hello JavaScript";
     $(function () {
       $("#footer").load("../../templates/footer.html");
     });

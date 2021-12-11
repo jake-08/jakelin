@@ -28,6 +28,67 @@
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+    <style>
+      .learn-grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 24px;
+        text-align: center;
+        padding: 20px;
+      }
+      .learn-grid-1 {
+        display: grid;
+        background-color: #2196f3;
+        padding: 10px;
+        gap: 20px;
+      }
+
+      .learn-grid-item-1 {
+        background-color: rgba(255, 255, 255, 0.8);
+        grid-column: 1 / span 2;
+      }
+
+      .learn-grid-item-2 {
+        background-color: rgba(255, 255, 255, 0.8);
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 2;
+      }
+
+      .learn-grid-item-5 {
+        background-color: rgba(255, 255, 255, 0.8);
+        grid-column: 1 / span 3;
+        grid-row: 3 / span 1;
+      }
+      .learn-grid-2 {
+        display: grid;
+        grid-template-areas:
+          "header header header header header header"
+          "menu main main main right right"
+          "menu footer footer footer footer footer";
+        background-color: #2196f3;
+        padding: 10px;
+        gap: 20px;
+      }
+
+      .learn-grid-2-item-1 {
+        grid-area: header;
+      }
+
+      .learn-grid-2-item-2 {
+        grid-area: menu;
+      }
+
+      .learn-grid-2-item-3 {
+        grid-area: main;
+      }
+
+      .learn-grid-2-item-4 {
+        grid-area: right;
+      }
+
+      .learn-grid-2-item-5 {
+        grid-area: footer;
+      }
+    </style>
   </head>
   <body>
     <header>

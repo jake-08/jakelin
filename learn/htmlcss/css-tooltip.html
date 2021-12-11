@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Meta Tag for Google Search Results -->
-    <title>Background Image</title>
+    <title>CSS Tooltip</title>
     <meta name="description" content="" />
 
     <!-- Meta Tag for Mobile Devices  -->
@@ -30,19 +30,75 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
 
     <style>
-      .learn-background-img {
+      .tooltip-1 {
         position: relative;
-        background-image: url("../../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        cursor: pointer;
       }
-      .background-img-code {
+      .tooltip-1 .tooltiptext-1 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Positioning Tooltip */
         position: absolute;
-        top: 50%;
+        z-index: 1;
+        /* Positition Top */
+        /* bottom: 100%;
         left: 50%;
-        opacity: 0.8;
-        transform: translate(-50%, -50%);
+        margin-left: -60px;*/
+        /* Positioin Right */
+        /* left: 105%;
+        top: -5px; */
+        /* Position Bottom */
+        /* left: 50%;
+        margin-left: -60px;
+        top: 100%; */
+        /* Position Left */
+        right: 105%;
+        top: -5%;
+      }
+      .tooltip-1:hover .tooltiptext-1 {
+        visibility: visible;
+      }
+      .tooltip-2 {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+      .tooltip-2 .tooltiptext-2 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 1s;
+      }
+      .tooltip-2 .tooltiptext-2::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+      .tooltip-2:hover .tooltiptext-2 {
+        visibility: visible;
+        opacity: 1;
       }
     </style>
   </head>
@@ -67,17 +123,18 @@
       <section class="s1">
         <div class="main-wrapper">
           <div class="secondary-wrapper">
-            <h1>Background Image</h1>
-            <div class="learn-background-img"></div>
-            <div class="background-img-code">
-              <pre>
-                .learn-background-img {
-                  &nbsp;background-image: url("../images/abc.jpg");
-                  &nbsp;height: 100vh;
-                  &nbsp;background-repeat: no-repeat;
-                  &nbsp;background-size: cover;
-                }
-              </pre>
+            <h1>CSS Tooltip</h1>
+            <p>A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element.</p>
+            <h3>Basic Tooltip</h3>
+            <div class="tooltip-1">
+              Hover over me
+              <span class="tooltiptext-1">Tooltip text</span>
+            </div>
+            <h3>Tooltip Arrow</h3>
+            <p>To create an arrow that should appear from a specific side of the tooltip, add "empty" content after tooltip, with the pseudo-element class <code>::after</code> together with the <code>content</code> property.</p>
+            <div class="tooltip-2">
+              Hover over me
+              <span class="tooltiptext-2">Tooltip text</span>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Meta Tag for Google Search Results -->
-    <title>Background Image</title>
+    <title>CSS Pagination</title>
     <meta name="description" content="" />
 
     <!-- Meta Tag for Mobile Devices  -->
@@ -30,19 +30,33 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
 
     <style>
-      .learn-background-img {
-        position: relative;
-        background-image: url("../../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
+      .pagination-1 {
+        display: inline-block;
       }
-      .background-img-code {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        opacity: 0.8;
-        transform: translate(-50%, -50%);
+      .pagination-1 a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        transition: background-color 0.5s;
+      }
+      .pagination-1 a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      .pagination-1 a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .pagination-1 a.active {
+        background-color: #4caf50;
+        color: white;
+      }
+      .pagination-1 a:hover:not(.active) {
+        background-color: #ddd;
       }
     </style>
   </head>
@@ -67,17 +81,19 @@
       <section class="s1">
         <div class="main-wrapper">
           <div class="secondary-wrapper">
-            <h1>Background Image</h1>
-            <div class="learn-background-img"></div>
-            <div class="background-img-code">
-              <pre>
-                .learn-background-img {
-                  &nbsp;background-image: url("../images/abc.jpg");
-                  &nbsp;height: 100vh;
-                  &nbsp;background-repeat: no-repeat;
-                  &nbsp;background-size: cover;
-                }
-              </pre>
+            <h1>CSS Pagination</h1>
+            <h2>Active and Hoverable Pagination</h2>
+            <p>Move the mouse over the numbers.</p>
+            <div class="pagination-1">
+              <a>&laquo;</a>
+              <a>1</a>
+              <a>2</a>
+              <a class="active">3</a>
+              <a>4</a>
+              <a>5</a>
+              <a>6</a>
+              <a>7</a>
+              <a>&raquo;</a>
             </div>
           </div>
         </div>

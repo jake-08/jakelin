@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>CSS Style Images</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style>
+      .img-1 {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        margin-right: 10px;
+      }
+      .img-2 {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+      }
+      .img-2:hover {
+        box-shadow: 0 0 2px 1px blue;
+      }
+      .img-3 {
+        max-width: 100%;
+        height: auto;
+      }
+      .img-4 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      div.polaroid {
+        width: 80%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+      }
+      div.container {
+        text-align: center;
+        padding: 10px 20px;
+      }
+      .container-1 {
+        position: relative;
+        width: 50%;
+      }
+      .img-5 {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .overlay-1 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 1s ease;
+        background-color: #009cba;
+      }
+      .container-1:hover .overlay-1 {
+        opacity: 1;
+      }
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .img-6 {
+        transform: scaleX(-1);
+      }
+      .mask1 {
+        -webkit-mask-image: url("https://www.w3schools.com/css/w3logo.png");
+        mask-image: url("https://www.w3schools.com/css/w3logo.png");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>CSS Style Images</h1>
+            <h2>Rounded Images</h2>
+            <p>Use the <code>border-radius</code> property to create rounded images.</p>
+            <img style="border-radius: 8px" src="../../images/welcome.jpg" alt="Welcome" width="300" height="300" />
+            <h2>Circled Image</h2>
+            <img style="border-radius: 50%" src="../../images/welcome.jpg" alt="Welcome" width="300" height="300" />
+            <h2>Thumbnail Images</h2>
+            <p>Use the <code>border</code> property to create thumbnail images.</p>
+            <img class="img-1" src="../../images/welcome.jpg" alt="Welcome" width="300" height="300" />
+            <img class="img-2" src="../../images/welcome.jpg" alt="Welcome" width="300" height="300" />
+            <h2>Responsive Images</h2>
+            <p>Responsive images will automatically adjust to fit the size of the screen.</p>
+            <img class="img-3" src="../../images/goalsetting.jpg" alt="Goal Setting" width="1000" height="300" />
+            <h2>Center an Image</h2>
+            <img class="img-4" src="../../images/goalsetting.jpg" alt="Goal Setting" width="500" height="300" />
+            <h2>Palariod Images</h2>
+            <div class="polaroid img-4">
+              <img src="../../images/winter.jpg" alt="Winter" style="width: 100%" />
+              <div class="container">
+                <p>Winter Time</p>
+              </div>
+            </div>
+            <h2>Transparent Image</h2>
+            <p>Image with 50% opacity:</p>
+            <img style="opacity: 0.5" src="../../images/winter.jpg" alt="Winter" width="300" height="200" />
+            <h2>Image Filters</h2>
+            <p>The CSS <code>filter</code> property adds visual effects (like blur and saturation) to an element.</p>
+            <img style="filter: grayscale(100%)" src="../../images/winter.jpg" alt="Winter" width="300" height="200" />
+            <h2>Image Hover Overlay</h2>
+            <p>Create an overlay effect on hover:</p>
+            <div class="container-1">
+              <img class="img-5" src="../../images/winter.jpg" alt="Winter" />
+              <div class="overlay-1">
+                <div class="text">Hellow Winter</div>
+              </div>
+            </div>
+            <h2>Filp an Image</h2>
+            <img class="img-6" src="../../images/winter.jpg" alt="Winter" width="300" height="200" />
+            <h2>The <code>mask-image</code> Property</h2>
+            <div class="mask1">
+              <img src="../../images/winter.jpg" alt="Winter" width="600" height="400" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>
