@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>CSS Animations</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style>
+    .animation-1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: example-1;
+        animation-duration: 4s;
+    }
+    @keyframes example-1 {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+    }
+    }
+    .animation-2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example-2;
+    animation-duration: 4s;
+    }
+    @keyframes example-2 {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: green;
+    }
+    }
+    .animation-3{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: example-3;
+        animation-duration: 4s;
+    }
+    @keyframes example-3 {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+    .animation-4 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: example-4;
+        animation-duration: 4s;
+        animation-delay: 2s;
+    }
+    @keyframes example-4 {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+    .div1, .div2, .div3, .div4, .div5 {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        font-weight: bold;
+        position: relative;
+        animation: mymove 5s infinite;
+    }
+
+    .div1 {animation-timing-function: linear;}
+    .div2 {animation-timing-function: ease;}
+    .div3 {animation-timing-function: ease-in;}
+    .div4 {animation-timing-function: ease-out;}
+    .div5 {animation-timing-function: ease-in-out;}
+    @keyframes mymove {
+        from {left: 0px;}
+        to {left: 300px;}
+    }
+    .animation-5 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation-name: example-5;
+        animation-duration: 3s;  
+        animation-fill-mode: forwards;
+    }
+    @keyframes example-5 {
+        from {top: 0px;}
+        to {top: 200px; background-color: blue;}
+    }
+    .animation-6 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation-name: example-6;
+        animation-duration: 3s;  
+        animation-fill-mode: backwards;
+    }
+
+    @keyframes example-6 {
+        from {top: 0px;}
+        to {top: 200px; background-color: blue;}
+    }
+    .animation-7 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation-name: example-7;
+        animation-duration: 3s;  
+        animation-fill-mode: both;
+    }
+
+    @keyframes example-7 {
+        from {top: 0px;}
+        to {top: 200px; background-color: blue;}
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>CSS Animations</h1>
+            <h2>What are CSS Animations?</h2>
+            <p>An animation lets an element gradually change from one style to another.</p>
+            <p>You can change as many CSS properties you want, as many times as you want.</p>
+            <p>To use CSS animation, you must first specify some keyframes for the animation.</p>
+            <p>Keyframes hold what styles the element will have at certain times.</p>
+            <p>In this chapter you will learn about the following properties:</p>
+            <p><code>@keyframes</code> - When you specify CSS styles inside the <code>@keyframes</code> rule, the animation will gradually change from the current style to the next style at certain times.</p>
+            <div class="animation-1"></div>
+            <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+            <p><b>Note:</b> The <code>animation-duration</code> property defines how long an animation should take to complete. If the <code>animation-duration</code> property is not specified, no animation will occur, because the default value isd 0 seconds.</p>
+            <p>In the example above we have specified when the style will change by using the keywords "from" and "to" (which represents 0% (start) and 100% (complete)).</p>
+            <p>It is also possible to use percent. By using percent, you can add as many style changes as you like.</p>
+            <p>The following example will change the background-color of the <code>div</code> element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+            <div class="animation-2"></div>
+            <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+            <p>The following example will change both the background-color and the position of the <div> element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+            <div class="animation-3"></div>
+            <h3>Delay an Animation</h3>
+            <p>The <code>animation-delay</code> property specifies a delay for the start of an animation.</p>
+            <p>The following example has a 2 seconds delay before starting the animation:</p>
+            <div class="animation-4"></div>
+            <h3>How many times an Animation should run?</h3>
+            <p>The <code>animation-iteration-count</code> property specifies the number of times an animation should run.</p>
+            <p><code>animation-iteration-count: 3;</code> - The animation runs 3 times before it stops.</p>
+            <p><code>animation-iteration-count: infinite;</code> - The animation will continue forever.</p>
+            <h3>Run Animation in Reverse Direction or Alternative Cycles</h3>
+            <p>The <code>animation-direction</code> property specifies whether an animation should be played forwards, backwards or in alternate cycles.</p>
+            <p>The animation-direction property can have the following values:</p>
+            <p><code>normal</code> - The animation is played as normal (forwards). This is default</p>
+            <p><code>reverse</code> - The animation is played in reverse direction (backwards)</p>
+            <p><code>alternate</code> - The animation is played forwards first, then backwards</p>
+            <p><code>alternate-reverse</code> - The animation is played backwards first, then forwards</p>
+            <h3>Specify the Speed Curve of the Animation</h3>
+            <p>The <code>animation-timing-function</code> property specifies the speed curve of the animation.</p>
+            <p>The animation-timing-function property can have the following values:</p>
+            <p><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is default)</p>
+            <p><code>linear</code> - Specifies an animation with the same speed from start to end</p>
+            <p><code>ease-in</code> - Specifies an animation with a slow start</p>
+            <p><code>ease-out</code> - Specifies an animation with a slow end</p>
+            <p><code>ease-in-out</code> - Specifies an animation with a slow start and end</p>
+            <p><code>cubic-bezier(n,n,n,n)</code> - Lets you define your own values in a cubic-bezier function</p>
+            <p>The following example shows some of the different speed curves that can be used:</p>
+            <div class="div1">linear</div>
+            <div class="div2">ease</div>
+            <div class="div3">ease-in</div>
+            <div class="div4">ease-out</div>
+            <div class="div5">ease-in-out</div>
+            <h3>Specify the fill-mode for an Animation</h3>
+            <p>CSS animations do not affect an element before the first keyframe is played or after the last keyframe is played. The animation-fill-mode property can override this behavior.</p>
+            <p>The <code>animation-fill-mode</code> property specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both).</p>
+            <p>The animation-fill-mode property can have the following values:</p>
+            <p><code>none</code> - Default value. Animation will not apply any styles to the element before or after it is executing</p>
+            <p><code>forwards</code> - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)</p>
+            <p><code>backwards</code> - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period</p>
+            <p><code>both</code> - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions</p>
+            <p>The following example lets the <code>div</code> element retain the style values from the last keyframe when the animation ends:</p>
+            <div class="animation-5"></div>
+            <p>The following example lets the <code>div</code> element get the style values set by the first keyframe before the animation starts (during the animation-delay period):</p>
+            <div class="animation-6"></div>
+            <p>The following example lets the <code>div</code> element get the style values set by the first keyframe before the animation starts, and retain the style values from the last keyframe when the animation ends:</p>
+            <div class="animation-7"></div>
+            <h3>Animation Shorthand Property</h3>
+            <pre>
+                div {
+                &nbsp&nbsp&nbspanimation-name: example;
+                &nbsp&nbsp&nbspanimation-duration: 5s;
+                &nbsp&nbsp&nbspanimation-timing-function: linear;
+                &nbsp&nbsp&nbspanimation-delay: 2s;
+                &nbsp&nbsp&nbspanimation-iteration-count: infinite;
+                &nbsp&nbsp&nbspanimation-direction: alternate;
+                }
+            </pre>
+            <p>The same animation effect as above can be achieved by using the shorthand animation property:</p>
+            <pre>
+                div {
+                &nbsp&nbsp&nbsp&nbspanimation: example 5s linear 2s infinite alternate;
+                }
+            </pre>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>
