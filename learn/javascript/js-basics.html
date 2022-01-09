@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>JavaScript Basics</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="/images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>JavaScript Basics</h1>
+            <h2>JavaScript Comments</h2>
+            <p>Not all JavaScript statements are "executed".</p>
+            <p>Code after double slashes <code>//</code> or between <code>/*</code> and <code>*/</code> is treated as a comment.</p>
+            <p>Comments are ignored, and will not be executed.</p>
+            <h2>JavaScript Identifiers / Names</h2>
+            <p>Identifiers are JavaScript names.</p>
+            <p>Idenfifiers are used to name variables and keywords, and functions.</p>
+            <p>The rules for legal names are the same in most programming languages.</p>
+            <p>A JavaScript name must begin with:</p>
+            <ul>
+              <li>A letter (A-Z or a-z)</li>
+              <li>A dollar sign ($)</li>
+              <li>Or an underscore (_)</li>
+            </ul>
+            <p>Subsequent characters may be letters, digits, underscores, or dollar signs.</p>
+            <p>Note: Numbers are not allowed as the first character in names.</p>
+            <h2>JavaScript is Case Sensitive</h2>
+            <p>All JavaScript identifers are <b>case sensitive</b>.</p>
+            <p>The variables <code>lastName</code> and <code>lastname</code>, are two different variables.</p>
+            <h2>JavaScript and Camel Case</h2>
+            <p>Historically, programmers have used different ways of joining mulitp.e words into one variable name.</p>
+            <p><b>Hyphens</b> are not allowed in JavaScript. They are reserved for subtractions.</p>
+            <p>JavaScript programmers tend to use camel case that starts with a lowercase letter.</p>
+            <p><code>firstName</code>, <code>lastName</code>, <code>masterCard</code>, <code>interCity</code></p>
+            <h2>JavaScript Variables</h2>
+            <p>4 Ways to Declare a JavaScript Variable</p>
+            <ul>
+              <li>Using <code>var</code></li>
+              <li>Using <code>let</code></li>
+              <li>Using <code>const</code></li>
+              <li>Using nothing</li>
+            </ul>
+            <h3>When to Use JavaScript <code>var</code>?</h3>
+            <p>Always declare JavaScript variables with <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+            <p>The <code>var</code> keyword is used in all JavaScript code from 1995 to 2015.</p>
+            <p>The <code>let</code> and <code>const</code> keywords were added to JavaScript in 2015.</p>
+            <p>If you want your code to run in older browser, you must use <code>var</code>.</p>
+            <p>An array declared with <code>var</code> does not have block scope.</p>
+            <h3>When to Use JavaScript <code>const</code>?</h3>
+            <p>If you want a general rule, always declare variables with <code>const</code>.</p>
+            <p>If you think the value of the variable can change, use <code>let</code>.</p>
+            <p>Note: It's a good programming practice to declare all variables at the beginning of a script.</p>
+            <p>An array declared with <code>const</code> has Block Scope - an array declared in a block is not the same as an array declared outside the block.</p>
+            <h3>One Statement, Many Variables</h3>
+            <p>You can delcare many variables in one statement.</p>
+            <pre>let person = "John Doe", carName = "Volvo", price = 200; </pre>
+            <h2>Value = undefined</h2>
+            <p>In computer programs, variables are often declared without a value. THe value can be something that has to be calculated, or something that will be provided later, like use input.</p>
+            <p>A variable declared without a value will have the value <code>undefined</code>.</p>
+            <p>The variable <code>carName</code> will have the value <code>undefined</code> after the execution of this statement.</p>
+            <h3>Re-Declaring JavaScript Variables</h3>
+            <p>If you re-declare a JavaScript variable declared with <code>var</code>, it will not lose its value.</p>
+            <p>Note: You cannot re-declare a variable declared with <code>let</code> or <code>const</code>.</p>
+            <h2>JavaScript Dollar Sign $</h2>
+            <p>Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names.</p>
+            <p>Using the dollar sign is not very common in JavaScript, but professional programmers often use it as an alias for the main function in a JavaScript library.</p>
+            <p>In the JavaScript library jQuery, for instance, the main function <code>$</code> is used to select HTML elements. In jQuery <code>$("p");</code> means "select all p elements".</p>
+            <h2>Constant Objects and Arrays</h2>
+            <p>The keyword <code>const</code> is a little misleading.</p>
+            <p>It does not define a constant value. It defines a constant reference to a value.</p>
+            <p>Because of this you can NOT:</p>
+            <ul>
+              <li>Reassign a constant value</li>
+              <li>Reassign a constant array</li>
+              <li>Reassign a constant object</li>
+            </ul>
+            <p>But you CAN:</p>
+            <ul>
+              <li>Change the elements of constant array</li>
+              <li>Change the properties of constant object</li>
+            </ul>
+            <pre>
+              // You can create a constant array:
+              const cars = ["Saab", "Volvo", "BMW"];
+
+              // You can change an element:
+              cars[0] = "Toyota";
+
+              // You can add an element:
+              cars.push("Audi");
+            </pre>
+            <p>But you can NOT reassign the array</p>
+            <pre>
+              const cars = ["Saab", "Volvo", "BMW"];
+
+              cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+            </pre>
+            <p>JavaScript <code>const</code> variables must be assigned a value when they are declared. Meaning: An arrays declared with <code>const</code> must be initialized when it is declared.</p>
+            <h2>JavaScript Arrays</h2>
+            <p>JavaScript arrays are written with square brackets.</p>
+            <p>Array items are separated by commas.</p>
+            <p>The following code declares (creates) an array called <code>cars</code>, containing three items (car names).</p>
+            <pre>const cars = ["Saab", "Volvo", "BMW"];</pre>
+            <p>Array indexes are zero-based, which means the first item is [0], second is [1], and so on.</p>
+            <h2>JavaScript Objects</h2>
+            <p>JavaScript objects are written with curly brackets <code>{}</code>.</p>
+            <p>Object properties are written as name:value pairs, separated by commas.</p>
+            <pre>const person = {firstName:"John", lastName:"Doe", age: 50, eyeColor:"blue"};</pre>
+            <h2>The <code>typeof</code> Operator</h2>
+            <p>You can use the JavaScript <code>typeof</code> operator to find the type of a JavaScript variable.</p>
+            <p>The <code>typeof</code> operator returns the type of a variable or an expression.</p>
+            <p>In JavaScript there are 5 different data types that can contain values:</p>
+            <ul>
+              <li><code>string</code></li>
+              <li><code>number</code></li>
+              <li><code>boolean</code></li>
+              <li><code>object</code></li>
+              <li><code>function</code></li>
+            </ul>
+            <p>There are 6 types of objects:</p>
+            <ul>
+              <li><code>Object</code></li>
+              <li><code>Date</code></li>
+              <li><code>Array</code></li>
+              <li><code>String</code></li>
+              <li><code>Number</code></li>
+              <li><code>Boolean</code></li>
+            </ul>
+            <p>And 2 data types that cannot contain values:</p>
+            <ul>
+              <li><code>null</code></li>
+              <li><code>undefined</code></li>
+            </ul>
+            <p>The <code>typeof</code> operator returns "<code>object</code>" for arrays because in JavaScript arrays are objects.</p>
+            <h2>Accessing Object Methods</h2>
+            <p>You can access an object method with the following syntax.</p>
+            <pre>objectName.methodName()</pre>
+            <pre>name = person.fullName();</pre>
+            <p>If you access a method without the () parenttheses, it will return the function definition.</p>
+            <pre>name = person.fullName;</pre>
+            <h2>JavaScript Events</h2>
+            <p>HTML events are "things" that happen to HTML elements.</p>
+            <p>When JavaScript is used in HTML pages, JavaScript can "react" on these events.</p>
+            <h3>HTML Events</h3>
+            <p>An HTML event can be something the browser does, or something a user does.</p>
+            <p>Here are some examples of HTML events:</p>
+            <ul>
+              <li>An HTML web page has finished loading</li>
+              <li>An HTML input field was changed</li>
+              <li>An HTML button was clicked</li>
+            </ul>
+            <p>Often, when events happen, you may want to do something.</p>
+            <p>JavaScript lets you execute code when events are detected.</p>
+            <p>HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.</p>
+            <h3>Common HTML Events</h3>
+            <p>Here is a list of some common HTML events</p>
+            <ul>
+              <li><code>onchange</code> - An HTML element has been changed</li>
+              <li><code>onclick</code> - The user clicks an HTML element</li>
+              <li><code>onmouseover</code> - The user moves the mouse over an HTML element</li>
+              <li><code>onmouseout</code> - The user moves the mouse away from an HTML element</li>
+              <li><code>onkeydown</code> - The user pushes a keyboard key</li>
+              <li><code>onkeydown</code> - The browser has finished loading the page</li>
+            </ul>
+            <h2>JavaScript String</h2>
+            <p>JavaScript strings are for storing and manipulating text.</p>
+            <p>You can use single or double quotes.</p>
+            <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+            <pre>
+              let answer1 = "It's alright";
+              let answer2 = "He is called 'Johnny'";
+              let answer3 = 'He is called "Johnny"';
+            </pre>
+            <p>To find the length of a string, use the built-in <code>length</code> property.</p>
+            <h3>Escape Character</h3>
+            <p>The blackslash (<code>\</code>) escape character turns special characters into string characters.</p>
+            <pre>let text = "We are the so-called \"Vikings\" from the north.";</pre>
+            <h2>Breaking Long Code Lines</h2>
+            <p>For best readability, programmers often like to avoid code lines longer than 80 characters.</p>
+            <p>If a JavaScript statement does not fit on one line, the best place to break it is after an operator.</p>
+            <pre>
+              document.getElementById("demo").innerHTML =
+              "Hello Dolly!";
+            </pre>
+            <p>You can also break up a code line within a text string with a single blackslash.</p>
+            <pre>
+              document.getElementById("demo").innerHTML = "Hello \
+              Dolly!";
+            </pre>
+            <p>A safer way to break up a string, is to use string addition.</p>
+            <pre>
+              document.getElementById("demo").innerHTML = "Hello " +
+              "Dolly!";
+            </pre>
+            <h2>Do Not Declare Strings, Numbers, and Booleans as Objects!</h2>
+            <pre>
+              x = new String();        // Declares x as a String object
+              y = new Number();        // Declares y as a Number object
+              z = new Boolean();       // Declares z as a Boolean object
+            </pre>
+            <p>Avoid <code>String</code>, <code>Number</code>, and <code>Boolean</code> objects. They complicate your code and slow down execution speed.</p>
+            <p>The <code>new</code> keyword complicates the code and slows down execution speed.</p>
+            <h2>JavaScript Template Literals</h2>
+            <p>Synonyms:</p>
+            <ul>
+              <li>Template Literals</li>
+              <li>Template Strings</li>
+              <li>String Templates</li>
+              <li>Back-Tics Syntax</li>
+            </ul>
+            <h3>Back-Tics Syntax</h3>
+            <p><b>Template Literals</b> use back-ticks (``) rather than the quotes ("") to define a string.</p>
+            <p>With <b>template literals</b>, you can use both single and double quotes inside a string.</p>
+            <p><b>Template literals</b> allows multiline strings.</p>
+            <p><b>Template literals</b> provide an easy way to interpolate variables and expressions into strings <code>${..}</code>.</p>
+            <p><b>Template literals</b> allow variables in strings.</p>
+            <pre>let text = `Welcome ${firstName}, ${lastName}!`;</pre>
+            <p><b>Template litrals</b> allow expressions in strings.</p>
+            <pre>let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;</pre>
+            <p>Automatic replacing of expressions with real values is called <b>string interpolation</b>.</p>
+            <p><b>Template literals</b> - allow HTML elements in string.</p>
+            <h2>JavaScript Numbers</h2>
+            <p>JavaScript has only one type of number. Numbers can be written with or without decimals.</p>
+            <p>JavaScript Numbers are always 64-bit floating point.</p>
+            <p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits.</p>
+            <pre>
+              let x = 999999999999999;   // x will be 999999999999999
+              let y = 9999999999999999;  // y will be 10000000000000000
+            </pre>
+            <p>Floating point arithmetic is not always 100% accurate.</p>
+            <p>If you add two numbers, the result will be a number.</p>
+            <p>If you add two strings, the result will be a string concatenation.</p>
+            <p>If you add a string and a number, the result will be a string concatenation.</p>
+            <p>A common mistake is to expect this result to be 30.</p>
+            <pre>
+              let x = 10;
+              let y = 20;
+              let z = "The result is: " + x + y;
+            </pre>
+            <p>A common mistake is to expect this result to be 102030.</p>
+            <pre>
+              let x = 10;
+              let y = 20;
+              let z = "30";
+              let result = x + y + z;
+            </pre>
+            <p>The JavaScript interpreter works from left to right.</p>
+            <p>First 10 + 20 is added because x and y are both numbers.</p>
+            <p>Then 30 + "30" is concatenated because z is a string.</p>
+            <h3>Numberic Strings</h3>
+            <p>JavaScript will try to convert strings to numbers in all numeric operations.</p>
+            <p>This will work:</p>
+            <pre>
+              let x = "100";
+              let y = "10";
+              let z1 = x / y;
+              let z2 = x - y;
+              let z3 = x * y;
+            </pre>
+            <p>But this will not work:</p>
+            <pre>
+              let x = "100";
+              let y = "10";
+              let z = x + y;
+            </pre>
+            <p>In the last example, JavaScript uses the + operator to concatenate the strings.</p>
+            <h3>NaN - Not a Number</h3>
+            <p><code>NaN</code> is a JavaScript reserved word indicating that a number is not a legal number.</p>
+            <p>Trying to do arithmetic with a non-numeric string will result in <code>NaN</code> (Note a Number).</p>
+            <p>You can use the global JavaScript function <code>isNaN()</code> to find out if a value is not a number.</p>
+            <h3>Infinity</h3>
+            <p><code>Infinity</code> (or <code>-Infinity</code>) is a value JavaScript will return if you calculate a number outside the largest possible number.</p>
+            <p>Division by 0 (zero) also generates <code>Infinity</code>.</p>
+            <h2>Hexadecimal</h2>
+            <p>JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.</p>
+            <p>By default, JavaScript displays numbers as <b>base 10</b> decimals.</p>
+            <p>But you can use the <code>toString()</code> method to output numbers from <b>base 2</b> to <b>base 36</b>.</p>
+            <p>Haxadecimal is <b>base 16</b>. Decimal is <b>base 10</b>. Octal is <b>base 8</b>. Binary is <b>base 2</b>.</p>
+            <h2>JavaScript Arrays</h2>
+            <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+            <p>It is a common practice to declare arrays with the <code>const</code> keyword.</p>
+            <p>There is no use <code>new Array()</code>.</p>
+            <p>For simplicity, readability and execution speed, use the array literal method.</p>
+            <p>Note: Array indexes start with 0.</p>
+            <p>Arrays are special type of objects. The <code>typeof</code> operator in JavaScript returns "object" for arrays.</p>
+            <p>Most programming languages support arrays with named indexes.</p>
+            <p>Arrays with named indexes are called associative arrays (or hashes).</p>
+            <p>JavaScript deos <b>not</b> support arrays with named indexes.</p>
+            <p>In JavaScript, <b>arrays</b> always use <b>numbered indexes</b>.</p>
+            <p>If you use named indexes, JavaScript will redefine the array to an object.</p>
+            <h3>The Difference Between Arrays and Objects</h3>
+            <p>In JavaScript, <b>arrays</b> use <b>numbered indexes</b>.</p>
+            <p>In JavaScript, <b>objects</b> use <b>named indexes</b>.</p>
+            <h2>JavaScript Date Objects</h2>
+            <p>JavaScript <b>Date Object</b> lets us work with dates.</p>
+            <pre>const d = new Date();</pre>
+            <p>By default, JavaScript will use the browser's time zone and display a date as a full text string.</p>
+            <p><b>Sun Jan 09 2022 14:56:25 GMT+1100 (Australian Eastern Daylight Time)</b></p>
+            <p><b>Note:</b> JavaScript counts months from 0(Janurary) to 11(December).</p>
+            <p>Specifying a month higher than 11, will not result in an error but add the overflow to the next year.</p>
+            <p>Specifying a day higher than max, will not result in an error but add the overflow to the next month.</p>
+            <p>You cannot omit month. If you supply only one parameter, it will be treated as milliseconds.</p>
+            <p>JavaScript stores dates as number of milliseconds since January 01, 1970, 00:00:00 UTC (Universal Time Coordinated). Zero time is January 01, 1970 00:00:00 UTC.</p>
+            <h2>JavaScript Booleans</h2>
+            <p>A JavaScript Boolean represents one of two values: <b>true</b> or <b>false</b>.</p>
+            <p>You can use the <code>Boolean()</code> function to find out if an expression is true.</p>
+            <p>Eveything with a "value" is True.</p>
+            <p>Everyting without a "value" is False.</p>
+            <h2>JavaScript For Loop</h2>
+            <p>JavaScript supports different kinds of loops:</p>
+            <ul>
+              <li><code>for</code> - loops through a block of code a number of times.</li>
+              <li><code>for/in</code> - loops through the properties (keys) of an object.</li>
+              <li><code>for/of</code> - loops through the values of an iterable object.</li>
+              <li><code>while</code> - loops through a block of code while a specified condition is true.</li>
+              <li><code>do/while</code> - also loops through a block of code while a specified condition is true.</li>
+            </ul>
+            <h2>JavaScript Break and Continue</h2>
+            <p>The <code>break</code> statement "jumps out" of a loop.</p>
+            <p>The <code>continue</code> statement "jumps over" one iteration in the loop.</p>
+            <h2>JavaScript Iterables</h2>
+            <p>Iterables are iterable objects (like Arrays, Sets, Maps).</p>
+            <p>Iterables can be accessed with simple and efficient code.</p>
+            <p>Iterables can be iterated over with <code>for..of</code> loops.</p>
+            <h2>JavaScript Sets</h2>
+            <p>A JavaScript Set is a collection of unique values.</p>
+            <p>Each value can oly occur once in a Set.</p>
+            <p>You can create JavaScript Set by: passing an Array to <code>new Set()</code> or create a new Set and use <code>add()</code> to add values.</p>
+            <h2>JavaScript Maps</h2>
+            <p>A Map holds key-value pairs where the keys can be any datatyep.</p>
+            <p>A Map rememebers the original insertion order of the keys.</p>
+            <p>You can create a JavaScript Map by:</p>
+            <ul>
+              <li>Passing an Array to <code>new Map()</code></li>
+              <li>Create a Map and use <code>Map.set()</code></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("/templates/footer.html");
+    });
+  </script>
+</html>

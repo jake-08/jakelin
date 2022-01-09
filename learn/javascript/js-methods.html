@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>JavaScript Methods</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="/images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>Javascript Methods</h1>
+            <h2>JavaScript String Methods</h2>
+            <ol>
+              <li><code>string.length</code> - returns the length of a string</li>
+              <li><code>slice(start, end)</code> - extracts a part of a string and returns the extracted part in a new string.</li>
+              <li><code>substring(start,end)</code> - similar to <code>slice()</code> but cannot accept negative indexes.</li>
+              <li><code>substr()</code> - similar to <code>slice()</code>, the difference is that second parameter specifies the length of the extracted part.</li>
+              <li><code>replace()</code> - replaces a specified value with another value in a string.</li>
+              <li><code>toUpperCase()</code> - A string is converted to upper case.</li>
+              <li><code>toLowerCase()</code> - A string is converted to lower case.</li>
+              <li><code>concat()</code> - joins tow or more strings.</li>
+              <li><code>trim()</code> - removes whitespace from both sides of a string.</li>
+              <li><code>charAt(position)</code> - returns the character at a specified index (position) in a string.</li>
+              <li><code>charCodeAt()</code> - returns the unicode of the character at a specified index in a string.</li>
+              <li><code>property access []</code> - ECMAScript 5 (2009) allows property access [] on strings.</li>
+              <li><code>split()</code> - A string can be converted to an awway with the <code>split()</code> method.</li>
+            </ol>
+            <h3>String Search Methods</h3>
+            <ol>
+              <li><code>indexOf()</code> - returns the index of (the position of) the <code>first</code> occurance of a specified text in a string.</li>
+              <li><code>lastIndexOf()</code> - returns the index of the <b>last</b> occurance of a specified text in a string.</li>
+              <li><code>search()</code> - searches a string for a specified value and returns the position of the match.</li>
+              <li><code>match(regexp)</code> - searches a string for a match against a regular expression, and returns the matches, as an Array object.</li>
+              <li><code>includes()</code> - returns true if a string contains a specified value.</li>
+              <li><code>startsWith()</code> - returns <code>true</code> if a string begins with a specfied value, otherwise <code>false</code>.</li>
+              <li><code>endsWith()</code> - returns <code>true</code> if a string ends with a specified value, otherwise <code>false</code>.</li>
+            </ol>
+            <p>Note: All string methods return a new string. They don't modify the original string.</p>
+            <p>Formally said: Strings are immutable: Strings cannot be changed, only replaced.</p>
+            <h3>String Methods Reference</h3>
+            <p>Complete String Methods Reference: <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp" target="_blank">https://www.w3schools.com/jsref/jsref_obj_string.asp</a></p>
+            <h2>JavaScript Number Methods</h2>
+            <p>Number methods help you work with numbers.</p>
+            <p>Primitive values (like 3.14 or 2014), cannot have properties and methods (because they are not objects).</p>
+            <p>But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
+            <ol>
+              <li><code>toString()</code> - method returns a number as a string.</li>
+              <li><code>toExponential()</code> - returns a string, with a number rounded and written using exponential notation.</li>
+              <li><code>toFixed()</code> - returns a string, with the number written with a specified number of decimals.</li>
+              <li><code>toPrecision()</code> - returns a string, with a number written with a specified length.</li>
+              <li><code>valueOf()</code> - returns a number as a number.</li>
+            </ol>
+            <p>In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object).</p>
+            <p>The <code>valueOf()</code> method is used internally in JavaScript to convert Number objects to primitive values.</p>
+            <h3>Converting Variables to Numbers</h3>
+            <p>There are 3 JavaScript methods that can be used to convert variables to numbers:</p>
+            <ol>
+              <li><code>Number()</code> - returns a number, converted from its argument.</li>
+              <li><code>parseFloat()</code> - parses its argument and returns a floating point number.</li>
+              <li><code>parseInt()</code> - parses its argument and returns an integer.</li>
+            </ol>
+            <p>If the number cannot be converted, <code>NaN</code> (Not a Number) is returned.</p>
+            <h3>Number Properties</h3>
+            <ol>
+              <li><code>MAX_VALUE</code> - returns the largest possible number in JavaScript.</li>
+              <li><code>MIN_VALUE</code> - returns the lowest possible number in JavaScript.</li>
+              <li><code>POSITIVE_INFINITY</code> - represents infinity (returned on overflow).</li>
+              <li><code>NEGATIVE_INFINITY</code> - represents negative infinity (returned on overflow).</li>
+              <li><code>NaN</code> - represents a "Not-a-Number" value.</li>
+            </ol>
+            <h3>Number Methods Reference</h3>
+            <p>Complete Number Methods Reference: <a href="https://www.w3schools.com/jsref/jsref_obj_number.asp" target="_blank">https://www.w3schools.com/jsref/jsref_obj_number.asp</a></p>
+            <h2>JavaScript Array Methods</h2>
+            <ol>
+              <li><code>toString()</code> - method converts an array to a string of (comma separated) array values.</li>
+              <li><code>join()</code> - method joins all array elements into a string. It behaves like <code>toString()</code>, but in addition you can specify the separator.</li>
+              <li><code>pop()</code> - method removes and returns the last element from an array.</li>
+              <li><code>push()</code> - method adds a new element to an array (at the end) and returns the new array length.</li>
+              <li><code>shift()</code> - method removes the first array element and "shifts" all other elements to a lower index.</li>
+              <li><code>unshift()</code> - method adds a new element to an array (at the beginning) and returns the new array length.</li>
+              <li><code>length</code> - length property provides an easy way to append a new element to an array.</li>
+              <li><code>delete</code> - delete operator deletes array elements and leaves undefined holes in the array.</li>
+              <li><code>concat()</code> - method creates a new array by merging (concatenating) existing arrays and returns a new array.</li>
+              <li><code>splice()</code> - method can be used to add new items to an array and returns an array with the deleted items.</li>
+              <li><code>slice()</code> - method slices out a piece of an array into a new array and does not remove any elements from the source array.</li>
+            </ol>
+            <h3>Array Sorting Methods</h3>
+            <ol>
+              <li><code>sort()</code> - method sorts an array alphabetically.</li>
+              <li><code>reverse()</code> - method reverses the elements in an array.</li>
+            </ol>
+            <h3>Numeric Sort</h3>
+            <p>By default, the <code>sort()</code> function sorts values as <b>strings</b>.</p>
+            <p>The <code>sort()</code> method will produce incorrect result when sorting numbers.</p>
+            <p>You can fix this by providing a <b>compare function</b>.</p>
+            <pre>
+              const points = [40, 100, 1, 5, 25, 10];
+              points.sort(function(a, b){return a - b});
+            </pre>
+            <p>Use the same trick to sort an array decending.</p>
+            <pre>
+              const points = [40, 100, 1, 5, 25, 10];
+              points.sort(function(a, b){return b - a});
+            </pre>
+            <h3>Using <code>Math.max()</code> on an Array</h3>
+            <p>You can use <code>Math.max.apply</code> to find the highest number in an array.</p>
+            <pre>
+              function myArrayMax(arr) {
+              &nbsp;return Math.max.apply(null, arr);
+              }
+            </pre>
+            <p>You can use <code>Math.min.apply</code> to find the lowest number in an array.</p>
+            <pre>
+            function myArrayMax(arr) {
+            &nbsp;return Math.min.apply(null, arr);
+            }
+            </pre>
+            <h3>Array Iteration Methods</h3>
+            <h4>Array <code>forEach()</code> method</h4>
+            <p>The <code>forEach()</code> method calls a function (a callback function) once for each array element.</p>
+            <p>Note that the function takes 3 arguments: the item value, the item index and the array itself.</p>
+            <pre>
+              const numbers = [45, 4, 9, 16, 25];
+              let txt = "";
+              numbers.forEach(myFunction);
+
+              function myFunction(value, index, array) {
+              &nbsp;  txt += value + "&lt;&sol;br&gt;";
+              }
+            </pre>
+            <h4>Array <code>map()</code> method</h4>
+            <p>The <code>map()</code> method creates a new array by performing a function on each array element.</p>
+            <p>The <code>map()</code> method does not execute the function for array elements without values.</p>
+            <p>The <code>map()</code> method does not change the original array.</p>
+            <p>Note that the function takes 3 arguments: the item value, the item index and the array itself.</p>
+            <h4>Array <code>filter()</code> method</h4>
+            <p>The <code>filter()</code> method creates a new array with array elements that passes a test.</p>
+            <p>Note that the function takes 3 arguments: the item value, the item index and the array itself.</p>
+            <h4>Array <code>reduce()</code> method</h4>
+            <p>The <code>reduce()</code> method runs a function on each array element to produce (reduce it to) asingle value.</p>
+            <p>The <code>reduce()</code> method works from left-to-right in the array.</p>
+            <p>The <code>reduce()</code> method does not reduce the original array.</p>
+            <p>Note that the function takes 4 arguments: the total (the initial value/ previously returned value), the item value, the item index and the array itself.</p>
+            <p>The <code>reduce()</code> method can accept an initial value.</p>
+            <p>The <code>reduceRight()</code> works from right-to-left in the array.</p>
+            <h4>Array <code>every()</code> method</h4>
+            <p>The <code>every()</code> method checks if all array values pass a test.</p>
+            <p>Note that the function takes 3 arguments: the item value, the item index and the array itself.</p>
+            <h4>Array <code>some()</code> method</h4>
+            <p>The <code>some()</code> method check if some array values pass a test.</p>
+            <p>Note that the function takes 3 arguments: the item value, the item index and the array itself.</p>
+            <h4>Array <code>indexOf()</code> method</h4>
+            <p>The <code>indexOf()</code> method searches an array for an element value and returns its position.</p>
+            <p>Note: The first item has position 0, the second item has position 1, so on.</p>
+            <pre>
+              array.indexOf(item, start)
+            </pre>
+            <p>item -> Required. The item to search for.</p>
+            <p>start -> Optional. Where to start the search.</p>
+            <p><code>Array.indexOf()</code> returns -1, if the item is not found.</p>
+            <p>If the item is present more than once, it returns the position of the first occurance.</p>
+            <p><code>Array.lastIndexOf()</code> is the same as <code>Array.indexOf()</code>, but returns the position of the last occurance of the specified element.</p>
+            <h4>Array <code>find()</code> method</h4>
+            <p>The <code>find()</code> method returns the value of the first array element that passes a test function.</p>
+            <p>Note that the function takes 3 arguments: the item value, the item index and the array itself.</p>
+            <h4>Array <code>findIndex()</code> method</h4>
+            <p>The <code>findIndex()</code> method returns the index of the first array element that passes a test function.</p>
+            <p>Note that the function takes 3 arguments: the item value, the item index and the array itself.</p>
+            <h4><code>Array.from()</code> method</h4>
+            <p>The <code>Array.from()</code> method returns an Array object from any object with a lenght property or any iterable object.</p>
+            <h4>The <code>keys()</code> method</h4>
+            <p>The <code>Array.keys()</code> method returns an Array Iterator object with the keys of an array.</p>
+            <h4>They <code>includes()</code> method</h4>
+            <p>The <code>Array.includes()</code> method allows us to check if an element is present in an array (including NaN).</p>
+            <p><code>Array.includes()</code> allows to check for NaN values. Unlike <code>Array.indexOf()</code>.</p>
+            <h3>Array Methods Reference</h3>
+            <p>Complete Array Methods Reference: <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">https://www.w3schools.com/jsref/jsref_obj_array.asp</a></p>
+            <h2>JavaScript Date Methods</h2>
+            <p>When a Date object is created, a number of methods allow you to operate on it.</p>
+            <p>Date methods allow you to get and set the year, month, day, hour, minute, second, and millisecond of date object, using either local time or UTC (unversal or GMT) time.</p>
+            <p>JavaScript will (by default) output dates in full text string format.</p>
+            <p>When you display a date object in HTML, it is automatically converted to a string, with the <code>toString()</code> method.</p>
+            <p>The <code>toUTCString()</code> method converts a date to a UTC string (a date disply standard).</p>
+            <p>The <code>toDateString()</code> method converts a date to a more readable format.</p>
+            <p>The <code>toISOString()</code> method converts a Date object to a string, using the ISO standard format.</p>
+            <p>The <code>Date.parse()</code> returns the number of milliseconds between the date and January 1, 1970.</p>
+            <h3>Date Get Methods</h3>
+            <p>The <code>getTime()</code> method returns the number of milliseconds since January 1, 1970.</p>
+            <p>The <code>getFullYear()</code> method returns the year of a date as a four digit number.</p>
+            <p>The <code>getMonth()</code> method returns the month of a date as a number (0 - 11). You can use an array of names, and <code>getMonth()</code> to return the month as a name.</p>
+            <p>The <code>getDate()</code> method returns the day of a date as a number (1 - 31).</p>
+            <p>The <code>getHours()</code> method returns the hours of a date as a number (0 - 23).</p>
+            <p>The <code>getMinutes()</code> method returns the miutes of a date as a number (0 - 59).</p>
+            <p>The <code>getSeconds()</code> method returns the seconds of a date as a number (0 - 59).</p>
+            <p>The <code>getMilliseconds()</code> method returns the milliseconds of a date as a number (0 - 999).</p>
+            <p>The <code>getDay()</code> method returns the weekday of a date as a number (0 - 6).</p>
+            <p>In JavaScript, dthe first day of the week (0) means "Sunday", even if some countries in the world consider the first day of the week to be "Monday".</p>
+            <h3>Date Set Methods</h3>
+            <p>The <code>setFullYear()</code> method sets the year of a date object and can optionally set month and day.</p>
+            <p>The <code>setMonth()</code> method sets teh month of a date object (0 - 11).</p>
+            <p>The <code>setDate()</code> method sets the day of a date object (1 - 31).</p>
+            <p>The <code>setHours()</code> method sets the hours of a date object (0 - 23).</p>
+            <p>The <code>setMinutes()</code> method sets the minutes of a date object (0 - 59).</p>
+            <p>The <code>setSeconds()</code> method sets the seconds of a date object (0 - 59).</p>
+            <h3>Date Methods Reference</h3>
+            <p>Complete Date Methods Reference: <a href="https://www.w3schools.com/jsref/jsref_obj_date.asp" target="_blank">https://www.w3schools.com/jsref/jsref_obj_date.asp</a></p>
+            <h2>JavaScript Math Methods</h2>
+            <p>The Math object is static. All methods and properties can be used without creating a Math object first.</p>
+            <p>The syntax for any Math property is <code>Math.property</code>.</p>
+            <p>JavaScript provides 8 mathematical contants that can be accessed as Math properties.</p>
+            <ol>
+              <li><code>Math.E</code> returns Euler's number.</li>
+              <li><code>Math.PI</code> returns PI.</li>
+              <li><code>Math.SQRT2</code> returns the square root of 2.</li>
+              <li><code>Math.SQRT1_2</code> returns the square root of 1/2.</li>
+              <li><code>Math.LN2</code> returns the natural logarithm of 2.</li>
+              <li><code>Math.LN10</code> returns the natural logarithm of 10.</li>
+              <li><code>Math.LOG2E</code> returns base 2 logarithm of E.</li>
+              <li><code>Math.LOG10E</code> returns base 10 logarithm of E.</li>
+            </ol>
+            <h3>Number to Integer</h3>
+            <p>There are 4 common methods to round a number to an integer.</p>
+            <ol>
+              <li><code>Math.round(x)</code> returns x rounded to its nearest integer.</li>
+              <li><code>Math.ceil(x)</code> returns x rounded up to its nearest integer.</li>
+              <li><code>Math.floor(x)</code> returns x rounded down to its nearest integer.</li>
+              <li><code>Math.trunc(x)</code> returns the integer part of x.</li>
+            </ol>
+            <p><code>Math.sign(x)</code> returns if x is negative, positive or null.</p>
+            <p><code>Math.pow(x, y)</code> returns the value of x to the power of y.</p>
+            <p><code>Math.sqrt(x)</code> returns the square root of x.</p>
+            <p><code>Math.abs(x)</code> returns the absolute (positive) value of x.</p>
+            <p><code>Math.sin(x)</code> returns the sine (a value between -1 and 1) of the angle x (given in radians).</p>
+            <p><code>Math.cos(x)</code> returns the cosine (a value between -1 and 1) of the angle x (given in radians).</p>
+            <p><code>Math.min()</code> and <code>Math.max()</code> can be used to find the lowest or highest value in a list of arguments.</p>
+            <p><code>Math.random()</code> returns a random number between 0 (inclusive), and 1 (exclusive).</p>
+            <p><code>Math.log(x)</code> returns the natural logarithm of x.</p>
+            <p><code>Math.log2(x)</code> returns the base 2 logarithm of x.</p>
+            <p><code>Math.log10(x)</code> returns the base 10 logarithm of x.</p>
+            <h3><code>Math.random()</code> Method</h3>
+            <p><code>Math.random()</code> returns a random number between 0 (inclusive), and 1 (exclusive).</p>
+            <p><code>Math.random()</code> always returns a number lower than 1.</p>
+            <p><code>Math.random()</code> and <code>Math.floor()</code> can be used to return random integers.</p>
+            <pre>
+              // Returns a random integer from 0 to 9:
+              Math.floor(Math.random() * 10);
+            </pre>
+            <pre>
+              // Returns a random integer from 1 to 10:
+              Math.floor(Math.random() * 10) + 1;
+            </pre>
+            <h3>Math Methods Reference</h3>
+            <p>Complete Math Methods Reference: <a href="https://www.w3schools.com/jsref/jsref_obj_math.asp" target="_blank">https://www.w3schools.com/jsref/jsref_obj_math.asp</a></p>
+            <h2>JavaScript Set Methods</h2>
+            <p><code>new Set()</code> creates a new Set.</p>
+            <p><code>add()</code> method adds a new element to the Set.</p>
+            <p><code>delete()</code> method removes an element from a Set.</p>
+            <p><code>has()</code> returns true if a value exists in the Set.</p>
+            <p><code>forEach()</code> invokes a callback for each elemetn in the Set.</p>
+            <p><code>values()</code> method returns an iterator with all values in a Set.</p>
+            <p><code>size</code> property returns the number of elements in a Set.</p>
+            <h2>JavaScript Map Methods</h2>
+            <p><code>new Map()</code> creates a new Map.</p>
+            <p><code>set()</code> method sets the value for a key in a Map.</p>
+            <p><code>get()</code> method gets the value for a key in a Map.</p>
+            <p><code>delete()</code> method removes a Map element specified by the Key.</p>
+            <p><code>has()</code> method returns true if a key exists in a Map.</p>
+            <p><code>forEach()</code> method calls a function for each key/value pair in a Map.</p>
+            <p><code>entries()</code> method returns an iterator with the [key,value] paris in a Map.</p>
+            <p><code>size</code> property returns the number of elements in a Map.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("/templates/footer.html");
+    });
+  </script>
+</html>
