@@ -379,6 +379,134 @@
               <li>Passing an Array to <code>new Map()</code></li>
               <li>Create a Map and use <code>Map.set()</code></li>
             </ul>
+            <h2>JavaScript RegExp Object</h2>
+            <p>A regular expression is a <b>pattern</b> of characters.</p>
+            <p>The pattern is used to do pattern-matching "<b>search-and-replace</b>" functions on text.</p>
+            <p>In JavaScript, a <b>RegExp Object</b> is a pattern with <b>Properties</b> and <b>Methods</b>.</p>
+            <h3>Syntax</h3>
+            <pre>/pattern/modifier(s);</pre>
+            <h3>Example</h3>
+            <pre>let pattern = /w3schools/i;</pre>
+            <ul>
+              <li><code>w3schools</code> -> The pattern to search for</li>
+              <li><code>/w3schools/</code> -> A regular expression</li>
+              <li><code>/w3schools/i</code> -> A case-insenstive regular expression</li>
+            </ul>
+            <h3>RegExp Reference</h3>
+            <p>Complete RegExp Reference: <a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp" target="_blank">https://www.w3schools.com/jsref/jsref_obj_regexp.asp</a></p>
+            <h2>JavaScript Errors</h2>
+            <p>The <code>try</code> statement defines a code block to run (to try).</p>
+            <p>The <code>catch</code> statement defines a code block to handle any error.</p>
+            <p>The <code>finally</code> statement defines a code block to run regardless of the result.</p>
+            <p>The <code>throw</code> statement defines a custom error.</p>
+            <h3>JavaScript try and catch</h3>
+            <p>The <code>try</code> statement allows you to define a block of code to be tested for errors while it is being executed.</p>
+            <p>The <code>catch</code> statement allows you to define a block of code to be executed, if an error occurs in the try block.</p>
+            <p>The JavaScript statements <code>try</code> and <code>catch</code> come in pairs.</p>
+            <h3>JavaScript Throws Errors</h3>
+            <p>When an error occurs, JavaScript will normally stop and generate an error message.</p>
+            <p>The technical term for this is: JavaScript will <b>throw an exception (throw an error)</b>.</p>
+            <p>The <code>throw</code> statement allows you to create a custom error.</p>
+            <p>If you use <code>throw</code> together with <code>try</code> and <code>catch</code>, you can control program flow and generate custom error messages.</p>
+            <h3>The finally Statement</h3>
+            <p>The <code>finally</code> statement lets you execute code, after try and catch, regardless of the result.</p>
+            <h3>The Error Object</h3>
+            <p>JavaScript has a built in error object that provides error information when an error occurs.</p>
+            <p>The error object provides two useful properties: name and message.</p>
+            <ul>
+              <li><code>name</code> - Sets or returns an error name.</li>
+              <li><code>message</code> - Sets or returns an error message (a string).</li>
+            </ul>
+            <h3>Error Name Values</h3>
+            <p>Six different values can be returned by the error name property:</p>
+            <ul>
+              <li><code>EvalError</code> - An error has occured in the eval() function.</li>
+              <li><code>RangeError</code> - A number "out of range" has occured.</li>
+              <li><code>ReferenceError</code> - An illegal reference has occured.</li>
+              <li><code>SyntaxError</code> - A syntax error has occured.</li>
+              <li><code>TypeError</code> - A type error has occured.</li>
+              <li><code>URIError</code> - An error encodedURI() has occured.</li>
+            </ul>
+            <h2>JavaScript Scope</h2>
+            <p>Scope determines the accessibility (visibility) of variables.</p>
+            <p>JavaScript has 3 types of scope:</p>
+            <ul>
+              <li>Block scope</li>
+              <li>Function scope</li>
+              <li>Global scope</li>
+            </ul>
+            <h3>Block Scope</h3>
+            <p>Before ES6 (2015), JavaScript had only <b>Global Scope</b> and <b>Function Scope</b>.</p>
+            <p>ES6 introduced two important new JavaScript keywords: <code>let</code> and <code>const</code>.</p>
+            <p>These two keywords provide <b>Block Scope</b> in JavaScript.</p>
+            <p>Variables declared inside a { } block cannot be accessed from outside the block.</p>
+            <h3>Local Scope</h3>
+            <p>Variables declared within a JavaScript function, become <b>LOCAL</b> to the function.</p>
+            <p>Local variables have <b>Function Scope</b>.</p>
+            <p>They can only be accessed from within the function.</p>
+            <h3>Function Scope</h3>
+            <p>JavaScript has function scope: Each function creates a new scope.</p>
+            <p>Variables defined inside a function are not accessible (visible) from outside the function.</p>
+            <p>Variables declared with <code>var</code>, <code>let</code> and <code>const</code> are quite similar when declared inside a function.</p>
+            <p>They all have <b>Function Scope</b>.</p>
+            <h3>Global Scope</h3>
+            <p>A variable declared outside a function, becomes <b>GLOBAL</b>.</p>
+            <p>A global variable has <b>Global Scope</b>.</p>
+            <p><b>Global</b> variables can be accessed from anywhere in a JavaScript program.</p>
+            <p>All scripts and functions on a web page can access it.</p>
+            <p>If you assign a value to a variable that has not been <b>declared</b>, it will automatically become a <b>GLOBAL</b> variable.</p>
+            <h2>JavaScript Hoisting</h2>
+            <p>Hoisting is JavaScript's default behavior of moving declarations to the top.</p>
+            <p>In JavaScript, a variable can be declared after it has been used.</p>
+            <p>In other words, a variable can be used before it has been declared.</p>
+            <p>To understand this, you have to understand the term "hoisting".</p>
+            <p>Hoisting is JavaScript's default behaviour of moving all declarations to the top of the current scoope (to the top of the current script or the current function).</p>
+            <p>JavaScript only hoists declarations, not initializations.</p>
+            <h2>JavaScript Use Strict</h2>
+            <p>The <code>"use strict"</code> directive was new in ECMAScript version 5.</p>
+            <p>The purpose of <code>"use strict"</code> is to indicate that the code should be executed in "strict mode".</p>
+            <p>With strict mode, you can not, for example, use undeclared variables.</p>
+            <p>You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.</p>
+            <h2>JavaScript this Keyword</h2>
+            <p>The JavaScript <code>this</code> keyword refers to the object it belongs to.</p>
+            <p>It has different values depending on where it is used:</p>
+            <ul>
+              <li>In a method, <code>this</code> refers to the <b>owner object</b>.</li>
+              <li>Alone, <code>this</code> refers to the <b>global object</b>.</li>
+              <li>In a function, <code>this</code> refers to the <b>global object</b>.</li>
+              <li>In a function, in strict mode, <code>this</code> is <code>undefined</code>.</li>
+              <li>In an event, this refers to the <b>element</b> that received the event.</li>
+            </ul>
+            <p>In an object method, this refers to the "<b>owner</b>" of the method.</p>
+            <h2>JavaScript Arrow Function</h2>
+            <p>Arrow functions were introduced in ES6.</p>
+            <p>Arrow functions allow us to write shorter function syntax.</p>
+            <p>It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the <code>return</code> keyword</p>
+            <h2>JavaScript Classes</h2>
+            <p>JavaScript Classes are templates for JavaScript Objects.</p>
+            <p>Use the keyword <code>class</code> to create a class.</p>
+            <p>Always add a method named <code>constructor()</code>.</p>
+            <p>A JavaScript class is <b>not</b> an object.</p>
+            <p>It is a <b>template</b> for JavaScript objects.</p>
+            <p>When you have a class, you can use the class to create objects.</p>
+            <p>The constructor method is called automatically when a new object is created.</p>
+            <h2>JavaScript JSON</h2>
+            <p>JSON is a format for storing and transporting data.</p>
+            <p>JSON is often used when data is sent from a server to a web page.</p>
+            <p>The JSON format is syntactically identical to the code for creating JavaScript objects.</p>
+            <p>Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.</p>
+            <h3>JSON Syntax Rules</h3>
+            <ul>
+              <li>Data is in name/value pairs</li>
+              <li>Data is separated by commas</li>
+              <li>Curly braces hold objects</li>
+              <li>Square brackets hold arrays</li>
+            </ul>
+            <p>JSON names require double quotes. JavaScript names do not.</p>
+            <p>JSON objects are written inside curly braces.</p>
+            <pre>{"firstName":"John", "lastName":"Doe"}</pre>
+            <p>Use the JavaScript built-in function <code>JSON.parse()</code> to convert the string into a JavaScript object.</p>
+            <pre>const obj = JSON.parse(text);</pre>
           </div>
         </div>
       </section>
