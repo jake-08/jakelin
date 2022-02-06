@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>JS Objects</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="/images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>Javascript Objects</h1>
+            <p>In JavaScript, objects are king. If you understand objects, you understand JavaScript.</p>
+            <p>In JavaScript, almost "everything" is an object.</p>
+            <ul>
+              <li>Booleans can be objects (if defined with the <code>new</code> keyword)</li>
+              <li>Numbers can be objects (if defined with the <code>new</code> keyword)</li>
+              <li>Strings can be objects (if defined with the <code>new</code> keyword)</li>
+              <li>Dates are always objects</li>
+              <li>Maths are always objects</li>
+              <li>Regular expressions are always objects</li>
+              <li>Arrays are always objects</li>
+              <li>Functions are always objects</li>
+              <li>Objects are always objects</li>
+            </ul>
+            <h2>Primitive Values</h2>
+            <p>All JavaScript values, except primitives, are objects.</p>
+            <p>A <b>primitive value</b> is a value that has no properties or methods.</p>
+            <p>A <b>primitive data type</b> is data that has a primitive value.</p>
+            <p>JavaScript defines 5 types of primtive data types:</p>
+            <ul>
+              <li>string</li>
+              <li>number</li>
+              <li>boolean</li>
+              <li>null</li>
+              <li>undefined</li>
+            </ul>
+            <p>Primitive values are immutable (they are hardcoded and therefore cannot be changed).</p>
+            <h2>Objects are Variables</h2>
+            <p>JavaScript variables can also contain many values.</p>
+            <p>Objects are variables too. But objects can contain many values.</p>
+            <p>Object values are written as <b>name</b> : <b>value</b> pairs (name and value separated by a colon).</p>
+            <p>A JavaScript object is a collection of <b>named values</b>.</p>
+            <h2>Object Properties</h2>
+            <p>The named values, in JavaScript objects, are called <b>properties</b>.</p>
+            <p>Properties are the most important part of any JavaScript object.</p>
+            <p>Properties are the values associated with a JavaScript object.</p>
+            <p>A JavaScript object is a collection of unordered properties.</p>
+            <p>Properties can usually be changed, added, and deleted, but some are read only.</p>
+            <h3>Accessing JavaScript Properties</h3>
+            <p>The syntax for accessing the property of an object is:</p>
+            <pre>objectName.property // person.age</pre>
+            <p>or</p>
+            <pre>objectName["property"] // person["age"]</pre>
+            <p>or</p>
+            <pre>objectName[expression] // x = "age"; person[x]</pre>
+            <p>The expression must evaluate to a property name.</p>
+            <h3>JavaScript for..in Loop</h3>
+            <p>The JavaScript <code>for..in</code> statement loops through the properties of an object.</p>
+            <pre>
+              for (let variable in object) {
+                // code to be executed 
+              }
+            </pre>
+            <h3>Deleting Properties</h3>
+            <p>The <code>delete</code> keyword deletes a property from an object.</p>
+            <pre>delete person.age;</pre>
+            <p>or</p>
+            <pre>delete person["age"];</pre>
+            <p>The <code>delete</code> keyword deletes both the value of the property and the property itself.</p>
+            <p>After deletion, the property cannot be used before it is added back again.</p>
+            <p>The <code>delete</code> operator is designed to be used on object properties. It has no effect on variables or functions.</p>
+            <p>The <code>delete</code> operator should not be used on predefined JavaScript object properties. It can crush your application.</p>
+            <h2>Adding New Properties</h2>
+            <p>You can add new properties to an existing object by simply giving it a value.</p>
+            <p>Assume that the person object already exists - you can then give it new properties:</p>
+            <pre>person.nationality = "English"</pre>
+            <h2>Object Methods</h2>
+            <p>Methods are <b>actions</b> that can be performed on objects.</p>
+            <p>Object properties can be both primitive values, other objects, and functions.</p>
+            <p>An <b>object method</b> is an object property containing a <b>function definition</b>.</p>
+            <h2>Creating a JavaScript Object</h2>
+            <p>There are different ways to create new objects:</p>
+            <ul>
+              <li>Create a single object, using an object literal.</li>
+              <pre>const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</pre>
+              <li>Create a single object, with the keyword <code>new</code>.</li>
+              <pre>
+                const person = new Object();
+                person.firstName = "John";
+                person.lastName = "Doe";
+                person.age = 50;
+                person.eyeColor = "blue";
+              </pre>
+              <li>Define an object constructor, and then create objects of the constructed type.</li>
+              <li>Create an object using <code>Object.create()</code>.</li>
+            </ul>
+            <h2>Nested Objects</h2>
+            <p>Values in an object can be another object.</p>
+            <pre>
+              myObj = {
+              &nbsp;name:"John",
+              &nbsp;age:30,
+              &nbsp;cars: {
+              &nbsp;&nbsp;car1:"Ford",
+              &nbsp;&nbsp;car2:"BMW",
+              &nbsp;&nbsp;car3:"Fiat"
+            &nbsp;&nbsp;}
+            }
+            </pre>
+            <p>You can access nested objects using the dot notation or the bracket notation.</p>
+            <pre>myObj.cars.car2;</pre>
+            <p>or</p>
+            <pre>myObj.cars["car2"];</pre>
+            <h2>Nested Arrays and Objects</h2>
+            <p>Values in objects can be arrays, and values in arrays can be objects.</p>
+            <h2>Object Methods</h2>
+            <h3>THe <b>this</b> keyword</h3>
+            <p>In a function definition, <code>this</code> refers to the "owner" of the function.</p>
+            <h3>Accessing Object Methods</h3>
+            <p>You can access an object method with the following syntax</p>
+            <pre>objectName.methodName()</pre>
+            <h2>Display Objects</h2>
+            <p>Some common solutions to display JavaScript objects are:</p>
+            <ul>
+              <li>Displaying the Object Properties by name</li>
+              <pre>
+                document.getElementById("demo").innerHTML =
+                person.name + "," + person.age + "," + person.city;
+              </pre>
+              <li>Displaying the Object Properties in a Loop</li>
+              <pre>
+                let txt = "";
+                for (let x in person) {
+                txt += person[x] + " ";
+                };
+
+                document.getElementById("demo").innerHTML = txt;
+              </pre>
+              <li>Displaying the Object using <code>Object.values()</code> (convert to an array)</li>
+              <pre>
+                const myArray = Object.values(person);
+                document.getElementById("demo").innerHTML = myArray;
+              </pre>
+              <li>Displaying the Object using <code>JSON.stringify()</code> (convert to a string)</li>
+              <pre>
+                let myString = JSON.stringify(person);
+                document.getElementById("demo").innerHTML = myString;
+              </pre>
+            </ul>
+            <h2>Object Accessors</h2>
+            <h3>JavaScript Getter (The get Keyword)</h3>
+            <p>The example use a <code>lang</code> property to <code>get</code> the value of the <code>language</code> property.</p>
+            <pre>
+              // Create an object:
+              const person = {
+              &nbsp;firstName: "John",
+              &nbsp;lastName: "Doe",
+              &nbsp;language: "en",
+              &nbsp;get lang() {
+              &nbsp;&nbsp;return this.language;
+              &nbsp;}
+              };
+
+              // Display data from the object using a getter:
+              document.getElementById("demo").innerHTML = person.lang;
+            </pre>
+            <h3>JavaScript Setter (The set Keyword)</h3>
+            <p>The example use a <code>lang</code> property to <code>set</code> the value of the <code>language</code> property.</p>
+            <pre>
+              // Create an object:
+              const person = {
+              &nbsp;firstName: "John",
+              &nbsp;lastName: "Doe",
+              &nbsp;language: "en",
+              &nbsp;set lang() {
+              &nbsp;&nbsp;this.language = lang;
+              &nbsp;}
+              };
+
+              // Set an object property using a setter:
+              person.lang = "en";
+
+              // Display data from the object using a getter:
+              document.getElementById("demo").innerHTML = person.lang;
+            </pre>
+            <h3>Function or Getter?</h3>
+            <p>Both of the can access the data but using <code>getter</code> provides a simpler syntax.</p>
+            <p>JavaScript can secure better data quality when using getters and setters.</p>
+            <h3>Why Using Getters and Setters?</h3>
+            <ul>
+              <li>It gives simpler syntax</li>
+              <li>It allows equal syntax for properties and methods</li>
+              <li>It can secure better data quality</li>
+              <li>It is useful for doing things behind-the-scenes</li>
+            </ul>
+            <h2>Object Constructors</h2>
+            <p>It is considered good practice to name constructor functions with an upper-case first letter.</p>
+            <p>Sometimes we need a "<b>blueprint</b>" for creating many objects of the same "type".</p>
+            <p>THe way to create an "object type", is to use an <b>object constructor function</b>.</p>
+            <pre>
+              function Person(first, last, age, eye) {
+              &nbsp;this.firstName = first;
+              &nbsp;this.lastName = last;
+              &nbsp;this.age = age;
+              &nbsp;this.eyeColor = eye;
+              }
+            </pre>
+            <p>Objects of the same type are created by calling the constructor function with the <code>new</code> keyword.</p>
+            <pre>
+              const myFather = new Person("John", "Doe", 50, "blue");
+              const myMother = new Person("Sally", "Rally", 48, "green");
+            </pre>
+            <h2>Object Prototypes</h2>
+            <p>All JavaScript objects inherit properties and methods from a prototype.</p>
+            <p>All JavaScript objects inherit properties and methods from a prototype:</p>
+            <ul>
+              <li><code>Date</code> objects inherit from <code>Date.prototype</code></li>
+              <li><code>Array</code> objects inherit from <code>Array.prototype</code></li>
+              <li><code>Person</code> objects inherit from <code>Person.prototype</code></li>
+            </ul>
+            <p>The <code>Object.prototype</code> is on the top of the prototype inheritance chain:</p>
+            <p><code>Date</code> objects, <code>Array</code> objects, and <code>Person</code> objects inherit from <code>Object.prototype</code>.</p>
+            <p>Sometimes you want to add new properties (or methods) to all existing objects of a given type.</p>
+            <p>Sometimes you want to add new properties (or methods) to an object constructor. </p>
+            <p>The JavaScript <code>prototype</code> property allows you to add new properties to object constructors.</p>
+            <pre>
+              function Person(first, last, age, eyecolor) {
+              &nbsp;this.firstName = first;
+              &nbsp;this.lastName = last;
+              &nbsp;this.age = age;
+              &nbsp;this.eyeColor = eyecolor;
+              }
+
+              Person.prototype.nationality = "English";
+            </pre>
+            <p>Only modify your <b>own</b> prototypes. Never modify the prototypes of standard JavaScript objects.</p>
+            <h2>JavaScript Iterables</h2>
+            <p>Iterable objects are objects that can be iterated over with <code>for..of</code>.</p>
+            <p>Technically, iterables must implement the <code>Symbol.iterator</code> method.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>

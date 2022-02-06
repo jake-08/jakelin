@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>JS Functions</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="/images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>Javascript Functions</h1>
+            <h2>Function Definitions</h2>
+            <p>JavaScript functions are <b>defined</b> with the <code>function</code> keyword.</p>
+            <p>You can use a function <b>declaration</b> or a function <b>expression</b>.</p>
+            <p>Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).</p>
+            <p>Semicolons are used to separate executable JavaScript statements.</p>
+            <p>Since a function <b>declaration</b> is not an executable statement, it is not common to end it with a semicolon.</p>
+            <p>A JavaScript function can also be defined using an <b>expression</b>.</p>
+            <p>The function ends with a semicolon because it is a part of an executable statement.</p>
+            <h2>Function Hoisting</h2>
+            <p>Hoisting in JavaScript's default behavior of moving <b>declarations</b> to the top of the current scope.</p>
+            <p>Hositing applies to variable declarations and to function declarations.</p>
+            <p>Because of this, JavaScript functions can be callled before they are declared.</p>
+            <p>Functions defined using an expression are not hoisted.</p>
+            <h2>Functions are Objects</h2>
+            <p>The <code>typeof</code> operator in JavaScript returns "function" for functions.</p>
+            <p>But, JavaScript functions can best be described as objects.</p>
+            <p>JavaScript functions have both <b>properties</b> and <b>methods</b>.</p>
+            <p>The <code>arguments.length</code> property returns the number of arguments received when the function was invoked.</p>
+            <p>The <code>toString()</code> method returns the function as a string.</p>
+            <h2>Arrow Functions</h2>
+            <p>Arrow functions allow a short syntax for writing function expressions.</p>
+            <p>You don't need the <code>function</code> keyword, the <code>return</code> keyword, and the <b>curly brackets</b>.</p>
+            <p>Arrow functions do not have their own <code>this</code>. They are not well suited for defining <b>object methods</b>.</p>
+            <p>Arrow functions are not hoisted. They must be declared <b>before</b> they are used.</p>
+            <p>Using <code>const</code> is safer than using <code>var</code>, because a function expression is always a constant value.</p>
+            <p>You can only omit the <code>return</code> keyword and the curly brackets if the function is a single statement.</p>
+            <h2>JavaScript Function Parameters</h2>
+            <p>A JavaScript <code>function</code> does not perform any checking on parameter values (arguments).</p>
+            <p>Function <b>parameters</b> are the <b>names</b> listed in the function definition.</p>
+            <p>Function <b>arguments</b> are the real <b>values</b> passed to (and received by) the function.</p>
+            <h3>Parameter Rules</h3>
+            <p>JavaScript function definitions do not specify data types for parameters.</p>
+            <p>JavaScript functions do not perform the type checking on the passed arguments.</p>
+            <p>JavaScript functions do not check the number of arguments received.</p>
+            <p>If a function is called with <b>missing arguments</b> (less than declared), the missing values are set to <code>undefined</code>.</p>
+            <p>JavaScript functions have a built-in object called the arugments objects.</p>
+            <p>The argument object contains an array of the arugments used when the function was called (invoked).</p>
+            <h2>JavaScript Function Invocation</h2>
+            <p>The code inside a JavaScript <code>function</code> will execute when "something" invokes it.</p>
+            <p>The code inside a function is not executed when the function is <b>defined</b>.</p>
+            <p>The code inside a function is executed when the function is <b>invoked</b>.</p>
+            <p>It is common to use the term "<b>call a function</b>" instead of "<b>invoke a function</b>".</p>
+            <h2>JavaScript Function Call</h2>
+            <p>In JavaScript, all functions are object methods.</p>
+            <p>If a function is not a method of a JavaScript object, it is a function of the global object.</p>
+            <h3>The JavaScript <code>call()</code> Method</h3>
+            <p>The <code>call()</code> method is predefined JavaScript method.</p>
+            <p>It can be used to invoke (call) a method with an owner object as an argument (parameter).</p>
+            <p>With <code>call()</code>, an object can use a method belonging to another object.</p>
+            <pre>
+              const person = {
+              &nbsp;fullName: function() {
+              &nbsp;&nbsp;return this.firstName + " " + this.lastName;
+              &nbsp;}
+              }
+              const person1 = {
+              &nbsp;firstName:"John",
+              &nbsp;lastName: "Doe"
+              }
+              const person2 = {
+              &nbsp;firstName:"Mary",
+              &nbsp;lastName: "Doe"
+              }
+
+              // This will return "John Doe":
+              person.fullName.call(person1);
+            </pre>
+            <h3>The JavaScript <code>apply()</code> Method</h3>
+            <p>The <code>apply()</code> method is similar to the <code>call()</code> mehtod.</p>
+            <p>The difference between call() and apply() is:</p>
+            <p>The <code>call()</code> method takes arugments <b>separately</b>.</p>
+            <p>The <code>apply()</code> takes arguments as an <b>array</b>.</p>
+            <h3>Stimulate a Max Method on Arrays</h3>
+            <p>You can find the largest number (in a list of numbers) using the <code>Math.max()</code> method.</p>
+            <pre>Math.max(1,2,3);  // Will return 3</pre>
+            <p>Since JavaScript arrays do not have a max method, you can apply the <code>Math.max()</code> method instead.</p>
+            <pre>Math.max.apply(null, [1,2,3]); // Will return 3</pre>
+            <p>The first arugment (null) does not matter.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>

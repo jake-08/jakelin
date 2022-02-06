@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Meta Tag for Google Search Results -->
-    <title>JavaScript Methods</title>
+    <title>Javascript Objects' Methods and Properties</title>
     <meta name="description" content="" />
 
     <!-- Meta Tag for Mobile Devices  -->
@@ -52,7 +52,7 @@
       <section class="s1">
         <div class="main-wrapper">
           <div class="secondary-wrapper">
-            <h1>Javascript Methods</h1>
+            <h1>Javascript Objects' Methods and Properties</h1>
             <h2>JavaScript String Methods</h2>
             <ol>
               <li><code>string.length</code> - returns the length of a string</li>
@@ -312,6 +312,79 @@
             <p><code>forEach()</code> method calls a function for each key/value pair in a Map.</p>
             <p><code>entries()</code> method returns an iterator with the [key,value] paris in a Map.</p>
             <p><code>size</code> property returns the number of elements in a Map.</p>
+            <h2>HTML DOM Methods and Propertiess</h2>
+            <h4>Finding HTML Elements</h4>
+            <p><code>document.getElementById(id)</code> method find an element by element id.</p>
+            <p><code>document.getElementsByTagName(name)</code> method find elements by tag name and returns an <code>HTMLCollection</code> object.</p>
+            <p>
+              <code>HTMLCollection</code> object is an array-like list (collection) of HTML elements. The elements in the collection can be accessed by an index number and the index starts at 0. The <code>length</code> property defines the number of elemets in an <code>HTMLCollection</code>. Note:
+              An HTMLCollection may look like an array, but it is not.
+            </p>
+            <p><code>document.getElementsByClassName(name)</code> method find elements by class name.</p>
+            <p><code>document.querySelectorAll(CSS selector)</code> method find all HTML elements that matach a specified <strong>CSS selector</strong> and return a <code>NodeList</code> object.</p>
+            <p>
+              <code>NodeList</code> object is a list (collection) of nodes extracted from a document. It is almost the same as <code>HTMLCollection</code> object. The elements in the NodeList can be accessed by an index number and the index starts at 0. The <code>length</code> property defines the
+              number of nodes in a node list.
+            </p>
+            <h4>Changing HTML Elements</h4>
+            <p><code>element.innerHTML = new html content</code> property change the inner HTML of an element.</p>
+            <p><code>element.attribute = new value</code> property change the attribute value of an HTML element.</p>
+            <p><code>element.style.property = new style</code> property change the style of an HTML element.</p>
+            <p><code>element.setAttribute(attribute, value)</code> method change the attribute value of an HTML element.</p>
+            <h4>Adding and Deleting Elements</h4>
+            <p><code>document.createElement(element)</code> method create an HTML element.</p>
+            <p><code>document.createTextNode(Text)</code> method creates a text node.</p>
+            <p><code>document.removeChild(element)</code> method removes an HTML element.</p>
+            <p><code>document.appendChild(element)</code> method adds an HTML element as the last child of the parent.</p>
+            <p><code>document.insertBefore(before element, element)</code> method adds an HTML element before the targeted element.</p>
+            <p><code>document.replaceChild(new, old)</code> method replace an HTML element.</p>
+            <p><code>document.write(text)</code> method write into the HTML output stream.</p>
+            <h4>Event Listener</h4>
+            <p><code>addEventListener()</code> method attaches an event handler to the specified element.</p>
+            <p><code>removeEventListener()</code> method removes event handlers that have been attached with the <code>addEventListener()</code> method.</p>
+            <h2>The Browser Object Model (BOM)</h2>
+            <p>The <strong>Browser Object Model (BOM)</strong> allows JavaScript to "talk to" the browser.</p>
+            <h3>The Window Object</h3>
+            <p>The <code>window</code> object is supported by all browsers. It represents the browser's window.</p>
+            <p>Reference: <a href="https://www.w3schools.com/js/js_window.asp" target="_blank">https://www.w3schools.com/js/js_window.asp</a></p>
+            <h3>The Window Screen Object</h3>
+            <p>The <code>window.screen</code> object contains information about the user's screen.</p>
+            <p>Reference: <a href="https://www.w3schools.com/js/js_window_screen.asp" target="_blank">https://www.w3schools.com/js/js_window_screen.asp</a></p>
+            <h3>The Window Location Object</h3>
+            <p>The <code>window.location</code> object can be used to get the current page address (URL) and to redirect the browser to a new page.</p>
+            <p>Reference: <a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank">https://www.w3schools.com/js/js_window_location.asp</a></p>
+            <h3>The Window History Object</h3>
+            <p>The <code>window.history</code> object contains the browsers history.</p>
+            <p>Reference: <a href="https://www.w3schools.com/js/js_window_history.asp" target="_blank">https://www.w3schools.com/js/js_window_history.asp</a></p>
+            <h3>The Window Navigator Object</h3>
+            <p>The <code>window.navigator</code> object contains information about the visitor's browser.</p>
+            <p>Reference: <a href="https://www.w3schools.com/js/js_window_navigator.asp" target="_blank">https://www.w3schools.com/js/js_window_navigator.asp</a></p>
+            <h3>JavaScript Popup Boxes</h3>
+            <p>JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.</p>
+            <p>Reference: <a href="https://www.w3schools.com/js/js_popup.asp" target="_blank">https://www.w3schools.com/js/js_popup.asp</a></p>
+            <h3>JavaScript Timing Events</h3>
+            <p>The <code>window</code> object allows execution of code at specified time intervals. These time intervals are called timing events.</p>
+            <p>The two key methods to use with JavaScript are:</p>
+            <p><code>setTimeout(function, milliseconds)</code> - executes a function, after waiting a specified number of milliseconds.</p>
+            <p><code>setInterval(function, milliseconds)</code> - same as <code>setTimeout()</code>, but repeats the execution of the function continuously.</p>
+            <p>Reference: <a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">https://www.w3schools.com/js/js_timing.asp</a></p>
+            <h3>JavaScript Cookies</h3>
+            <p>Cookies let you store user information in web pages.</p>
+            <p>Cookies are data, stored in small text files, on your computer.</p>
+            <p>When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.</p>
+            <p>Cookies were invented to solve the problem "how to remember information about the user":</p>
+            <ul>
+              <li>When a user visits a web page, his/her name can be stored in a cookie.</li>
+              <li>Next time the user visits the page, the cookie "remembers" his/her name.</li>
+            </ul>
+            <p>Cookies are saved in name-value pairs like: username: John Doe</p>
+            <p>Reference: <a href="https://www.w3schools.com/js/js_cookies.asp" target="_blank">https://www.w3schools.com/js/js_cookies.asp</a></p>
+            <h2>JavaScript Web APIs</h2>
+            <p>Full Reference: <a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank">https://www.w3schools.com/js/js_window_location.asp</a></p>
+            <h2>JavaScript AJAX</h2>
+            <p>Full Reference: <a href="https://www.w3schools.com/js/js_ajax_intro.asp" target="_blank">https://www.w3schools.com/js/js_ajax_intro.asp</a></p>
+            <h2>JavaScript Vs JQuery</h2>
+            <p>Full Reference: <a href="https://www.w3schools.com/js/js_jquery_selectors.asp" target="_blank">https://www.w3schools.com/js/js_jquery_selectors.asp</a></p>
           </div>
         </div>
       </section>
