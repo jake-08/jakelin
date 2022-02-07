@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>Blurry Loading</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <!-- Internal Style Sheet -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .bg {
+        background: url("https://images.unsplash.com/photo-1640622842223-e1e39f4bf627?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2371&q=80") no-repeat center center/cover;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: calc(100vw + 60px);
+        height: calc(100vh + 60px);
+        z-index: -1;
+        filter: blur(0px);
+      }
+
+      .loading-text {
+        font-size: 50px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="bg"></section>
+    <div class="loading-text">0%</div>
+  </body>
+  <!-- Internal JavaScript -->
+  <script>
+    const bg = document.querySelector(".bg");
+    const text = document.querySelector(".loading-text");
+
+    let count = 0;
+    let timer = setInterval(blurring, 30);
+
+    function blurring() {
+      count++;
+      if (count > 100) {
+        clearInterval(timer);
+      }
+      text.innerHTML = `${count}%`;
+      text.style.opacity = scale(count, 0, 100, 1, 0);
+      bg.style.filter = `blur(${scale(count, 0, 100, 0, 30)}px)`;
+    }
+
+    // https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
+    const scale = (num, in_min, in_max, out_min, out_max) => {
+      return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+    };
+  </script>
+</html>
