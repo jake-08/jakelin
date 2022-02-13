@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Meta Tag for Google Search Results -->
-    <title></title>
+    <title>Rotating Navigation</title>
     <meta name="description" content="" />
 
     <!-- Meta Tag for Mobile Devices  -->
@@ -21,7 +21,7 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome CDM -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
     <!-- Github -->
@@ -44,7 +44,21 @@
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div class="content"></div>
+      </div>
+    </div>
+  </body>
   <!-- Internal JavaScript -->
   <script></script>
 </html>
