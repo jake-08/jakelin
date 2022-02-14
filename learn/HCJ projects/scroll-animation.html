@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>Scroll Animation</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDM -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <!-- Github -->
+    <!-- https://github.com/bradtraversy/50projects50days -->
+
+    <!-- Internal Style Sheet -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #efedd6;
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      h1 {
+        margin: 10px;
+      }
+
+      .box {
+        background-color: steelblue;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+        transform: translateX(400%);
+        transition: transform 0.4s ease;
+      }
+
+      .box:nth-of-type(even) {
+        transform: translateX(-400%);
+      }
+
+      .box.show {
+        transform: translateX(0);
+      }
+
+      .box h2 {
+        font-size: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scroll to see the animation</h1>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+    <div class="box"><h2>Content</h2></div>
+  </body>
+  <!-- Internal JavaScript -->
+  <script>
+    const boxes = document.querySelectorAll(".box");
+
+    window.addEventListener("scroll", checkBoxes);
+
+    checkBoxes();
+
+    function checkBoxes() {
+      const triggerBottom = (window.innerHeight / 5) * 4;
+
+      boxes.forEach((box) => {
+        const boxTop = box.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          box.classList.add("show");
+        } else {
+          box.classList.remove("show");
+        }
+      });
+    }
+  </script>
+</html>
