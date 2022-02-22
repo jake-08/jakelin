@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>Increment Counter</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDM -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <!-- Github -->
+    <!-- https://github.com/bradtraversy/50projects50days -->
+
+    <!-- Internal Style Sheet -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+          background-color: #8e44ad;
+          color: #fff;
+        font-family: "Roboto Mono", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .counter-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 30px 50px;
+          text-align: center;
+      }
+
+      .counter {
+          font-size: 60px;
+          margin-top: 10px;
+      }
+
+      @media (max-width: 580px) {
+          body {
+              flex-direction: column;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="counter-container">
+        <i class="fab fa-twitter fa-3x"></i>
+        <div class="counter" data-target="12000"></div>
+        <span>Twitter Followers</span>
+    </div>
+    <div class="counter-container">
+        <i class="fab fa-youtube fa-3x"></i>
+        <div class="counter" data-target="5000"></div>
+        <span>YouTube Subscribers</span>
+    </div>
+    <div class="counter-container">
+        <i class="fab fa-facebook fa-3x"></i>
+        <div class="counter" data-target="7500"></div>
+        <span>Facebook Fans</span>
+    </div>
+  </body>
+  <!-- Internal JavaScript -->
+  <script>
+      const counters = document.querySelectorAll('.counter')
+      
+      counters.forEach(counter => {
+          counter.innerTexts = '0'
+
+          let count = 0; 
+          const updateCounter = () => {
+              const target = +counter.getAttribute('data-target')
+              const c = +counter.innerText
+
+              const increment = target / 200
+
+              if(c < target) {
+                  counter.innerText = `${Math.ceil(c + increment)}`
+                  setTimeout(updateCounter, 1)
+              } else {
+                counter.innerText = target
+              }
+
+          }
+          updateCounter()
+      })
+  </script>
+</html>
