@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>Hoverboard</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDM -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Github -->
+    <!-- https://github.com/bradtraversy/50projects50days -->
+
+    <!-- Internal Style Sheet -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 400px;
+      }
+
+      .square {
+        background-color: #1d1d1d;
+        box-shadow: 0 0 2px #000;
+        height: 16px;
+        width: 16px;
+        margin: 2px;
+        transition: 2s ease;
+      }
+
+      .square:hover {
+        transition-duration: 0s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container"></div>
+  </body>
+  <!-- Internal JavaScript -->
+  <script>
+    const container = document.getElementById("container");
+    const colors = ["#e74c3c", "#8e44ad", "#3498db", "#e67e22", "#2ecc71"];
+    const SQUARES = 500;
+
+    for (let i = 0; i < SQUARES; i++) {
+      const square = document.createElement("div");
+      square.classList.add("square");
+
+      square.addEventListener("mouseover", () => setColor(square));
+
+      square.addEventListener("mouseout", () => removeColor(square));
+
+      container.appendChild(square);
+    }
+
+    function setColor(element) {
+      const color = getRandomColor();
+      element.style.background = color;
+      element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
+    }
+
+    function removeColor(element) {
+      element.style.background = "#1d1d1d";
+      element.style.boxShadow = "0 0 2px #000";
+    }
+
+    function getRandomColor() {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+  </script>
+</html>
