@@ -1,6 +1,6 @@
 :root {
-  --mainColor: #2c445c;
-  --secondaryColor: #3c6388;
+  --mainColor: #41729f;
+  --secondaryColor: steelblue;
 
   --borderColor: #000000;
 
@@ -13,4 +13,5 @@
   --previewShadow: #111921;
 
   --buttonColor: #17a2b8;
+  --linkColor: #fff;
 }

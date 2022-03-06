@@ -13,6 +13,8 @@
   --previewShadow: #f0ead6;
 
   --buttonColor: black;
+
+  --linkColor: #06c;
 }
 
 /*
@@ -33,7 +35,12 @@ body * {
 }
 
 h1,
-h2,
+h2 {
+  color: #ffa500;
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+}
+
 h3,
 h4,
 h5,
@@ -94,6 +101,14 @@ th {
   border: 1px solid black;
   padding: 8px;
   vertical-align: top;
+  color: var(--mainText);
+}
+
+th {
+  font-size: 20px;
+  color: var(--mainText);
+  text-decoration: underline;
+  background-color: var(--mainColor);
 }
 
 button {
@@ -334,7 +349,11 @@ code {
 
 a {
   text-decoration: none;
-  color: #17a2b8;
+  color: var(--linkColor);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .nav-wrapper ul {
@@ -437,6 +456,7 @@ a {
 
 .post {
   background-color: #fff;
+  background-color: var(--mainColor);
   border: 1px solid var(--borderColor);
   height: 500px;
   -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
@@ -454,6 +474,7 @@ a {
 
 .post-preview {
   background-color: #fff;
+  background-color: var(--mainColor);
   padding: 15px;
 }
 
@@ -468,6 +489,7 @@ a {
 .post-title h6 {
   margin: 0;
   color: black;
+  color: var(--mainText);
 }
 
 .post-intro {
@@ -649,6 +671,9 @@ article h2 {
 .footer {
   background-color: var(--secondaryColor);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*
