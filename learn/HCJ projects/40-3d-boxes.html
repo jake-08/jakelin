@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>3D Boxes</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDM -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Github -->
+    <!-- https://github.com/bradtraversy/50projects50days -->
+
+    <!-- Internal Style Sheet -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fafafa;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .magic {
+        background-color: #f9ca24;
+        color: #fff;
+        font-family: inherit;
+        border: 0;
+        border-radius: 3px;
+        font-size: 16px;
+        padding: 12px 20px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        letter-spacing: 1px;
+        box-shadow: 0px 3px rgba(249, 202, 36, 0.5);
+        z-index: 100;
+      }
+
+      .magic:focus {
+        outline: none;
+      }
+
+      .magic:active {
+        box-shadow: none;
+        transform: translateY(2px);
+      }
+
+      .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px;
+        width: 500px;
+        position: relative;
+        transition: 0.4s ease;
+      }
+
+      .boxes.big {
+        width: 600px;
+        height: 600px;
+        justify-content: space-around;
+      }
+
+      .boxes.big .box {
+        transform: rotateZ(360deg);
+      }
+
+      .box {
+        background: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
+        background-repeat: no-repeat;
+        background-size: 500px 500px;
+        position: relative;
+        width: 125px;
+        height: 125px;
+        transition: 0.4s ease;
+      }
+
+      .box::after {
+        content: "";
+        background-color: #f6e58d;
+        position: absolute;
+        top: 8px;
+        right: -15px;
+        height: 100%;
+        width: 15px;
+        transform: skewY(45deg);
+      }
+
+      .box::before {
+        content: "";
+        background-color: #f6e58d;
+        position: absolute;
+        bottom: -15px;
+        left: 8px;
+        height: 15px;
+        width: 100%;
+        transform: skewX(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn" class="magic">Magic🎩</button>
+    <div id="boxes" class="boxes big"></div>
+  </body>
+  <!-- Internal JavaScript -->
+  <script>
+    const boxesContainer = document.getElementById("boxes");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => boxesContainer.classList.toggle("big"));
+
+    function createBoxes() {
+      for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+          const box = document.createElement("div");
+          box.classList.add("box");
+          box.style.backgroundPosition = `${-j * 125}px ${-i * 125}px`;
+          boxesContainer.append(box);
+        }
+      }
+    }
+
+    createBoxes();
+  </script>
+</html>
