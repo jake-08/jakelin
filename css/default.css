@@ -490,7 +490,7 @@ a:hover {
 .post-title h6 {
   margin: 0;
   color: black;
-  color: var(--mainText);
+  color: var(--mainHeader);
 }
 
 .post-intro {
