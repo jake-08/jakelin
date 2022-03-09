@@ -6,6 +6,7 @@
 
   --mainText: black;
   --secondaryText: #4b5156;
+  --mainHeader: #ffa500;
 
   --themeDotBroder: #24292e;
 
@@ -36,7 +37,7 @@ body * {
 
 h1,
 h2 {
-  color: #ffa500;
+  color: var(--mainHeader);
   font-family: "Russo One", sans-serif;
   font-weight: 500;
 }
@@ -98,7 +99,7 @@ table {
 td,
 th {
   text-align: left;
-  border: 1px solid black;
+  border: 1px solid var(--borderColor);
   padding: 8px;
   vertical-align: top;
   color: var(--mainText);
