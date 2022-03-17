@@ -55,8 +55,42 @@ body {
 }
 
 .nav-menu-items li:hover {
-    background-color: #999999;
+    background-color: steelblue;
     color: #fff;
+}
+
+.nav-menu .drop-down {
+    position: relative;
+    border-right: 0px solid #5d6b6b;
+}
+
+.nav-menu .drop-down-items {
+    background-color: #fff;
+    display: none;
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    list-style-type: none;
+    padding-left: 0;
+    z-index: 1;
+    color: steelblue;
+}
+
+.nav-menu .drop-down:hover .drop-down-items {
+    background-color: #fff;
+    display: block;
+}
+
+.nav-menu .drop-down .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align:middle;
+    margin-left: 5px;
+    border-top: 6px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
 }
 
 .nav-menu-form {
@@ -300,6 +334,43 @@ footer {
 .go-to-top button i {
     font-size: 20px;
     color: #fff;
+}
+
+.smart-share {
+    position: fixed;
+    top: 35%;
+    right: 0;
+    width: 60px;
+    background: none;
+}
+
+.smart-share .title {
+    color: #fff;
+    background-color: steelblue;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.smart-share .btn {
+    background-color: #999999;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    overflow: hidden;
+    width: 60px;
+    float: right;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.smart-share .btn:hover {
+    color: steelblue;
+    width: 80px;
 }
 
 @media (max-width: 1300px) {
