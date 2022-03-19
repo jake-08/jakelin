@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title></title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDM -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <!-- Github -->
+    <!-- https://github.com/bradtraversy/50projects50days -->
+
+    <!-- Internal Style Sheet -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      nav {
+        background-color: black;
+        font: normal bold 11px Arial, Sans-Serif;
+        color: gray;
+        height: 30px;
+      }
+
+      nav ul,
+      nav li {
+        margin: 0 0;
+        padding: 0 0;
+        list-style: none;
+      }
+
+      /* navigation height */
+      nav ul {
+        height: 30px;
+      }
+
+      nav li {
+        float: left;
+        display: inline;
+      }
+
+      nav a {
+        display: block;
+        line-height: 30px;
+        padding: 0 14px;
+        text-decoration: none;
+        color: white;
+      }
+
+      /* checkbox element: for mobile navigation button */
+      nav input {
+        display: none;
+        margin: 0 0;
+        padding: 0 0;
+        width: 30px;
+        height: 30px;
+        opacity: 0; /* hide the checkbox */
+        filter: alpha(opacity=0); /* hmmm... */
+        cursor: pointer;
+      }
+
+      /* for visual purpose */
+      nav label {
+        display: none;
+        font-size: 200%;
+        width: 30px;
+        height: 30px;
+        /* center vertically and horizontally */
+        line-height: 30px;
+        text-align: center;
+      }
+
+      /* hover state menu */
+      nav a:hover {
+        background-color: #39f;
+      }
+
+      nav {
+        /* we want to absolute positioning the menu, checkbox and label element to its parent, so this is needed */
+        position: relative;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: #200;
+        height: 0; /* set the sub menu height to `0` */
+        visibility: visible; /* use `visibility:hidden` instead of `display:none`, so we can animate the sub menu height */
+        overflow: hidden;
+        /* use CSS transition to animate the sub menu height */
+        -webkit-transition: all 0.26s ease-in-out;
+        -moz-transition: all 0.26s ease-in-out;
+        -ms-transition: all 0.26s ease-in-out;
+        -o-transition: all 0.26s ease-in-out;
+        transition: all 0.26s ease-in-out;
+      }
+
+      /* set the menu as a block list item */
+      nav li {
+        display: block;
+        float: none;
+        width: auto;
+      }
+
+      nav input,
+      nav label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block; /* show the menu icon */
+      }
+
+      nav input {
+        z-index: 4;
+      } /* always place the checkbox above the label element */
+
+      /* highlight the label element and show the menu if the checkbox is checked */
+      nav input:checked + label {
+        color: white;
+      }
+      nav input:checked ~ ul {
+        height: 120px; /* (menu item height multiplied by menu length) */
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- required markup: <nav>, <ul>, <li>, <input type=checkbox>, <label>, <a> -->
+    <nav>
+      <input type="checkbox" />
+      <label>&equiv;</label>
+      <ul>
+        <li><a href="http://www.dte.web.id/2012/12/konsep-navigasi-mobile-dengan-media.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Archive</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+  <!-- Internal JavaScript -->
+  <script></script>
+</html>
