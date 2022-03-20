@@ -3,6 +3,9 @@ const bannerImagesContainer = document.getElementById("banner-images");
 const bannerImages = document.querySelectorAll(".banner-images img");
 let bannerImagesIdx = 0;
 
+// Stop Interval in Default Page
+const pageHeaderEl = document.querySelector(".page-header-container");
+
 // Open & Close Mobile Nav
 const navMenu = document.querySelector(".nav-menu");
 const navMenuItems = document.querySelectorAll(".nav-menu-items li");
@@ -17,14 +20,22 @@ const testimonials = [
   "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
 ];
-const testimonialsEl = document.querySelector(".testimonials p");
-let testimonialsIdx = 0;
+const testimonialsEl = document.querySelector(".testimonials-text p");
+let testimonialsIdx = 1;
 
 // Scroll To Top Function
-const goToTopBtn = document.getElementById("goToTopBtn");
+const goToTopBtnEl = document.getElementById("goToTopBtn");
+
+/* 
+  ################################################################################################
+               Functions Start Here
+  ################################################################################################
+*/
 
 // Banner Carousel
-setInterval(runBannerCarousel, 5000);
+if(bannerImagesContainer) {
+  setInterval(runBannerCarousel, 5000);
+}
 
 function runBannerCarousel() {
   bannerImagesIdx++;
@@ -45,21 +56,7 @@ function openMobileNav() {
   navMenu.classList.toggle("open");
 }
 
-// Scroll To Top Function
-window.onscroll = () => showGoToTopBtn();
-
-function showGoToTopBtn() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    goToTopBtn.style.display = "block";
-  } else {
-    goToTopBtn.style.display = "none";
-  }
-}
-
-function goToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+setInterval(updateTestimonial, 10000);
 
 // Testimonials 
 function updateTestimonial() {
@@ -74,4 +71,18 @@ function updateTestimonial() {
     }
 }
 
-setInterval(updateTestimonial, 1000);
+// Scroll To Top Function
+window.onscroll = () => showGoToTopBtn();
+
+function showGoToTopBtn() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    goToTopBtnEl.style.display = "block";
+  } else {
+    goToTopBtnEl.style.display = "none";
+  }
+}
+
+function goToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
