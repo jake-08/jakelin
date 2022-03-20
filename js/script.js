@@ -47,3 +47,29 @@ var postIntro = document.querySelectorAll(".js-post-intro");
 for (var i = 0; i < postIntro.length; i++) {
   $clamp(postIntro[i], { clamp: 7 });
 }
+
+/*
+################################################################################################
+               Design Palette
+################################################################################################
+*/
+const paletteEl = document.querySelectorAll(".palette");
+console.log(paletteEl)
+
+for(let i = 0; i < paletteEl.length; i++) {
+  paletteEl[i].childNodes[3].addEventListener('click', () => {
+    const textarea = document.createElement("textarea");
+    const paletteValue = paletteEl[i].childNodes[1].innerText;
+
+    if (!paletteValue) {
+      return;
+    }
+
+    textarea.value = paletteValue;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+    alert(`${paletteValue} coppied to clipboard!`);
+  });
+}

@@ -6,7 +6,8 @@
 
   --mainText: black;
   --secondaryText: #4b5156;
-  --mainHeader: #ffa500;
+  --mainHeader: steelblue;
+  --secondaryHeader: steelblue;
 
   --themeDotBroder: #24292e;
 
@@ -36,17 +37,17 @@ body * {
 }
 
 h1,
-h2 {
+h2, 
+h3 {
   color: var(--mainHeader);
   font-family: "Russo One", sans-serif;
   font-weight: 500;
 }
 
-h3,
 h4,
 h5,
 h6 {
-  color: var(--mainText);
+  color: var(--secondaryHeader);
   font-family: "Russo One", sans-serif;
   font-weight: 500;
 }
@@ -69,7 +70,6 @@ h2 {
   font-size: 36px;
 }
 h3 {
-  margin: 15px 0;
   font-size: 28px;
 }
 h4 {
@@ -136,6 +136,27 @@ code {
   font-size: 105%;
 }
 
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+}
+
 /*
 ################################################################################################
               Genereal Css End
@@ -182,6 +203,12 @@ code {
 @media screen and (max-width: 1200px) {
   .main-wrapper {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .secondary-wrapper {
+    padding: 1em 2em;
   }
 }
 
@@ -376,6 +403,12 @@ a:hover {
   margin-left: 10px;
 }
 
+@media screen and (max-width: 800px) {
+  .nav-wrapper {
+    justify-content: space-around;
+  }
+}
+
 /*
 ################################################################################################
                Naviagation  Bar (All Page) End
@@ -489,8 +522,6 @@ a:hover {
 
 .post-title h6 {
   margin: 0;
-  color: black;
-  color: var(--linkColor);
 }
 
 .post-intro {
@@ -545,7 +576,7 @@ a:hover {
   font-size: 14px;
 }
 
-#submit-btn {
+.submit-btn {
   margin-top: 10px;
   width: 100%;
   padding-top: 10px;
@@ -553,7 +584,13 @@ a:hover {
   color: #fff;
   background-color: var(--buttonColor);
   border: none;
+  cursor: pointer;
 }
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
 /*
 ################################################################################################
                Contact Form (Index Page) End
@@ -680,6 +717,74 @@ article h2 {
 /*
 ################################################################################################
                Footer End 
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Design Paletter
+################################################################################################
+*/
+
+.palette-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.palette {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.palette .palette-value {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.palette .palette-btn {
+  background-color: var(--buttonColor);
+  color: #fff;
+  font-size: 16px;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.palette-btn:focus,
+input:focus {
+  outline: none;
+}
+
+.palette-btn:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 800px) {
+  .palette-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  
+}
+
+/*
+################################################################################################
+               Design Palette End
 ################################################################################################
 */
 
