@@ -244,12 +244,18 @@ header {
     position: relative;
     height: 60vh;
     max-width: 100%;
+    overflow: hidden;
+}
+
+.banner-images {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 1s ease-in;
 }
 
 .banner-images img {
-    position: absolute;
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -277,10 +283,12 @@ header {
 .banner-image-text h1 {
     font-size: 52px;
     margin: 0 0 10px 0;
+    animation: banner-text-load 1.5s ease-in 500ms;
 }
 
 .banner-image-text p {
     margin: 0 0 20px 0;
+    animation: banner-text-load 1.5s ease-in 1s;
 }
 
 .banner-image-text button {
@@ -291,6 +299,7 @@ header {
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
+    animation: banner-text-load 1.5s ease-in 1.5s;
 }
 
 .banner-image-text button:hover {
@@ -298,8 +307,17 @@ header {
 }
 
 @media (max-width: 1400px) {
-    .banner-img {
-        height: 40vh;
+    .banner-image-container {
+        height: 50vh;
+    }
+
+    .banner-images {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-image-text {
+        transform: translate(-50%, -50%);
     }
 
     .banner-image-text h1 {
@@ -314,6 +332,18 @@ header {
         padding: 15px 30px;
     }
 }
+
+@keyframes banner-text-load {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 
 /* Main Container */
 
