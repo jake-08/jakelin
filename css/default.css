@@ -54,7 +54,7 @@ h6 {
 
 p,
 li,
-span,
+/* span, */
 label,
 input,
 textarea {
@@ -750,12 +750,10 @@ article h2 {
   display: flex;
   align-items: center;
   position: relative;
-  font-size: 18px;
   letter-spacing: 1px;
   padding: 12px 10px;
   height: 50px;
   border-radius: 5px;
-  /* border: 1px solid #333; */
 }
 
 .palette.border {
@@ -765,9 +763,8 @@ article h2 {
 .palette .palette-value {
   word-wrap: break-word;
   max-width: calc(100% - 40px);
-  font: inherit;
-  color: inherit;
-  
+  font-family: inherit;
+  font-size: 18px;
 }
 
 .palette .palette-btn {
@@ -794,7 +791,9 @@ input:focus {
 }
 
 @media screen and (max-width: 800px) {
-  
+  .palette-container.two-col, .palette-container.three-col, .palette-container.four-col {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*
