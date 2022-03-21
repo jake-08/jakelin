@@ -123,6 +123,7 @@ pre,
 code {
   background-color: var(--mainColor);
   color: crimson;
+  border-radius: 5px;
 }
 
 pre {
@@ -728,14 +729,25 @@ article h2 {
 
 .palette-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 
+.palette-container.two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.palette-container.three-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.palette-container.four-col {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .palette {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
-  /* justify-content: flex-start; */
   align-items: center;
   position: relative;
   font-size: 18px;
@@ -743,11 +755,19 @@ article h2 {
   padding: 12px 10px;
   height: 50px;
   border-radius: 5px;
+  /* border: 1px solid #333; */
+}
+
+.palette.border {
+  background-color: #fff;
 }
 
 .palette .palette-value {
   word-wrap: break-word;
   max-width: calc(100% - 40px);
+  font: inherit;
+  color: inherit;
+  
 }
 
 .palette .palette-btn {
@@ -774,11 +794,6 @@ input:focus {
 }
 
 @media screen and (max-width: 800px) {
-  .palette-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-  }
   
 }
 

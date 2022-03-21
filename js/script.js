@@ -54,13 +54,18 @@ for (var i = 0; i < postIntro.length; i++) {
 ################################################################################################
 */
 const paletteEl = document.querySelectorAll(".palette");
-console.log(paletteEl)
+const paletteContainer = document.querySelectorAll(".palette-container");
+
+paletteEl.forEach((palette, idx) => palette.setAttribute("style", `${paletteEl[idx].childNodes[1].innerText}`))
+// paletteEl.forEach((palette, idx) => palette.childNodes[1].setAttribute("style", `${paletteEl[idx].childNodes[1].innerText}`))
+// paletteEl.forEach((palette, idx) => console.log(palette.childNodes[1]))
 
 for(let i = 0; i < paletteEl.length; i++) {
+  // console.log(paletteEl[i])
   paletteEl[i].childNodes[3].addEventListener('click', () => {
     const textarea = document.createElement("textarea");
     const paletteValue = paletteEl[i].childNodes[1].innerText;
-
+    
     if (!paletteValue) {
       return;
     }
