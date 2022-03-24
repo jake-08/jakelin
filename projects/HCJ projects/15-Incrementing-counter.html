@@ -34,8 +34,8 @@
       }
 
       body {
-          background-color: #8e44ad;
-          color: #fff;
+        background-color: #8e44ad;
+        color: #fff;
         font-family: "Roboto Mono", sans-serif;
         display: flex;
         align-items: center;
@@ -46,22 +46,22 @@
       }
 
       .counter-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          margin: 30px 50px;
-          text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px 50px;
+        text-align: center;
       }
 
       .counter {
-          font-size: 60px;
-          margin-top: 10px;
+        font-size: 60px;
+        margin-top: 10px;
       }
 
       @media (max-width: 580px) {
-          body {
-              flex-direction: column;
-          }
+        body {
+            flex-direction: column;
+        }
       }
     </style>
   </head>
@@ -87,7 +87,7 @@
       const counters = document.querySelectorAll('.counter')
       
       counters.forEach(counter => {
-          counter.innerTexts = '0'
+          counter.innerText = '0'
 
           let count = 0; 
           const updateCounter = () => {
