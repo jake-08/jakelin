@@ -53,6 +53,46 @@
         <div class="main-wrapper">
           <div class="secondary-wrapper">
             <h1>Javascript Objects' Methods and Properties</h1>
+            <h3>Table of Content</h3>
+            <div id="content"></div>
+            <h2>HTML DOM Methods and Properties</h2>
+            <h4>Finding HTML Elements</h4>
+            <p><code>document.getElementById(id)</code> method find an element by element id.</p>
+            <p><code>document.getElementsByTagName(name)</code> method find elements by tag name and returns an <code>HTMLCollection</code> object.</p>
+            <p>
+              <code>HTMLCollection</code> object is an array-like list (collection) of HTML elements. The elements in the collection can be accessed by an index number and the index starts at 0. The <code>length</code> property defines the number of elemets in an <code>HTMLCollection</code>. Note:
+              An HTMLCollection may look like an array, but it is not.
+            </p>
+            <p><code>document.getElementsByClassName(name)</code> method find elements by class name.</p>
+            <p><code>document.querySelectorAll(CSS selector)</code> method find all HTML elements that matach a specified <strong>CSS selector</strong> and return a <code>NodeList</code> object.</p>
+            <p>
+              <code>NodeList</code> object is a list (collection) of nodes extracted from a document. It is almost the same as <code>HTMLCollection</code> object. The elements in the NodeList can be accessed by an index number and the index starts at 0. The <code>length</code> property defines the
+              number of nodes in a node list.
+            </p>
+            <h4>querySelector vs. getElementById</h4>
+            <p>Both the <code>querySelector()</code> and <code>getElementById()</code> methods let you retrieve an element from the JavaScript Document Object Model (DOM). However, each method has its own user cases.</p>
+            <p>The JavaScript <code>querySelector()</code> method lets you retrieve an element from the DOM, or the web page, using a CSS selector. This method comes with a sister function called <code>querySelectorAll()</code> which selects all the elements that match a particular selector from the DOM.</p>
+            <p>The <code>getElementById()</code> method retrieves an element based on its ID attribute. You would use this method if you only want to retrieve one element from the web page.</p>
+            <p>You should opt to use the <code>querySelector()</code> method if you need to select elements using more complex rules that are easily represented using a CSS selector.</p>
+            <p>If you want to select an element by its ID, using <code>getElementById()</code> is a good choice.</p>
+            <p><b>In Conclution,</b>they both are the same. Just be careful with <code>querySelectorAll()</code> method, as it returns a Node List and you will have to select the node before DOM Manupulation.</p>
+            <h4>Sets or Returns HTML Elements</h4>
+            <p><code>element.innerHTML</code> property sets or returns the HTML content (inner HTML) of an element.</p>
+            <p><code>element.innerText</code> property sets or returns the text content of an element.</p>
+            <p><code>element.attribute</code> property returns a collection of attributes in an element.</p>
+            <p><code>element.style.property</code> property change the style of an HTML element.</p>
+            <p><code>element.setAttribute(attribute, value)</code> method change the attribute value of an HTML element.</p>
+            <h4>Adding and Deleting Elements</h4>
+            <p><code>document.createElement(element)</code> method create an HTML element.</p>
+            <p><code>document.createTextNode(Text)</code> method creates a text node.</p>
+            <p><code>document.removeChild(element)</code> method removes an HTML element.</p>
+            <p><code>document.appendChild(element)</code> method adds an HTML element as the last child of the parent.</p>
+            <p><code>document.insertBefore(before element, element)</code> method adds an HTML element before the targeted element.</p>
+            <p><code>document.replaceChild(new, old)</code> method replace an HTML element.</p>
+            <p><code>document.write(text)</code> method write into the HTML output stream.</p>
+            <h4>Event Listener</h4>
+            <p><code>addEventListener()</code> method attaches an event handler to the specified element.</p>
+            <p><code>removeEventListener()</code> method removes event handlers that have been attached with the <code>addEventListener()</code> method.</p>
             <h2>JavaScript String Methods</h2>
             <ol>
               <li><code>string.length</code> - returns the length of a string</li>
@@ -312,36 +352,6 @@
             <p><code>forEach()</code> method calls a function for each key/value pair in a Map.</p>
             <p><code>entries()</code> method returns an iterator with the [key,value] paris in a Map.</p>
             <p><code>size</code> property returns the number of elements in a Map.</p>
-            <h2>HTML DOM Methods and Propertiess</h2>
-            <h4>Finding HTML Elements</h4>
-            <p><code>document.getElementById(id)</code> method find an element by element id.</p>
-            <p><code>document.getElementsByTagName(name)</code> method find elements by tag name and returns an <code>HTMLCollection</code> object.</p>
-            <p>
-              <code>HTMLCollection</code> object is an array-like list (collection) of HTML elements. The elements in the collection can be accessed by an index number and the index starts at 0. The <code>length</code> property defines the number of elemets in an <code>HTMLCollection</code>. Note:
-              An HTMLCollection may look like an array, but it is not.
-            </p>
-            <p><code>document.getElementsByClassName(name)</code> method find elements by class name.</p>
-            <p><code>document.querySelectorAll(CSS selector)</code> method find all HTML elements that matach a specified <strong>CSS selector</strong> and return a <code>NodeList</code> object.</p>
-            <p>
-              <code>NodeList</code> object is a list (collection) of nodes extracted from a document. It is almost the same as <code>HTMLCollection</code> object. The elements in the NodeList can be accessed by an index number and the index starts at 0. The <code>length</code> property defines the
-              number of nodes in a node list.
-            </p>
-            <h4>Changing HTML Elements</h4>
-            <p><code>element.innerHTML = new html content</code> property change the inner HTML of an element.</p>
-            <p><code>element.attribute = new value</code> property change the attribute value of an HTML element.</p>
-            <p><code>element.style.property = new style</code> property change the style of an HTML element.</p>
-            <p><code>element.setAttribute(attribute, value)</code> method change the attribute value of an HTML element.</p>
-            <h4>Adding and Deleting Elements</h4>
-            <p><code>document.createElement(element)</code> method create an HTML element.</p>
-            <p><code>document.createTextNode(Text)</code> method creates a text node.</p>
-            <p><code>document.removeChild(element)</code> method removes an HTML element.</p>
-            <p><code>document.appendChild(element)</code> method adds an HTML element as the last child of the parent.</p>
-            <p><code>document.insertBefore(before element, element)</code> method adds an HTML element before the targeted element.</p>
-            <p><code>document.replaceChild(new, old)</code> method replace an HTML element.</p>
-            <p><code>document.write(text)</code> method write into the HTML output stream.</p>
-            <h4>Event Listener</h4>
-            <p><code>addEventListener()</code> method attaches an event handler to the specified element.</p>
-            <p><code>removeEventListener()</code> method removes event handlers that have been attached with the <code>addEventListener()</code> method.</p>
             <h2>The Browser Object Model (BOM)</h2>
             <p>The <strong>Browser Object Model (BOM)</strong> allows JavaScript to "talk to" the browser.</p>
             <h3>The Window Object</h3>
@@ -393,6 +403,21 @@
   </body>
   <script type="text/javascript" src="../../js/script.js"></script>
   <script>
+    const tableOfContent = document.getElementById("content");
+    const mainHeaders = document.querySelectorAll("h2");
+
+    tableOfContent.innerHTML = "";
+    
+    for(let i = 0; i < mainHeaders.length; i++) {
+      const header = document.createElement('a')
+      header.setAttribute("href", `#${i}`)
+
+      mainHeaders[i].setAttribute("id", i)
+
+      header.innerHTML = `<p>${mainHeaders[i].innerText}</p>`
+      
+      tableOfContent.appendChild(header)
+    }
     $(function () {
       $("#footer").load("/templates/footer.html");
     });
