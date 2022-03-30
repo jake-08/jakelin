@@ -788,7 +788,8 @@ header {
 
 footer {
   background-color: #000000;
-  background-image: url("/images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url("../../../images/banner\ images/anders-jilden-cYrMQA7a3Wc-unsplash.jpg");
   object-fit: cover;
   background-position: center bottom;
 }

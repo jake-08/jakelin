@@ -8,7 +8,7 @@ let themeDots = document.getElementsByClassName("theme-dot");
 let theme = localStorage.getItem("theme");
 
 if (theme == null) {
-  setTheme("blue");
+  setTheme("default");
 } else {
   setTheme(theme);
 }
