@@ -29,7 +29,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
 
-    <style></style>
+    <style>
+      :root {
+        scroll-padding-top: 30px;
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -57,19 +62,23 @@
             <div id="content"></div>
             <h2>HTML DOM Methods and Properties</h2>
             <h4>Finding HTML Elements</h4>
-            <p><code>document.getElementById(id)</code> method find an element by element id.</p>
+            <p><code>document.getElementById(id)</code> method find an element by element id and returns an element with a specified value.</p>
+            <p><code>document.querySelector()</code> method returns the <strong>first</strong> element that matches a CSS selector.</p>
+            <p><code>document.querySelectorAll()</code> method find all HTML elements that matach a specified CSS selector and return a <code>NodeList</code> object.</p>
+            <p><code>document.closest()</code> method searches <strong>up</strong> the DOM tree for elements which matches a specified CSS selector.</p>
             <p><code>document.getElementsByTagName(name)</code> method find elements by tag name and returns an <code>HTMLCollection</code> object.</p>
+            <p><code>document.getElementsByClassName(name)</code> method find elements by class name and returns an <code>HTMLCollection</code> object.</p>
+            <h4><code>HTMLCollection</code> Vs <code>NodeList</code></h4>
             <p>
               <code>HTMLCollection</code> object is an array-like list (collection) of HTML elements. The elements in the collection can be accessed by an index number and the index starts at 0. The <code>length</code> property defines the number of elemets in an <code>HTMLCollection</code>. Note:
               An HTMLCollection may look like an array, but it is not.
             </p>
-            <p><code>document.getElementsByClassName(name)</code> method find elements by class name.</p>
-            <p><code>document.querySelectorAll(CSS selector)</code> method find all HTML elements that matach a specified <strong>CSS selector</strong> and return a <code>NodeList</code> object.</p>
+            <p><code>HTMLCollection</code> doesn't have <code>forEach</code> method, have to use <code>Array.from()</code> method to convert to Array to use <code>forEach</code> method.</p>
             <p>
               <code>NodeList</code> object is a list (collection) of nodes extracted from a document. It is almost the same as <code>HTMLCollection</code> object. The elements in the NodeList can be accessed by an index number and the index starts at 0. The <code>length</code> property defines the
               number of nodes in a node list.
             </p>
-            <h4>querySelector vs. getElementById</h4>
+            <h3>querySelector vs. getElementById</h3>
             <p>Both the <code>querySelector()</code> and <code>getElementById()</code> methods let you retrieve an element from the JavaScript Document Object Model (DOM). However, each method has its own user cases.</p>
             <p>The JavaScript <code>querySelector()</code> method lets you retrieve an element from the DOM, or the web page, using a CSS selector. This method comes with a sister function called <code>querySelectorAll()</code> which selects all the elements that match a particular selector from the DOM.</p>
             <p>The <code>getElementById()</code> method retrieves an element based on its ID attribute. You would use this method if you only want to retrieve one element from the web page.</p>
@@ -79,6 +88,12 @@
             <h4>Sets or Returns HTML Elements</h4>
             <p><code>element.innerHTML</code> property sets or returns the HTML content (inner HTML) of an element.</p>
             <p><code>element.innerText</code> property sets or returns the text content of an element.</p>
+            <p><code>element.children</code> property returns an <code>HTMLCollection</code> of an element's child elements.</p>
+            <p><code>element.parentElement</code> property returns the parent element of the specified element.</p>
+            <p><code>element.parentNode</code> property returns the parent node of an element or node.</p>
+            <p>The difference between <code>parentElement</code> and <code>parentNode</code>, is that parentElement returns <code>null</code> if the parent node is not an element node.</p>
+            <p><code>element.nextElementSibiling</code> property returns the <strong>next</strong> element in the same tree level.</p>
+            <p><code>element.previousElementSibiling</code> property returns the <strong>previous</strong> element in the same tree level.</p>
             <p><code>element.attribute</code> property returns a collection of attributes in an element.</p>
             <p><code>element.style.property</code> property change the style of an HTML element.</p>
             <p><code>element.setAttribute(attribute, value)</code> method change the attribute value of an HTML element.</p>

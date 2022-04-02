@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tag for Google Search Results -->
+    <title>JS Data Attributes</title>
+    <meta name="description" content="" />
+
+    <!-- Meta Tag for Mobile Devices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- Meta Tag for Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jake-08.github.io/jakelin.github.io/posts/" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://jake-08.github.io/jakelin.github.io/images/" />
+
+    <!-- Favicon -->
+    <link href="../../images/jakepic.jpeg" rel="icon" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+
+    <style>
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../../main/index.html">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+        </a>
+        <ul class="navigation">
+          <li><a href="../../main/index.html#contact-form">Contact</a></li>
+          <li><a href="../../main/blogs.html">Blogs</a></li>
+          <li><a href="../../main/learn.html">Learn</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="s1">
+        <div class="main-wrapper">
+          <div class="secondary-wrapper">
+            <h1>Data Attributes in JavaScript</h1>
+            <p>One of the best ways to store data in HTML is with data attributes. These data attributes can be used to do some pretty cool things in CSS without the need for JavaScript, but data attributes are most useful when combined with JavaScript.</p>
+            <p>To create a data attribute in HTML we just need to add a custom attribute to our HTML element that starts with <code>data-</code>.</p>
+            <pre>
+                &lt;div 
+                &nbsp;&nbsp;id="test-div"
+                &nbsp;&nbsp;data-first-name="Jake"
+                &nbsp;&nbsp;data-last-name="Lin"
+                &nbsp;&nbsp;data-active
+                &lt;/div&gt;
+            </pre>
+            <h3>Reading Data Attributes</h3>
+            <p>We now have a div with three custom data attributes. Now let's move over to JavaScript to see how we would access these data attributes.</p>
+            <pre>
+                const div = document.getElementById("test-div")
+
+                console.log(div.dataset)
+            </pre>
+            <p>The <code>dataset</code> property on an element will return a <code>DOMStringMap</code> which is essentially just an object that contains all the custom data attributes of an element. Our dataset looks like this.</p>
+            <pre>
+                {
+                    &nbsp;&nbsp;active: ""
+                    &nbsp;&nbsp;firstName: "Kyle"
+                    &nbsp;&nbsp;lastName: "Cook"
+                  }
+            </pre>
+            <p>You will notice two interesting things about this.</p>
+            <p>First, all of our properties are converted from snake case, <code>first-name</code>, to camel case, <code>firstName</code>. This is because in JavaScript object properties are primarily written as camel case so this just makes working with the JavaScript object much easier.</p>
+            <p>Second, the <code>active</code> property has a value of <code>""</code>. This is because any data attribute without a value is assumed to have an empty string as its value.</p>
+            <p>Now in order to access an individual data attribute we just access it like a property on an object since <code>dataset</code> is just an object.</p>
+            <pre>
+                const div = document.getElementById("test-div")
+
+                console.log(div.dataset.firstName)
+                // Kyle
+                console.log(div.dataset.lastName)
+                // Cook
+            </pre>
+            <h3>Conclusion</h3>
+            <p>Data attributes in JavaScript are incredibly useful. They allow you to write extremely flexible code which means you can spend more time writing the HTML for your project and less time worrying about writing a custom event listener for each new element you add.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("../../templates/footer.html");
+    });
+  </script>
+</html>
