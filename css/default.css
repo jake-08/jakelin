@@ -1,11 +1,15 @@
 :root {
+  --main-font: "Russo One", sans-serif;
+  --secondary-font: "Roboto Mono", monospace;
+  --blog-font: "Helvetica", serif;
+
   --mainColor: #eaeaea;
   --secondaryColor: #fff;
 
   --borderColor: #c1c1c1;
 
   --mainText: black;
-  --secondaryText: #4b5156;
+  --secondaryText: #333;
   --mainHeader: steelblue;
   --secondaryHeader: steelblue;
 
@@ -40,7 +44,7 @@ h1,
 h2, 
 h3 {
   color: var(--mainHeader);
-  font-family: "Russo One", sans-serif;
+  font-family: var(--main-font);
   font-weight: 500;
 }
 
@@ -48,18 +52,17 @@ h4,
 h5,
 h6 {
   color: var(--secondaryHeader);
-  font-family: "Russo One", sans-serif;
+  font-family: var(--main-font);
   font-weight: 500;
 }
 
 p,
 li,
-/* span, */
 label,
 input,
 textarea {
   color: var(--secondaryText);
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--secondary-font);
   font-size: 16px;
 }
 
@@ -79,7 +82,7 @@ h5 {
   font-size: 20px;
 }
 h6 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 hr {
@@ -139,23 +142,32 @@ code {
 
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 36px;
-  }
-  h2 {
     font-size: 28px;
   }
-  h3 {
+  h2 {
     font-size: 24px;
   }
-  h4 {
+  h3 {
     font-size: 20px;
   }
-  h5 {
+  h4 {
     font-size: 18px;
   }
-  h6 {
+  h5 {
     font-size: 16px;
   }
+  h6 {
+    font-size: 14px;
+  }
+
+  p,
+  li,
+  label,
+  input,
+  textarea {
+    font-size: 12px;
+  }
+
 }
 
 /*
@@ -600,16 +612,28 @@ a:hover {
 
 /*
 ################################################################################################
-               Article 
+               Blog 
 ################################################################################################
 */
+#blogs .secondary-wrapper {
+  position: relative;
+}
 
-article .img-container {
+#blogs article h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#blogs article p {
+  line-height: 1.75;
+}
+
+#blogs article .img-container {
   width: 50%;
   margin: 0 auto;
 }
 
-.img-container img {
+#blogs .img-container img {
   width: 100%;
   border-radius: 10%;
   -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
@@ -617,16 +641,7 @@ article .img-container {
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
 
-article h2 {
-  text-align: center;
-}
-
-#blogs .secondary-wrapper {
-  position: relative;
-}
-
 .date-time {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   position: absolute;
   right: 5%;
   top: 0;
@@ -634,6 +649,10 @@ article h2 {
   color: var(--secondaryText);
   font-weight: bold;
   text-align: right;
+}
+
+.date-time p {
+  margin: 8px 0;
 }
 
 .quote {
@@ -669,7 +688,7 @@ article h2 {
 }
 
 .song span {
-  font-size: 12px;
+  font-size: 16px;
   font-style: italic;
   color: black;
   margin-left: 15px;
@@ -693,11 +712,19 @@ article h2 {
   article .img-container {
     width: 70%;
   }
+
+  .date-time p {
+    margin: 5px;
+  }
+
+  .song span {
+    font-size: 12px;
+  }
 }
 
 /*
 ################################################################################################
-               Article end
+               Blog end
 ################################################################################################
 */
 
