@@ -637,64 +637,7 @@ a:hover {
 
 /*
 ################################################################################################
-               Contact Form (Index Page) 
-################################################################################################
-*/
-
-#contact-form {
-  background-color: var(--mainColor);
-  border: 1px solid var(--borderColor);
-  border-radius: 5px;
-  display: block;
-  max-width: 600px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  padding: 15px;
-}
-
-#contact-form label {
-  line-height: 2.7em;
-}
-
-#contact-form textarea {
-  font-size: 14px;
-  min-height: 100px;
-}
-
-.input-field {
-  background-color: var(--secondaryColor);
-  border: 1px solid var(--borderColor);
-  border-radius: 5px;
-  font-size: 14px;
-  width: 99%;
-  padding: 10px 0;
-}
-
-.submit-btn {
-  background-color: var(--buttonColor);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-
-.submit-btn:active {
-  transform: scale(0.98);
-}
-
-/*
-################################################################################################
-               Contact Form (Index Page) End
-################################################################################################
-*/
-
-/*
-################################################################################################
-               Blog 
+               Blog Page
 ################################################################################################
 */
 #blogs .secondary-wrapper {
@@ -711,7 +654,7 @@ article p {
   text-align: justify;
 }
 
-article span .highlight {
+article span.highlight {
   background-color: var(--yellowColor);
 }
 
@@ -813,7 +756,64 @@ article .img-container {
 
 /*
 ################################################################################################
-               Blog end
+               Blog Page end
+################################################################################################
+*/
+
+/*
+################################################################################################
+               Contact Form (Index Page) 
+################################################################################################
+*/
+
+#contact-form {
+  background-color: var(--mainColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 15px;
+}
+
+#contact-form label {
+  line-height: 2.7em;
+}
+
+#contact-form textarea {
+  font-size: 14px;
+  min-height: 100px;
+}
+
+.input-field {
+  background-color: var(--secondaryColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  font-size: 14px;
+  width: 99%;
+  padding: 10px 0;
+}
+
+.submit-btn {
+  background-color: var(--buttonColor);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/*
+################################################################################################
+               Contact Form (Index Page) End
 ################################################################################################
 */
 
@@ -839,7 +839,7 @@ article .img-container {
 
 /*
 ################################################################################################
-               Design Paletter
+               Design Palette Page
 ################################################################################################
 */
 
