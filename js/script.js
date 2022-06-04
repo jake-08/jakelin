@@ -45,7 +45,7 @@ function setTheme(mode) {
 var postIntro = document.querySelectorAll(".js-post-intro");
 
 for (var i = 0; i < postIntro.length; i++) {
-  $clamp(postIntro[i], { clamp: 6 });
+  $clamp(postIntro[i], { clamp: 5 });
 }
 
 /*
