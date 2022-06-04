@@ -418,7 +418,7 @@ a:hover {
 
 @media screen and (max-width: 800px) {
   .nav-wrapper {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 
@@ -709,9 +709,9 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
-  /* #blogs article .img-container {
-    width: 70%;
-  } */
+  #blogs article .img-container {
+    width: 80%;
+  }
 
   .date-time p {
     margin: 0;
