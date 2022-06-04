@@ -343,6 +343,15 @@ code {
     padding-top: 0;
     padding-bottom: 100px;
   }
+
+  #preview-shadow {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  
+  #preview {
+    width: 280px;
+  }
 }
 /*
 ################################################################################################
@@ -652,6 +661,10 @@ article h1 {
 article p {
   line-height: 1.75;
   text-align: justify;
+}
+
+article span .highlight {
+  background-color: #fec02f;
 }
 
 article .img-container {
