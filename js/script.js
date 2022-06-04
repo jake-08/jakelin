@@ -48,24 +48,6 @@ for (var i = 0; i < postIntro.length; i++) {
   $clamp(postIntro[i], { clamp: 6 });
 }
 
-// var maxWidth = window.matchMedia("(max-width: 800px)")
-
-// function myFunction(x) {
-//   if (maxWidth.matches) { // If media query matches
-//     for (var i = 0; i < postIntro.length; i++) {
-//       $clamp(postIntro[i], { clamp: 7 });
-//     }
-//   } else {
-//     for (var i = 0; i < postIntro.length; i++) {
-//       $clamp(postIntro[i], { clamp: 7 });
-//     }
-//   }
-// }
-// myFunction(maxWidth);
-// maxWidth.addEventListener(myFunction);
-
-
-
 /*
 ################################################################################################
                Design Palette

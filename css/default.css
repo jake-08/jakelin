@@ -92,6 +92,7 @@ hr {
 ul,
 ol {
   margin: 0;
+  padding: 0 0 0 30px;
 }
 
 table {
@@ -166,6 +167,11 @@ code {
   input,
   textarea {
     font-size: 12px;
+  }
+
+  ul,
+  ol {
+    padding: 0 0 0 20px;
   }
 
 }
@@ -266,6 +272,7 @@ code {
   width: 250px;
   object-fit: cover;
   border: 2px solid var(--borderColor);
+  border-radius: 10%;
 }
 
 .right-column {
