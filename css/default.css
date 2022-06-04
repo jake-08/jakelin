@@ -215,13 +215,13 @@ code {
 
 @media screen and (max-width: 1200px) {
   .main-wrapper {
-    width: 90%;
+    width: 95%;
   }
 }
 
 @media screen and (max-width: 800px) {
   .secondary-wrapper {
-    padding: 1em 2em;
+    padding: 1em 1.5em;
   }
 }
 
@@ -709,12 +709,12 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
-  article .img-container {
+  /* #blogs article .img-container {
     width: 70%;
-  }
+  } */
 
   .date-time p {
-    margin: 5px;
+    margin: 0;
   }
 
   .song span {
