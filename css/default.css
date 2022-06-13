@@ -696,7 +696,7 @@ article .img-container {
 }
 
 .quote p {
-  color: var(--mainText);
+  color: #fff;
   font-style: italic;
   margin: 0;
 }
