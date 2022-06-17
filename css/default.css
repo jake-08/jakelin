@@ -70,6 +70,11 @@ textarea {
   font-size: 16px;
 }
 
+i {
+  color: #444;
+  font-weight: lighter;
+}
+
 h1 {
   font-size: 48px;
 }
@@ -655,8 +660,16 @@ article p {
   text-align: justify;
 }
 
-article span.highlight {
+article .highlight {
   background-color: var(--yellowColor);
+}
+
+article ol li.tick {
+  list-style: none;
+}
+
+article ol li.tick:before {
+  content: '✓';
 }
 
 article .img-container {
