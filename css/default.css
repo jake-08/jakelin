@@ -896,10 +896,9 @@ article .img-container {
 }
 
 .palette .palette-btn {
-  background-color: var(--buttonColor);
+  background-color: var(--mainHeader);
   border: none;
   border-radius: 5px;
-  color: #fff;
   font-size: 16px;
   position: absolute;
   right: 10px;
@@ -907,6 +906,10 @@ article .img-container {
   height: 40px;
   padding: 8px;
   cursor: pointer;
+}
+
+.palette .palette-btn i {
+  color: #fff;
 }
 
 .palette-btn:focus,

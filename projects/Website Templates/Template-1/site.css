@@ -78,7 +78,7 @@ header {
   top: 43px;
   left: 0px;
   padding-left: 0;
-  z-index: 2;
+  z-index: 100;
   width: 200px;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -273,7 +273,7 @@ header {
 .banner-images {
   display: flex;
   transform: translateX(0);
-  transition: transform 1s ease-in;
+  transition: transform 1.5s ease;
 }
 
 .banner-images img {
@@ -306,12 +306,17 @@ header {
 .banner-image-text h1 {
   font-size: 52px;
   margin: 0 0 10px 0;
-  animation: banner-text-load 1.5s ease-in 500ms;
+  transform: translateY(-200%);
+  opacity: 0;
+  /* the animation-fill-mode forwards property reatins the style values from the last keyframe when the animation ends */
+  animation: banner-text-load 1s ease-out forwards 500ms;
 }
 
 .banner-image-text p {
   margin: 0 0 20px 0;
-  animation: banner-text-load 1.5s ease-in 1s;
+  transform: translateY(-200%);
+  opacity: 0;
+  animation: banner-text-load 1s ease-out forwards 1.5s;
 }
 
 .banner-image-text button {
@@ -322,7 +327,9 @@ header {
   font-size: 14px;
   color: #fff;
   text-transform: uppercase;
-  animation: banner-text-load 1.5s ease-in 1.5s;
+  transform: translateY(-200%);
+  opacity: 0;
+  animation: banner-text-load 1s ease-out forwards 2.5s;
 }
 
 .banner-image-text button:hover {
@@ -358,13 +365,12 @@ header {
 
 @keyframes banner-text-load {
   0% {
-    transform: translateY(20px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(0px);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
