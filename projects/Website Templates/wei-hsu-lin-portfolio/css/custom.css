@@ -1,0 +1,1074 @@
+/* Custom CSS for Bootstrap 5 template designed for Web and Time-based Unit DESN1021  - WSU 2022 */
+/* Author: Web and Time-based Design unit */
+/* Date: Sept 23 / 2022 */
+
+/* sets the default rem size for an entire page (for all sizing to be relative to) */
+
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif !important;
+  margin: 0 auto;
+  padding: 0;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #f7c236;
+  height: 5px;
+  border: 0;
+}
+
+/* Resume template specific styles  */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  color: transparent;
+  font-weight: 700;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  animation: effect 5s linear infinite;
+}
+
+@keyframes effect {
+  0% {
+    background: linear-gradient(grey, #f7c236);
+    -webkit-background-clip: text;
+  }
+
+  100% {
+    background: linear-gradient(#f7c236, grey);
+    -webkit-background-clip: text;
+  }
+}
+
+h2 {
+  color: #f7c236;
+  padding-top: 0.5rem;
+  font-size: 2.5rem;
+}
+
+h3 {
+  padding-bottom: 0.3rem;
+  padding-top: 1rem;
+  color: grey;
+}
+
+h3.navmenu {
+  padding-bottom: 0.3rem;
+  padding-top: 0;
+}
+
+h4 {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  color: grey;
+}
+
+p,
+ul,
+ol,
+li,
+a {
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+}
+
+#nav.scrolled {
+  background-color: #404244 !important;
+  transition: background-color 500ms linear;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px -10px #000;
+}
+
+#home {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom,rgba(35,37,38,.9),rgba(65,67,69,.9)),url(../img/mainbg.jpg);
+  background-size: cover;
+}
+
+#banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+/*header style*/
+.header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3rem;
+}
+
+.overlay {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(244, 244, 244, 0.6);
+}
+
+.description {
+  position: absolute;
+  top: 30%;
+  margin: auto;
+  padding: 2rem;
+}
+
+.description h1 {
+  color: #f7c236;
+  font-size: 4rem;
+}
+
+.description p {
+  color: #666;
+  font-size: 1.5rem;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.description button {
+  border: 1px solid #f7c236;
+  background: #f7c236;
+  color: #fff;
+}
+
+button a {
+  color: #fff;
+}
+
+button a:hover {
+  color: #f7c236;
+  text-decoration: none;
+}
+
+.col-8 {
+  border: 0;
+  border-left: 6px solid #f7c236;
+  padding-left: 3rem;
+}
+
+.col-4 {
+  padding-right: 3rem;
+}
+
+/* CONTACT FORM - Start - sourced from: https://www.bootdey.com/snippets/view/contact-page-section */
+
+.contact-name {
+  margin-bottom: 30px;
+}
+.contact-name h5 {
+  font-size: 22px;
+  color: #f7c236;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.contact-name p {
+  font-size: 18px;
+  margin: 0;
+  color: white;
+}
+
+.social-share a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 10px;
+}
+.social-share .instagram {
+  box-shadow: 0 8px 30px -4px rgba(234, 76, 137, 0.5);
+  background-color: #f7c236;
+}
+.social-share .behance {
+  box-shadow: 0 8px 30px -4px rgba(0, 103, 255, 0.5);
+  background-color: #f7c236;
+}
+.social-share .linkedin {
+  box-shadow: 0 8px 30px -4px rgba(1, 119, 172, 0.5);
+  background-color: #f7c236;
+}
+
+.contact-form .form-control {
+  border-bottom: 1px solid #20247b;
+  background: white;
+  border-radius: 0;
+  padding-left: 0;
+  box-shadow: none !important;
+}
+
+.formcol {
+  background: grey;
+}
+
+.contact-form .form-control:focus {
+  border-bottom: 1px solid #fc5356;
+}
+.contact-form .form-control.invalid {
+  border-bottom: 1px solid #ff0000;
+}
+.contact-form .send {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .contact-form .send {
+    margin-bottom: 20px;
+  }
+}
+
+.contact-form .send {
+  margin-top: 20px;
+}
+.px-btn {
+  padding: 0 50px 0 20px;
+  line-height: 60px;
+  position: relative;
+  display: inline-block;
+  color: #20247b;
+  background: none;
+}
+.px-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid #f7c236;
+  border-right: 1px solid transparent;
+  -moz-transition: ease all 0.35s;
+  -o-transition: ease all 0.35s;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+  width: 60px;
+  height: 60px;
+}
+.px-btn .arrow {
+  width: 13px;
+  height: 2px;
+  background: currentColor;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 25px;
+}
+.px-btn .arrow:after {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  display: inline-block;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.formanchor {
+  color: white;
+}
+
+.formanchor:hover {
+  color: #f7c236;
+}
+/* CONTACT FORM - End */
+
+/* ACCORDION - Start */
+
+.accordion {
+  background-color: grey;
+  color: #f7c236;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  margin-bottom: 1em;
+}
+
+.accordion-item {
+  background-color: white;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: solid 1px #f7c236;
+  transition: 0.4s;
+  margin-bottom: 1em;
+}
+
+h3 button.uniquebutton {
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+  font-weight: bold;
+  background: #f7c236;
+}
+
+/* ACCORDION - End */
+
+/* PROGRESS BAR - https://bootsnipp.com/snippets/nrDmZ */
+
+.progress {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left {
+  left: 0;
+}
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right {
+  right: 0;
+}
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: #44484b;
+  font-size: 14px;
+  color: #fff;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.progress.blue .progress-bar {
+  border-color: #049dff;
+}
+.progress.blue .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+.progress.yellow .progress-bar {
+  border-color: #fdba04;
+}
+.progress.yellow .progress-left .progress-bar {
+  animation: loading-3 1s linear forwards 1.8s;
+}
+.progress.pink .progress-bar {
+  border-color: #ed687c;
+}
+.progress.pink .progress-left .progress-bar {
+  animation: loading-4 0.4s linear forwards 1.8s;
+}
+.progress.green .progress-bar {
+  border-color: #1abc9c;
+}
+.progress.green .progress-left .progress-bar {
+  animation: loading-5 1.2s linear forwards 1.8s;
+}
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(36deg);
+    transform: rotate(36deg);
+  }
+}
+@keyframes loading-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(126deg);
+    transform: rotate(126deg);
+  }
+}
+@media only screen and (max-width: 990px) {
+  .progress {
+    margin-bottom: 20px;
+  }
+}
+
+/* PROGRESS BAR - End */
+
+/* FLOATING STICKY SOCIAL MEDIA - Start - source: https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp */
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #33ddff;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* FLOATING STICKY SOCIAL MEDIA - End */
+
+/* FOOTER SOCIAL MEDIA ICONS - Start */
+.footsocial {
+  color: #f5d785;
+}
+
+.footsocial:hover {
+  color: white;
+}
+/* FOOTER SOCIAL MEDIA ICONS - End */
+
+/* COVER PAGE BUTTON - Start */
+.btn-secondary,
+.btn-secondary:focus {
+  color: #f7c236;
+  background: transparent;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  border-color: #f7c236;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background: #f7c236;
+}
+/* COVER PAGE BUTTON - End */
+
+/*COVER PAGE NAV - Start */
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 0.25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: #f7c236;
+  color: #f7c236;
+}
+
+.nav-masthead .navbar-nav + .nav-item {
+  margin-left: 1.5rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-toggler {
+  background: grey !important;
+  color: white;
+}
+
+.navbar-collapse.show {
+  background-color: grey;
+  padding: 20px;
+  z-index: 2;
+}
+
+/* COVER PAGE NAV - End */
+
+/* Examples of customising Bootstrap's media queries at different 'snapping' points - for example, change the size of your browser window and watch the <p> text colour change. Don't EVER change the pixel variables or you will be creating snapping points between Bootstrap's default snapping points - just add your styles in the brackets of the @media queries*/
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  p {
+    color: red;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  p {
+    color: green;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  p {
+    color: blue;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  p {
+    color: orange;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  p {
+    color: grey;
+  }
+}
+
+/* -------------------------------------------------------- */
+
+/* LIGHTBOX - Start */
+
+img.lights:hover {
+  filter: drop-shadow(5px 5px 10px #f7c236);
+}
+
+/* LIGHTBOX - End */
+
+/* Intro Section - Start */
+/* The linebreak code comes from https://coderwall.com/p/zvz52g/adding-a-line-break-between-two-inline-elements */
+
+.home {
+  margin-bottom: 0;
+  background: white;
+  height: 750px;
+  align-items: center;
+}
+
+.intro {
+  font-size: 2.0rem;
+  color: #f7c236;
+}
+
+.intro span.name {
+  text-decoration: none;
+  position: relative;
+  font-size: 36px;
+  color: #f5d785;
+}
+
+.intro span.name::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 46%;
+  width: 190px;
+  background: #ddd;
+}
+
+.typewrite {
+  padding: 0;
+  font-size: 3rem;
+  display: inline-block;
+  color: #f7c236;
+}
+
+.break:after {
+  content: "\A\A";
+  white-space: pre;
+}
+
+/* SPAN STANDOUT WORDS - Start */
+.standout {
+  color: #f7c236;
+  font-weight: 700;
+}
+/* SPAN STANDOUT WORDS - End */
+
+@media all and (max-width: 960px) {
+
+  #banner-text {
+    min-width: 350px;
+  }
+/* 
+  #nav {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  } */
+
+  .intro span.name::after {
+    width: 0;
+  }
+
+  /* .nav-masthead .nav-link + .nav-link {
+    margin-left: 0.5rem;
+  } */
+
+  .intro {
+    font-size: 20px;
+  }
+
+  .intro span.name {
+    font-size: 20px;
+  }
+
+  .typewrite {
+    font-size: 16px;
+  }
+
+  #banner-text p {
+    font-size: 14px;
+  }
+}
+
+/* Intro Section - End */
+
+/* Skills Section Start */
+
+#skills h2 {
+  text-decoration: none;
+  position: relative;
+}
+
+#skills h2::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  width: 110px;
+  background: #ddd;
+}
+
+#skills .card {
+  background-color: rgba(31, 41, 54, 0.9);
+  border-radius: 10px;
+}
+
+/* Skill Section End */
+
+/* Experience Section Start */
+
+#experience {
+  background-color: #343637;
+}
+
+#experience h2 {
+  text-decoration: none;
+  position: relative;
+}
+
+#experience h2::after  {
+  position: absolute;
+  content: "";
+  height: 4px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  width: 150px;
+  background: #ddd;
+}
+
+#experience h3 {
+  color: #f5d785;
+}
+
+#experience h5 {
+  color: #f5cf02;
+}
+
+#experience p {
+  color: #f5cf02;
+}
+
+#experience ul > li {
+  color: #fff;
+  margin-left: 20px;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+/* Experience Section End */
+
+/* Projects Section Start */
+
+#projects h2 {
+  text-decoration: none;
+  position: relative;
+}
+
+#projects h2::after  {
+  position: absolute;
+  content: "";
+  height: 4px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  width: 150px;
+  background: #ddd;
+}
+
+#projects h3 {
+  color: #fff;
+}
+
+#projects img {
+  width: 100%;
+  height: 400px;
+}
+
+#projects .projects-card-body .badge {
+  color: #ddd;
+}
+
+#projects .projects-card .projects-card-links {
+  display: flex;
+}
+
+#projects .projects-card .projects-card-links a {
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#projects .projects-card .projects-card-links a i:hover {
+  color: #f5d785;
+}
+
+#projects .projects-card .projects-card-links a:hover {
+  color: #f5d785;
+}
+
+@media all and (max-width: 960px) {
+  #projects .projects-card {
+    margin-bottom: 30px;
+  }
+
+  #projects img {
+    object-fit: contain;
+    height: 200px;
+  }
+}
+
+
+/* Projects Section End */
+
+/* Contact Section Start */
+
+#contact {
+  background-color: #eff6ff;
+}
+
+#contact a.contact-icons {
+  text-decoration: none;
+  color: #3b5998;
+}
+
+#contact a.contact-icons:hover {
+  color: #f5cf02;
+}
+
+#contact .contact-icons i {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+/* Contact Section End */
+
+/* BASIC PARALLAX - Start - Adapted from: https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm */
+
+.parallax-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+SECTIONS
+============================================================ */
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h3 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+  background-color: rgba(207, 216, 220, 0.5);
+}
+section.module.content:last-child {
+  margin-bottom: 60px;
+}
+section.module.parallax {
+  padding: 240px 0;
+  background-position: 0 0;
+}
+section.module.parallax h2 {
+  color: #f7c236;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px white;
+}
+section.module.parallax-1 {
+  background-image: url("../img/parallax1.png");
+  background-position: 50% 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 123, 255, 0.4);
+  background-blend-mode: screen;
+}
+section.module.parallax-2 {
+  background-image: url("../img/parallax2.png");
+  background-position: 50% 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 123, 255, 0.4);
+  background-blend-mode: screen;
+}
+section.module.parallax-3 {
+  background-image: url("../img/parallax3.png");
+  background-position: 50% 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 123, 255, 0.4);
+  background-blend-mode: screen;
+}
+
+section.module.parallax-4 {
+  background-image: url("../img/parallax4.png");
+  background-position: 50% 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 123, 255, 0.4);
+  background-blend-mode: screen;
+}
+
+@media all and (min-width: 600px) {
+  section.module h3 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax {
+    padding: 300px 0;
+  }
+  section.module.parallax h2 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h2 {
+    font-size: 160px;
+  }
+}
+
+/* PARALLAX - End */
+
+/* FULL FEATURED IMAGE GALLERY - Start - Sourced from: https://www.cssscript.com/demo/image-viewer-spotlight/ */
+
+img.viewer {
+  width: 30vw;
+  max-width: 320px;
+}
+
+/* FULL FEATURED IMAGE GALLERY - End */
+
+/* SWIPER CAROUSEL - Start */
+
+.swiper {
+  width: 100%;
+}
+
+img.slideswipe {
+  width: 100%;
+}
+
+.swiper-button-prev {
+  color: white;
+  font-weight: 700;
+  font-size: 5em;
+}
+
+.swiper-button-next {
+  color: white;
+  font-weight: 700;
+  font-size: 5em;
+}
+
+/* SWIPER CAROUSEL - End */
+
+/* LIGHT/DARK SWITCH - Start - Sourced from: https://www.cssscript.com/dark-mode-switcher-bootstrap-5/ */
+
+#lightSwitch {
+  transform: scale(1.8);
+}
+
+.custom-theme.bg-light {
+  background-color: darkslategray !important;
+  border-radius: 3px;
+  color: gainsboro;
+  text-decoration: underline;
+}
+
+.custom-theme.bg-dark {
+  background-color: blanchedalmond !important;
+  box-shadow: 10px 5px 5px rgba(246, 255, 219, 0.5);
+  color: dimgray;
+  text-decoration: overline;
+}
+
+/* SWITCH - End */
+
+/* ANIMATED PARTICLES - Start - Sourced from: https://codepen.io/nashvail/pen/wpGgXO */
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+/* ANIMATED PARTICLES - End */
+
+/* Custom CSS for Bootstrap 5 template designed for Web and Time-based Unit DESN1021  - WSU 2022 */
