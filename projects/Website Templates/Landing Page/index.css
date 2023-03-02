@@ -204,6 +204,10 @@ section.count-conference {
 @media (max-width: 578px) {
     .navbar .logo {
         height: 30px;
+        margin-bottom: 10px;
+    }
+    .navbar .nav-text-container {
+        width: 250px;
     }
     .navbar .nav-text-container .nav-text {
         font-size: small;
@@ -217,6 +221,9 @@ section.count-conference {
 }
 
 @media (max-width: 502px) {
+    .navbar .nav-text-container {
+        width: 200px;
+    }
     .card-inner {
         width: 80%;
     }
