@@ -864,6 +864,31 @@ img.lights:hover {
   color: #f5d785;
 }
 
+#projects .projects-card .video-img {
+  position: relative;
+  width: 100%;
+}
+
+#projects .projects-card .video-img .video-icon {
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+#projects .projects-card .video-img .video-icon i {
+  font-size: 3.5rem !important;
+}
+
+#projects .projects-card .video-img .video-icon p {
+  margin-left: -15px;
+  margin-top: -15px;
+  margin-bottom: 0;
+  color: red;
+  font-weight: bold;
+}
+
 @media all and (max-width: 960px) {
   #projects .projects-card {
     margin-bottom: 30px;
@@ -874,7 +899,6 @@ img.lights:hover {
     height: 200px;
   }
 }
-
 
 /* Projects Section End */
 
