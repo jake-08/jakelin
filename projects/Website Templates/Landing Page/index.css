@@ -9,6 +9,7 @@ body {
 
 .navbar {
     padding-top: 1.5rem;
+    margin-bottom: 0px;
 }
 
 .navbar > .container {
@@ -50,7 +51,7 @@ body {
 /* Main Section */
 
 section.count-conference {
-    margin: 25px 0 50px 0;
+    margin-bottom: 50px;
 }
 
 .count-conference .title-container {
@@ -70,10 +71,33 @@ section.count-conference {
     width: 100%;
     height: 3px;
     background-color: #009C84;
-    bottom: -10px;
+    bottom: -5px;
     display: block;
 }
 
+.quote-container {
+    color: #fff;
+    width: 800px;
+}
+
+.quote-container p {
+    margin-bottom: 1.5rem;;
+}
+
+.quote-container span.underline {
+    position: relative;
+    display: inline-block;
+}
+
+.quote-container span.underline:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #009C84;
+    display: block;
+    bottom: 0px;
+}
 /* Card Container */
 
 .card-container {
@@ -94,8 +118,12 @@ section.count-conference {
     outline: 0;
 }
 
-.card-container:hover .card-inner,
+/* .card-container:hover .card-inner,
 .card-container:focus .card-inner{
+    transform: rotateY(180deg);
+} */
+
+.card-inner:hover {
     transform: rotateY(180deg);
 }
 
@@ -126,6 +154,14 @@ section.count-conference {
 
 .card-front .card-body {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.card-front .card-body i {
+    text-align: right;
 }
 
 .card-front .card-body span {
@@ -193,12 +229,20 @@ section.count-conference {
     .container {
         width: 1170px;
     }
+    .row {
+        margin-bottom: 20px;
+    }
+    
 }
 
 @media (max-width: 990px) {
     .card-inner {
         width: 100%;
     }
+    .quote-container {
+        width: 670px;
+    }
+    
 }
 
 @media (max-width: 770px) {
@@ -216,6 +260,9 @@ section.count-conference {
     }
     .count-conference .footer .highlight {
         font-size: 22px;
+    }
+    .quote-container {
+        width: 400px;
     }
 }
 
@@ -236,6 +283,7 @@ section.count-conference {
     .card-inner {
         width: 70%;
     }
+    
 }
 
 @media (max-width: 502px) {
