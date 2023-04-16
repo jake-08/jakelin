@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Bootstrap 5 Modals</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <!-- Favicon -->
+    <link href="../../../images/jakepic.jpeg" rel="icon" />
+  </head>
+  <body>
+    <div class="container p-4">
+      <h3>Dynamic Bootstrap Modals using data attributes</h3>
+      <!-- Populate Data Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary btn-modal"
+        data-bs-toggle="modal"
+        data-bs-target="#getuser"
+        data-title="New Account"
+        data-url="https://www.boredapi.com/api/activity"
+        data-button="Create"
+        data-clear="true"
+      >
+        Populate Data
+      </button>
+      <!-- Confirm Modal Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-confirm-modal" data-title="Confirmed" data-body="Are you sure to delete?" data-url="https://www.boredapi.com/api/activity">Confirm Modal</button>
+      <input type="text" id="id" name="id" value="25" hidden />
+      <!-- Populate Data Modal -->
+      <div class="modal fade" id="getuser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="getuserLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="getUserLabel">Modal title</h5>
+              <button type="button" class="btn-close btn-cancel" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-12 mt-2">
+                  <div class="form-group">
+                    <label for="accessibility">Accessability</label>
+                    <input type="text" id="accessibility" name="accessibility" />
+                  </div>
+                </div>
+                <div class="col-sm-12 mt-2">
+                  <div class="form-group">
+                    <label for="activity">Activity</label>
+                    <input type="text" id="activity" name="activity" />
+                  </div>
+                </div>
+                <div class="col-sm-12 mt-2">
+                  <div class="form-group">
+                    <label for="type">Type</label>
+                    <input type="text" id="type" name="type" />
+                  </div>
+                </div>
+                <div class="col-sm-12 mt-2">
+                  <div class="form-group">
+                    <label for="participants">Participants</label>
+                    <input type="text" id="participants" name="participants" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary btn-modal">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container p-4">
+      <!-- Tabs navs -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#profile" class="nav-link" data-bs-toggle="tab">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="#messages" class="nav-link" data-bs-toggle="tab">Messages</a>
+        </li>
+      </ul>
+      <!-- Tabs navs -->
+      <!-- Tabs content -->
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+          <p>Home tab content ...</p>
+        </div>
+        <div class="tab-pane fade" id="profile">
+          <p>Profile tab content ...</p>
+        </div>
+        <div class="tab-pane fade" id="messages">
+          <p>Messages tab content ...</p>
+        </div>
+      </div>
+      <!-- Tabs content -->
+    </div>
+  </body>
+</html>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+  integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
