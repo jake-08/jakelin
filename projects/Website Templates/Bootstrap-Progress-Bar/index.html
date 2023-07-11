@@ -43,6 +43,36 @@
         </div>
       </div>
     </div>
+    <div class="container p-4">
+      <button type="button" class="btn btn-success btn-modal" data-bs-toggle="modal" data-bs-target="#progress-modal">Open Progress Modal</button>
+      <!-- Populate Progress Modal -->
+      <div class="modal fade" id="progress-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="getuserLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="getUserLabel">Document Generating</h5>
+            </div>
+            <div class="modal-body">
+              <div class="progress mt-2">
+                <div
+                  class="progress-bar bg-success progress-bar-striped progress-bar-animated w-100"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="100"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  100% Bulk Generation Complete
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Download</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 <script
