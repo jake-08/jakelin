@@ -1,0 +1,49 @@
+<div style="font-family: Arial, Helvetica, sans-serif; height: 100%">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="padding: 30px; word-break: break-word">
+              <p>Hi {{first_name}},</p>
+              <p><span style="color: #009c84; font-weight: bold">{{case_name}}</span> case completed, please see the summary below:</p>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background-color: #009c84; padding: 15px; color: #fff">
+                    <td>Case Type</td>
+                    <td>Total</td>
+                    <td>Success</td>
+                    <td>Failed</td>
+                    <td>Generation Time (hh:mm:ss)</td>
+                    <td>Binder Version</td>
+                </tr>
+                <tr style="background-color: #c7c8c9; padding: 15px; color: #000">
+                    <td>{{case_type}}</td>
+                    <td>{{total_docs}}</td>
+                    <td>{{success_docs}}</td>
+                    <td>{{failed_docs}}</td>
+                    <td>{{generation_time}}</td>
+                    <td>{{binder_version}}</td>
+                </tr>
+              </table>
+              <p>Please click on the link below to go to your case:</p>
+              <p><a href="{{url}}" style="color: #009c84; font-weight: bold;">{{url}}</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #009c84; padding: 30px;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                <tr>
+                  <td style="color: #fff">Template Testing Tool</td>
+                  <td style="text-align: right; color: #fff">
+                    &copy; {{current_year}} Powered by <a href="https://dash.com.au" target="_blank" style="color: #fff">DASH</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
